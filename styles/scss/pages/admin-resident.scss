@@ -1,0 +1,154 @@
+* {
+  padding: 0 0;
+  margin: 0 0;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+
+  &.option {
+    height: 13px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #383838;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: #383838;
+  min-height: 100vh;
+}
+
+header {
+  height: 95px;
+  background: #00B14F;
+
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+
+  .logo {
+    float: left;
+    width: 230px;
+    height: 95px;
+    text-align: center;
+    
+    img {
+      margin-top: 12px;
+    }
+  }
+
+  .nav-header {
+    float: right;
+    width: calc(100% - 230px);
+    height: 95px;
+
+    .user-info {
+      padding: 10px 15px;
+      text-align: right;
+      margin-bottom: 10px;
+
+      a {
+        color: #fff;
+        display: inline-block;
+        font-size: 14px;
+
+        &.noti {
+          margin-right: 5px;
+          padding-right: 5px;
+          border-right: 1px solid #fff;
+        }
+
+        svg {
+          fill: #fff;
+          vertical-align: middle;
+          margin-left: 3px;
+        }
+      }
+    }
+
+    .nav {
+      float: right;
+
+      ul {
+        padding: 0 0;
+        margin: 0 0;
+
+        li {
+          list-style: none;
+
+          &:hover {
+            background: #009442;
+          }
+
+          &.has-child {
+            position: relative;
+
+            &:hover {
+              .sub-menu {
+                display: block;
+              }
+              
+            }
+          }
+
+          a {
+            display: block;
+            color: #fff;
+            padding: 0 30px 0 40px;
+            font-size: 16px;
+            font-weight: 500;
+
+            svg {
+              fill: #fff;
+              vertical-align: middle;
+            }
+          }
+        }
+
+        &.level-0 {
+          & > li {
+            float: left;
+
+            a {
+              line-height: 45px;
+            }
+          }
+        }
+
+        &.sub-menu {
+          display: none;
+          position: absolute;
+          width: 165px;
+          background: #00B14F;
+
+          a {
+            line-height: 30px;
+            padding: 0 10px;
+          }
+
+          &.sub-level-1 {
+            top: 45px;
+          }
+
+          &.sub-level-2 {
+            left: 185px;
+            top: 0;
+          }
+        }
+        
+      }
+    }
+  }
+}
