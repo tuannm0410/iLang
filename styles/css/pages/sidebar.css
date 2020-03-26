@@ -62,17 +62,20 @@ aside nav ul li {
   border-bottom: 1px solid transparent;
 }
 
-aside nav ul li.has-sub a span {
-  text-decoration: none;
-  border-bottom-color: #383838;
+aside nav ul li.has-sub > a {
+  border-bottom: 1px solid #ddd;
 }
 
-aside nav ul li.has-sub a.collapsed span {
+aside nav ul li.has-sub > a span {
+  text-decoration: none;
+}
+
+aside nav ul li.has-sub > a.collapsed {
   border-bottom-color: transparent;
 }
 
-aside nav ul li.has-sub a:hover span {
-  border-bottom-color: #383838;
+aside nav ul li.has-sub .show span {
+  border-bottom: 1px solid #ddd;
 }
 
 aside nav ul li a {
@@ -111,11 +114,11 @@ aside nav ul li a svg.nav-arrow, aside nav ul li a svg.nav-plus {
 
 aside nav ul li a:hover {
   text-decoration: none;
-  color: #383838;
+  color: #00B14F;
 }
 
-aside nav ul li a:hover span {
-  border-bottom-color: #383838;
+aside nav ul li a:hover svg {
+  fill: #00B14F;
 }
 
 aside nav ul li.active {
@@ -129,4 +132,29 @@ aside nav ul li.active a {
 
 aside nav ul li.active a svg {
   fill: #00B14F;
+}
+
+@media (max-width: 1199px) {
+  aside {
+    position: absolute;
+    background: #fff;
+    z-index: 99;
+    bottom: 0;
+    top: 0;
+  }
+  aside.show {
+    display: block !important;
+  }
+}
+
+@media (max-width: 767px) {
+  aside {
+    width: 100%;
+  }
+  aside .information .detail {
+    padding: 15px 0;
+  }
+  aside nav {
+    padding: 0 15px;
+  }
 }

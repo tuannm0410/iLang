@@ -55,22 +55,21 @@ aside {
         border-bottom: 1px solid transparent;
 
         &.has-sub {
-          a {
+          & > a {
+            border-bottom: 1px solid #ddd;
+
             span {
               text-decoration: none;
-              border-bottom-color: #383838;
             }
             
             &.collapsed {
-              span {
-                border-bottom-color: transparent;
-              }
+              border-bottom-color: transparent;
             }
+          }
 
-            &:hover {
-              span {
-                border-bottom-color: #383838;
-              }
+          .show {
+            span {
+              border-bottom: 1px solid #ddd;
             }
           }
         }
@@ -109,10 +108,10 @@ aside {
 
           &:hover {
             text-decoration: none;
-            color: #383838;
+            color: #00B14F;
 
-            span {
-              border-bottom-color: #383838;
+            svg {
+              fill: #00B14F;
             }
           }
         }
@@ -130,6 +129,36 @@ aside {
           }
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  aside {
+    position: absolute;
+    background: #fff;
+    z-index: 99;
+    bottom: 0;
+    top: 0;
+
+    &.show {
+      display: block !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  aside {
+    width: 100%;
+
+    .information {
+      .detail {
+        padding: 15px 0;
+      }
+    }
+
+    nav {
+      padding: 0 15px;
     }
   }
 }

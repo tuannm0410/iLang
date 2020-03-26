@@ -3,21 +3,83 @@ header {
   position: relative;
   z-index: 2;
   box-shadow: 0 5px 8px -5px #b2b2b2;
-  padding: 0 20px;
+  display: flex;
 
-  a {
-    color: #fff;
-    display: inline-block;
-    line-height: 48px;
-    font-size: 15px;
+  .menu-bar {
+    flex: 1;
 
-    &:hover {
-      text-decoration: none;
+    a {
+      display: inline-block;
+      font-size: 28px;
       color: #fff;
+      padding: 0 20px;
+      line-height: 48px;
 
-      span {
-        text-decoration: underline;
+      &:active, &:focus {
+        text-decoration: none;
       }
     }
   }
+
+  .profile {
+    flex: 1;
+    position: relative;
+
+    a {
+      color: #fff;
+      display: inline-block;
+      line-height: 48px;
+      font-size: 15px;
+      padding: 0 20px;
+  
+      &:hover {
+        text-decoration: none;
+        color: #fff;
+        background: #00A54A;
+
+        & + .profile-nav {
+          display: block;
+        }
+      }
+    }
+
+    .profile-nav {
+      position: absolute;
+      display: none;
+      right: 0;
+      top: 100%;
+      background: #00A54A;
+      padding: 10px 15px;
+
+      &:hover {
+        display: block;
+      }
+
+      svg {
+        width: 42px;
+        height: 42px;
+        fill: #fff;
+        float: left;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0 0;
+        text-align: left;
+        margin: 0 0;
+        
+        li {
+          a {
+            padding: 0 10px 0 15px;
+            line-height: 21px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+  
 }
