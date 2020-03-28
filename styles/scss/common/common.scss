@@ -24,3 +24,37 @@ svg {
     height: 8px;
   }
 }
+
+.main-content {
+  background: #f5f5f5;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 20px 70px 20px;
+  min-height: calc(100vh - 48px);
+  position: relative;
+
+  .copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    left: 20px;
+    z-index: 2;
+    color: #a4a4a4;
+    font-size: 16px;
+
+    a {
+      color: #00B14F;
+      text-decoration: underline;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .main-content {
+    .copyright {
+      font-size: 14px;
+    }
+  }
+}
