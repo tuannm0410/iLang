@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/css/common/bootstrap.min.css" />
-    <link rel="stylesheet" href="styles/css/pages/index.min.css" />
+    <link rel="stylesheet" href="styles/css/pages/quan-ly-can-ho.min.css" />
 
 
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -136,31 +136,37 @@
               <button type="button" class="btn mr-2">Cho thuê</button>
               <button type="button" class="btn">Văn phòng</button>
             </div>
-            <div class="filter-detail d-flex">
-              <div class="filter-name">
-                <form class="form-inline">
-                  <div class="input-group mr-sm-2">
-                    <input type="text" class="form-control" id="departName" placeholder="Tìm kiếm căn hộ">
-                    <div class="input-group-append">
-                      <span class="input-group-text">
-                        <svg><use xlink:href="#icon-search"/></svg>
-                      </span>
-                    </div>
+            <div class="filter-detail">
+              <div class="row">
+                <div class=" col-12 col-xs-6">
+                  <div class="filter-name">
+                    <form class="form-inline">
+                      <div class="input-group mr-sm-2">
+                        <input type="text" class="form-control" id="departName" placeholder="Tìm kiếm căn hộ">
+                        <div class="input-group-append">
+                          <span class="input-group-text">
+                            <svg><use xlink:href="#icon-search"/></svg>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="input-group">
+                        <select class="custom-select">
+                          <option selected>Căn hộ</option>
+                          <option>Căn hộ 2</option>
+                          <option>Căn hộ 3</option>
+                          <option>Căn hộ 4</option>
+                        </select>
+                      </div>
+                    </form>
                   </div>
-                  <div class="input-group">
-                    <select class="custom-select">
-                      <option selected>Căn hộ</option>
-                      <option>Căn hộ 2</option>
-                      <option>Căn hộ 3</option>
-                      <option>Căn hộ 4</option>
-                    </select>
+                </div>
+                <div class=" col-12 col-xs-6">
+                  <div class="filter-status ml-auto">
+                    <button type="button" class="btn active mr-2">Sử dụng</button>
+                    <button type="button" class="btn empty mr-2">Trống</button>
+                    <button type="button" class="btn expired">Hết hạn</button>
                   </div>
-                </form>
-              </div>
-              <div class="filter-status ml-auto">
-                <button type="button" class="btn active mr-2">Sử dụng</button>
-                <button type="button" class="btn empty mr-2">Trống</button>
-                <button type="button" class="btn expired">Hết hạn</button>
+                </div>
               </div>
             </div>
           </div>
@@ -168,7 +174,7 @@
           <div class="apartments align-items-start">
             <div class="row">
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -187,7 +193,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -206,7 +212,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item empty">
                   <div class="position">
                     <div class="code">
@@ -225,7 +231,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item expired">
                   <div class="position">
                     <div class="code">
@@ -244,7 +250,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -263,7 +269,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -282,7 +288,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item empty">
                   <div class="position">
                     <div class="code">
@@ -301,7 +307,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item expired">
                   <div class="position">
                     <div class="code">
@@ -320,7 +326,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -339,7 +345,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -358,7 +364,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item empty">
                   <div class="position">
                     <div class="code">
@@ -377,7 +383,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item expired">
                   <div class="position">
                     <div class="code">
@@ -396,7 +402,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -415,7 +421,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -434,7 +440,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item empty">
                   <div class="position">
                     <div class="code">
@@ -453,7 +459,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item expired">
                   <div class="position">
                     <div class="code">
@@ -472,7 +478,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -491,7 +497,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -510,7 +516,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item empty">
                   <div class="position">
                     <div class="code">
@@ -529,7 +535,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item expired">
                   <div class="position">
                     <div class="code">
@@ -548,7 +554,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -567,7 +573,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item active">
                   <div class="position">
                     <div class="code">
@@ -586,7 +592,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item empty">
                   <div class="position">
                     <div class="code">
@@ -605,7 +611,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-3">
+              <div class="col-12 col-md-6 col-lg-3">
                 <div class="apartment-item expired">
                   <div class="position">
                     <div class="code">
@@ -629,9 +635,24 @@
           <div class="pager align-items-start">
             <nav>
               <ul class="pagination justify-content-end">
-                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><span class="d-none d-sm-block">Trang 1/12</span></li>
+                <li class="page-item">
+                  <a class="page-link" href="#"><svg class="first-page"><use xlink:href="#icon-first-page" /></svg></a>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#"><svg class="prev-page"><use xlink:href="#icon-prev-page" /></svg></a>
+                </li>
+                <li class="page-item">
+                  <select class="custom-select">
+                    <option selected>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                </li>
+                <li class="page-item">
+                  <a class="page-link" href="#"><svg class="next-page"><use xlink:href="#icon-next-page" /></svg></a>
+                </li>
                 <li class="page-item">
                   <a class="page-link" href="#"><svg class="last-page"><use xlink:href="#icon-last-page" /></svg></a>
                 </li>
@@ -641,15 +662,15 @@
 
           <div class="copyright">
             <div class="row">
-              <div class="col-6">Bản quyền thuộc về <a href="#" target="_blank">iLang.vn</a></div>
-              <div class="col-6 text-right">Phiên bản 1.1.1</div>
+              <div class="col-7">Bản quyền thuộc về <a href="#" target="_blank">iLang.vn</a></div>
+              <div class="col-5 text-right">Phiên bản 1.1.1</div>
             </div>
           </div>
         </section>
       </div>
     </div>
 
-    <symbol display="none">
+    <svg display="none">
       <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-home">
         <path d="M15.1111 0H8.00003C7.51114 0 7.11115 0.4 7.11115 0.888889V2.32C7.11115 2.32 7.11115 2.32 7.12003 2.32889L11.5645 6.32889C12.1245 6.82667 12.4445 7.55556 12.4445 8.31111V8.88889H14.2223V10.6667H12.4445V12.4444H14.2223V14.2222H12.4445V16H15.1111C15.6 16 16 15.6 16 15.1111V0.888889C16 0.4 15.6 0 15.1111 0ZM10.6667 3.55556H8.88892V1.77778H10.6667V3.55556ZM14.2223 7.11111H12.4445V5.33333H14.2223V7.11111ZM14.2223 3.55556H12.4445V1.77778H14.2223V3.55556Z"/>
         <path d="M10.6667 15.1111V8.3111C10.6667 8.06221 10.56 7.82221 10.3733 7.65332L5.92889 3.65332C5.76 3.49332 5.54667 3.42221 5.33333 3.42221C5.12 3.42221 4.90667 3.50221 4.73778 3.65332L0.293333 7.65332C0.106667 7.81332 0 8.05332 0 8.3111V15.1111C0 15.6 0.4 16 0.888889 16H2.66667C3.15556 16 3.55556 15.6 3.55556 15.1111V11.5555H7.11111V15.1111C7.11111 15.6 7.51111 16 8 16H9.77778C10.2667 16 10.6667 15.6 10.6667 15.1111Z"/>
@@ -770,18 +791,31 @@
         </defs>
       </symbol>
         
-      <symbol width="7" height="8" viewBox="0 0 7 8" id="icon-last-page">
-        <path d="M0.771654 7.8999L3.85827 4.38085C4.04724 4.1654 4.04724 3.87813 3.85827 3.7345L0.771654 0.215452C0.708661 0.071817 0.582677 0 0.456693 0C0.330709 0 0.267717 0.0718171 0.141732 0.143634C-0.0472441 0.359086 -0.0472441 0.646355 0.141732 0.78999L2.91339 3.94995L0.141732 7.10991C-0.0472441 7.32536 -0.0472441 7.61263 0.141732 7.82808C0.330709 8.04353 0.582677 8.04353 0.771654 7.8999Z"/>
-        <path d="M3.77165 7.8999L6.85827 4.38085C7.04724 4.1654 7.04724 3.87813 6.85827 3.7345L3.77165 0.215452C3.70866 0.071817 3.58268 0 3.45669 0C3.33071 0 3.26772 0.0718171 3.14173 0.143634C2.95276 0.359086 2.95276 0.646355 3.14173 0.78999L5.91339 3.94995L3.14173 7.10991C2.95276 7.32536 2.95276 7.61263 3.14173 7.82808C3.33071 8.04353 3.58268 8.04353 3.77165 7.8999Z"/>
+      <symbol width="9" height="10" viewBox="0 0 9 10" id="icon-first-page">
+        <path d="M8.03543 0.12513L4.17717 4.52394C3.94095 4.79325 3.94095 5.15234 4.17717 5.33188L8.03543 9.73069C8.11417 9.91023 8.27165 10 8.42913 10C8.58661 10 8.66535 9.91023 8.82283 9.82046C9.05906 9.55114 9.05906 9.19206 8.82283 9.01251L5.35827 5.06257L8.82284 1.11262C9.05906 0.843303 9.05906 0.484217 8.82284 0.214902C8.58662 -0.0544129 8.27165 -0.0544129 8.03543 0.12513Z" />
+        <path d="M4.28543 0.12513L0.427166 4.52394C0.190945 4.79325 0.190945 5.15234 0.427165 5.33188L4.28543 9.73069C4.36417 9.91023 4.52165 10 4.67913 10C4.83661 10 4.91535 9.91023 5.07283 9.82046C5.30906 9.55114 5.30906 9.19206 5.07283 9.01251L1.60827 5.06257L5.07284 1.11262C5.30906 0.843303 5.30906 0.484217 5.07284 0.214902C4.83661 -0.0544129 4.52165 -0.0544129 4.28543 0.12513Z" />
       </symbol>
         
+      <symbol width="9" height="10" viewBox="0 0 9 10" id="icon-last-page">
+        <path d="M0.964567 9.87487L4.82283 5.47606C5.05905 5.20675 5.05905 4.84766 4.82283 4.66812L0.964567 0.269314C0.885827 0.0897713 0.728347 0 0.570866 0C0.413386 0 0.334646 0.0897714 0.177165 0.179543C-0.0590551 0.448858 -0.0590551 0.807944 0.177165 0.987487L3.64173 4.93743L0.177165 8.88738C-0.0590551 9.1567 -0.0590551 9.51578 0.177165 9.7851C0.413386 10.0544 0.728347 10.0544 0.964567 9.87487Z" />
+        <path d="M4.71457 9.87487L8.57283 5.47606C8.80906 5.20675 8.80906 4.84766 8.57283 4.66812L4.71457 0.269314C4.63583 0.0897713 4.47835 0 4.32087 0C4.16339 0 4.08465 0.0897714 3.92717 0.179543C3.69094 0.448858 3.69094 0.807944 3.92717 0.987487L7.39173 4.93743L3.92717 8.88738C3.69094 9.1567 3.69094 9.51578 3.92717 9.7851C4.16339 10.0544 4.47835 10.0544 4.71457 9.87487Z"  />
+      </symbol>
+      
+      <symbol width="5" height="10" viewBox="0 0 5 10" id="icon-next-page">
+        <path d="M0.964567 9.87487L4.82283 5.47606C5.05905 5.20675 5.05905 4.84766 4.82283 4.66812L0.964567 0.269314C0.885827 0.0897713 0.728347 0 0.570866 0C0.413386 0 0.334646 0.0897714 0.177165 0.179543C-0.0590551 0.448858 -0.0590551 0.807944 0.177165 0.987487L3.64173 4.93743L0.177165 8.88738C-0.0590551 9.1567 -0.0590551 9.51578 0.177165 9.7851C0.413386 10.0544 0.728347 10.0544 0.964567 9.87487Z" />
+      </symbol>
+        
+      <symbol width="5" height="10" viewBox="0 0 5 10" id="icon-prev-page">
+        <path d="M4.03543 0.12513L0.177166 4.52394C-0.0590544 4.79325 -0.0590544 5.15234 0.177166 5.33188L4.03543 9.73069C4.11417 9.91023 4.27165 10 4.42913 10C4.58661 10 4.66535 9.91023 4.82283 9.82046C5.05906 9.55114 5.05906 9.19206 4.82283 9.01251L1.35827 5.06257L4.82284 1.11262C5.05906 0.843303 5.05906 0.484217 4.82284 0.214902C4.58662 -0.0544129 4.27165 -0.0544129 4.03543 0.12513Z" />
+      </symbol>        
+
       <symbol width="42" height="42" viewBox="0 0 42 42" id="icon-user-2">
         <path d="M21 0C9.40625 0 0 9.3975 0 21C0 32.6025 9.40625 42 21 42C32.5938 42 42 32.5938 42 21C42 9.40625 32.5938 0 21 0ZM16.45 8.4175C18.9613 5.90625 23.03 5.90625 25.5412 8.4175C28.0525 10.9288 28.0525 14.9975 25.5412 17.5088C23.03 20.02 18.9613 20.02 16.45 17.5088C13.9387 15.0063 13.9387 10.9288 16.45 8.4175ZM29.0325 32.2437H12.9675C12.0837 32.2437 11.3575 31.5263 11.3575 30.6338C11.3575 26.2063 14.9625 22.6012 19.39 22.6012H22.6012C27.0287 22.6012 30.6338 26.2063 30.6338 30.6338C30.6425 31.5263 29.925 32.2437 29.0325 32.2437Z" />
       </symbol>
   
       <symbol height="32" id="icon-menu-bar" viewBox="0 0 32 32" width="32" >
         <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-      </symbol>
+      </svg>
     </svg>
   </body>
 </html>

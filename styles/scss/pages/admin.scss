@@ -191,7 +191,7 @@ a {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-size: 12px;
   color: #383838;
   min-height: 100vh;
@@ -222,11 +222,17 @@ header {
     float: right;
     width: calc(100% - 300px);
     height: 105px;
+    text-transform: none;
+    text-shadow: none;
+    padding: 0 0;
+    line-height: normal;
+    font-weight: normal;
 
     .user-info {
       padding: 10px 15px;
       text-align: right;
       margin-bottom: 21px;
+      position: relative;
 
       a {
         color: #fff;
@@ -244,15 +250,60 @@ header {
           vertical-align: middle;
           margin-left: 3px;
         }
+
+        &.profile {
+          &:hover ~ .profile-nav {
+            opacity: 1;
+            transition-delay: 0.5s;
+          }
+        }
+      }
+
+      .profile-nav {
+        position: absolute;
+        right: 15px;
+        top: 25px;
+        text-align: left;
+        padding: 10px;
+        z-index: 10;
+        transition: 0s;
+        opacity: 0;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        ul {
+          margin: 0 0;
+          border: 1px solid #00B14F;
+          padding: 10px 20px;
+          background: #fff;
+        }
+
+        li {
+          list-style: none;
+          a {
+            color: #00B14F;
+            display: block;
+            font-size: 14px;
+            line-height: 25px;
+          }
+        }
       }
     }
 
     .nav {
-      float: right;
+      margin-bottom: 0;
 
       ul {
         padding: 0 0;
         margin: 0 0;
+
+        &:after {
+          display: block;
+          content: "";
+          clear: both;
+        }
 
         li {
           list-style: none;
@@ -313,6 +364,7 @@ header {
           display: none;
           position: absolute;
           width: 165px;
+          z-index: 9;
 
           li {
             background: #00A54A;

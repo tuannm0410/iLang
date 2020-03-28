@@ -20,9 +20,49 @@ svg.nav-plus {
   height: 14px;
 }
 
-svg.last-page {
-  width: 7px;
-  height: 8px;
+.main-content {
+  background: #f5f5f5;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 20px 70px 20px;
+  min-height: calc(100vh - 48px);
+  position: relative;
+}
+
+.main-content .copyright {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  left: 20px;
+  z-index: 2;
+  color: #a4a4a4;
+  font-size: 16px;
+}
+
+.main-content .copyright a {
+  color: #00B14F;
+  text-decoration: underline;
+}
+
+.datepicker td, .datepicker th {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.85rem;
+}
+
+.datepicker {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 767px) {
+  .main-content .copyright {
+    font-size: 14px;
+  }
 }
 
 header {
@@ -289,7 +329,14 @@ aside nav ul li.active a svg {
   border-color: #00B14F;
 }
 
-.pager .pagination li a {
+.pager .pagination li span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 33px;
+  padding: 0 5px;
+}
+
+.pager .pagination li a.page-link {
   border-radius: 5px;
   border: none;
   background: #fff;
@@ -297,20 +344,35 @@ aside nav ul li.active a svg {
           box-shadow: 1px 1px 3px 0 #c2c2c2;
   color: #383838;
   font-size: 14px;
+  height: 33px;
+  width: 33px;
 }
 
-.pager .pagination li a svg {
+.pager .pagination li a.page-link svg {
   fill: #383838;
+  width: 10px;
+  height: 10px;
 }
 
-.pager .pagination li a:hover {
+.pager .pagination li a.page-link svg.next-page, .pager .pagination li a.page-link svg.prev-page {
+  width: 5px;
+}
+
+.pager .pagination li a.page-link:hover {
   background: #00B14F;
   border-color: #00B14F;
   color: #fff;
 }
 
-.pager .pagination li a:hover svg {
+.pager .pagination li a.page-link:hover svg {
   fill: #fff;
+}
+
+.pager .pagination li .custom-select {
+  height: 33px;
+  border-color: #aaa;
+  cursor: pointer;
+  min-width: 50px;
 }
 
 #wrapper {
@@ -493,17 +555,18 @@ aside nav ul li.active a svg {
   fill: #383838;
 }
 
-.main-content .copyright {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
-  left: 20px;
-  z-index: 2;
-  color: #a4a4a4;
-  font-size: 16px;
-}
-
-.main-content .copyright a {
-  color: #00B14F;
-  text-decoration: underline;
+@media (max-width: 767px) {
+  .main-content .filter .filter-type {
+    margin-bottom: 10px;
+  }
+  .main-content .filter .filter-type .btn {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .main-content .filter .filter-detail .filter-name input {
+    width: auto;
+  }
+  .main-content .filter .filter-detail .filter-name .input-group {
+    margin-bottom: 10px;
+  }
 }

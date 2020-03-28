@@ -7,11 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/css/common/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/css/common/bootstrap-datepicker.min.css" />
     <link rel="stylesheet" href="styles/css/pages/profile.min.css" />
 
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
     <script src="js/sidebar.js"></script>
     <script src="js/profile.js"></script>
     <title>Quản lý căn hộ</title>
@@ -32,7 +34,7 @@
             </a>
             <div class="profile-nav">
               <div class="nav">
-                <svg><use xlink:href="#icon-user-2" /></svg>
+                <svg><use xlink:href="#icon-user" /></svg>
                 <ul>
                   <li><a href="#">Thông tin cá nhân</a></li>
                   <li><a href="#">Logout</a></li>
@@ -157,7 +159,10 @@
                     <div class="form-group row">
                       <label for="dob" class="col-4 col-md-3 col-lg-4">Ngày sinh</label>
                       <div class="col-8 col-md-9 col-lg-8">
-                        <input type="text" class="form-control" id="dob">
+                        <div class="input-component">
+                          <input type="text" class="form-control" id="dob">
+                          <svg><use xlink:href="#icon-calendar" /></svg>
+                        </div>
                       </div>
                     </div>
                     <div class="form-group row">
@@ -281,7 +286,7 @@
       </div>
     </div>
 
-    <symbol display="none">
+    <svg display="none">
       <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-home">
         <path d="M15.1111 0H8.00003C7.51114 0 7.11115 0.4 7.11115 0.888889V2.32C7.11115 2.32 7.11115 2.32 7.12003 2.32889L11.5645 6.32889C12.1245 6.82667 12.4445 7.55556 12.4445 8.31111V8.88889H14.2223V10.6667H12.4445V12.4444H14.2223V14.2222H12.4445V16H15.1111C15.6 16 16 15.6 16 15.1111V0.888889C16 0.4 15.6 0 15.1111 0ZM10.6667 3.55556H8.88892V1.77778H10.6667V3.55556ZM14.2223 7.11111H12.4445V5.33333H14.2223V7.11111ZM14.2223 3.55556H12.4445V1.77778H14.2223V3.55556Z"/>
         <path d="M10.6667 15.1111V8.3111C10.6667 8.06221 10.56 7.82221 10.3733 7.65332L5.92889 3.65332C5.76 3.49332 5.54667 3.42221 5.33333 3.42221C5.12 3.42221 4.90667 3.50221 4.73778 3.65332L0.293333 7.65332C0.106667 7.81332 0 8.05332 0 8.3111V15.1111C0 15.6 0.4 16 0.888889 16H2.66667C3.15556 16 3.55556 15.6 3.55556 15.1111V11.5555H7.11111V15.1111C7.11111 15.6 7.51111 16 8 16H9.77778C10.2667 16 10.6667 15.6 10.6667 15.1111Z"/>
@@ -407,13 +412,13 @@
         <path d="M3.77165 7.8999L6.85827 4.38085C7.04724 4.1654 7.04724 3.87813 6.85827 3.7345L3.77165 0.215452C3.70866 0.071817 3.58268 0 3.45669 0C3.33071 0 3.26772 0.0718171 3.14173 0.143634C2.95276 0.359086 2.95276 0.646355 3.14173 0.78999L5.91339 3.94995L3.14173 7.10991C2.95276 7.32536 2.95276 7.61263 3.14173 7.82808C3.33071 8.04353 3.58268 8.04353 3.77165 7.8999Z"/>
       </symbol>
         
-      <symbol width="42" height="42" viewBox="0 0 42 42" id="icon-user-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <symbol width="42" height="42" viewBox="0 0 42 42" id="icon-user" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M21 0C9.40625 0 0 9.3975 0 21C0 32.6025 9.40625 42 21 42C32.5938 42 42 32.5938 42 21C42 9.40625 32.5938 0 21 0ZM16.45 8.4175C18.9613 5.90625 23.03 5.90625 25.5412 8.4175C28.0525 10.9288 28.0525 14.9975 25.5412 17.5088C23.03 20.02 18.9613 20.02 16.45 17.5088C13.9387 15.0063 13.9387 10.9288 16.45 8.4175ZM29.0325 32.2437H12.9675C12.0837 32.2437 11.3575 31.5263 11.3575 30.6338C11.3575 26.2063 14.9625 22.6012 19.39 22.6012H22.6012C27.0287 22.6012 30.6338 26.2063 30.6338 30.6338C30.6425 31.5263 29.925 32.2437 29.0325 32.2437Z" />
       </symbol>
-  
-      <symbol height="32" id="icon-menu-bar" viewBox="0 0 32 32" width="32" >
-        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-      </symbol>  
+
+      <symbol width="14" height="12" viewBox="0 0 14 12" id="icon-calendar">
+        <path d="M12.6 1.33333H11.9V0.666667C11.9 0.3 11.585 0 11.2 0C10.815 0 10.5 0.3 10.5 0.666667V1.33333H3.50001V0.666667C3.50001 0.3 3.185 0 2.8 0C2.415 0 2.10001 0.3 2.10001 0.666667V1.33333H1.4C0.629999 1.33333 0 1.93333 0 2.66667V10.6667C0 11.4 0.630001 12 1.4 12H12.6C13.37 12 14 11.4 14 10.6667V2.66667C14 1.93333 13.37 1.33333 12.6 1.33333ZM11.9 10.6667H2.10001C1.715 10.6667 1.4 10.3667 1.4 10V4H12.6V10C12.6 10.3667 12.285 10.6667 11.9 10.6667Z" />
+      </symbol>        
     </svg>
   </body>
 </html>

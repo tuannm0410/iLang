@@ -1,3 +1,11 @@
+$(function(){
+  $("#dob").datepicker({
+    format: "dd/mm/yyyy",
+    orientation: "bottom auto",
+    autoclose: true
+  });
+});
+
 function editAvatar() {
   $("#avatarInput").trigger("click");
 }

@@ -196,6 +196,20 @@
           }
         }
       }
+
+      .input-component {
+        position: relative;
+
+        svg {
+          position: absolute;
+          right: 0;
+          fill: #a4a4a4;
+          width: 14px;
+          height: 12px;
+          top: 12px;
+          right: 10px;
+        }
+      }
     }
 
     .action {

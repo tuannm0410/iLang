@@ -54,6 +54,16 @@ svg.last-page {
   text-decoration: underline;
 }
 
+.datepicker td, .datepicker th {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.85rem;
+}
+
+.datepicker {
+  margin-bottom: 3rem;
+}
+
 @media (max-width: 767px) {
   .main-content .copyright {
     font-size: 14px;

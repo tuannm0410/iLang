@@ -11,7 +11,14 @@
   border-color: #00B14F;
 }
 
-.pager .pagination li a {
+.pager .pagination li span {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 33px;
+  padding: 0 5px;
+}
+
+.pager .pagination li a.page-link {
   border-radius: 5px;
   border: none;
   background: #fff;
@@ -19,18 +26,33 @@
           box-shadow: 1px 1px 3px 0 #c2c2c2;
   color: #383838;
   font-size: 14px;
+  height: 33px;
+  width: 33px;
 }
 
-.pager .pagination li a svg {
+.pager .pagination li a.page-link svg {
   fill: #383838;
+  width: 10px;
+  height: 10px;
 }
 
-.pager .pagination li a:hover {
+.pager .pagination li a.page-link svg.next-page, .pager .pagination li a.page-link svg.prev-page {
+  width: 5px;
+}
+
+.pager .pagination li a.page-link:hover {
   background: #00B14F;
   border-color: #00B14F;
   color: #fff;
 }
 
-.pager .pagination li a:hover svg {
+.pager .pagination li a.page-link:hover svg {
   fill: #fff;
+}
+
+.pager .pagination li .custom-select {
+  height: 33px;
+  border-color: #aaa;
+  cursor: pointer;
+  min-width: 50px;
 }
