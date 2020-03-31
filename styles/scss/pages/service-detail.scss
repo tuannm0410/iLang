@@ -1,0 +1,98 @@
+@import '../common/common.scss';
+@import '../common/header.scss';
+@import '../common/sidebar.scss';
+@import '../common/pagination.scss';
+
+#wrapper {
+    position: relative;
+}
+
+.main-content {
+    .service-detail {
+        .apartment-item {
+            width: 244px;
+            background: #00B14F;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            border-radius: 5px;
+            padding: 2px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            -webkit-box-shadow: 1px 1px 5px 1px #c2c2c2;
+            box-shadow: 1px 1px 5px 1px #c2c2c2;
+
+            &.has-paid {
+                background: #00B14F;
+            }
+
+            &.not-paid {
+                background: #444E99;
+            }
+
+            &.expired {
+                background: #FF6C58;
+            }
+
+            .position {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                text-align: center;
+                padding: 0 11px;
+
+                .code {
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: row;
+                    flex-direction: row;
+                    -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 20px;
+                }
+            }
+
+            .info {
+                width: 100%;
+                background: #fff;
+                padding: 10px;
+                border-radius: 3px;
+                font-size: 14px;
+                line-height: 16px;
+
+                .owner {
+                    font-weight: 700;
+                    margin-bottom: 8px;
+                    font-size: 14px;
+                }
+
+                .desc {
+                    color: #a4a4a4;
+                    margin-bottom: 10px;
+                }
+
+                .total {
+                    font-weight: 700;
+
+                    svg {
+                        margin-right: 3px;
+                        vertical-align: text-bottom;
+                        fill: #383838;
+                        width: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {}
