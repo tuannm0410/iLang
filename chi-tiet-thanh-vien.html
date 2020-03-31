@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/css/common/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles/css/common/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="styles/css/pages/member.min.css" />
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/member.js"></script>
+    <title>Quản lý căn hộ</title>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div class="menu-bar">
+                <a href="javascript:;" onclick="showSidebar()" class="d-inline-block d-lg-none">☰</a>
+            </div>
+            <div class="profile">
+                <div class="text-right">
+                    <a href="#">
+                        <span>admin</span>
+                        <img src="images/admin.svg" alt="admin" />
+                    </a>
+                    <div class="profile-nav">
+                        <div class="nav">
+                            <svg>
+                                <use xlink:href="#icon-user" /></svg>
+                            <ul>
+                                <li><a href="#">Thông tin cá nhân</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="wrapper" class="d-flex">
+            <aside class="sidebar d-none d-xl-block">
+                <div class="information d-flex">
+                    <div class="logo d-flex">
+                        <a href="/"><img src="images/iLang-logo.svg" alt="logo" /></a>
+                    </div>
+                    <div class="detail">
+                        <h3>Splendora <br>Bắc An Khánh</h3>
+                        <p>Km10+600, Đại lộ Thăng Long, <br>
+                            An Khánh, Hoài Đức, Hà Nội</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a href="#">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-home" /></svg>
+                                <span>
+                                    Căn hộ
+                                    <svg class="nav-arrow">
+                                        <use xlink:href="#icon-arrow" /></svg>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-wallet" /></svg>
+                                <span>Phí dịch vụ <svg class="nav-arrow">
+                                        <use xlink:href="#icon-arrow" /></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-check" /></svg>
+                                <span>Quản lý tiện ích <svg class="nav-arrow">
+                                        <use xlink:href="#icon-arrow" /></svg></span>
+                            </a>
+                        </li>
+                        <li class="has-sub">
+                            <a href="#" data-toggle="collapse" class="collapsed" data-target="#sub-item-1">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-megaphone" /></svg>
+                                <span>Giao tiếp cư dân <svg class="nav-plus">
+                                        <use xlink:href="#icon-plus" /></svg></span>
+                            </a>
+                            <ul id="sub-item-1" class="collapse">
+                                <li>
+                                    <a href="#">
+                                        <span>Gửi thông báo <svg class="nav-arrow">
+                                                <use xlink:href="#icon-arrow" /></svg></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span>Tiếp nhận ý kiến <svg class="nav-arrow">
+                                                <use xlink:href="#icon-arrow" /></svg></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-card" /></svg>
+                                <span>Nhân viên <svg class="nav-arrow">
+                                        <use xlink:href="#icon-arrow" /></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-cogwheels" /></svg>
+                                <span>Vận hành bảo trì <svg class="nav-arrow">
+                                        <use xlink:href="#icon-arrow" /></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-home" /></svg>
+                                <span>Quản lý thủ tục, văn bản pháp lý <svg class="nav-arrow">
+                                        <use xlink:href="#icon-arrow" /></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-report" /></svg>
+                                <span>Báo cáo <svg class="nav-arrow">
+                                        <use xlink:href="#icon-arrow" /></svg></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <svg class="nav-icon">
+                                    <use xlink:href="#icon-setting" /></svg>
+                                <span>Cấu hình hệ thống <svg class="nav-arrow">
+                                        <use xlink:href="#icon-arrow" /></svg></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <section class="main-content">
+                <div class="member-detail">
+                    <h1 class="d-flex flex-wrap"><button type="button" class="btn btn-back" onclick=""><svg>
+                                <use xlink:href="#icon-back" /></svg></button> Thông tin cá nhân</h1>
+                    <div class="basic-info box-info">
+                        <h3>1. Thông tin cơ bản</h3>
+                        <div class="box-content d-flex align-items-start">
+                            <div class="avatar">
+                                <img src="images/avatar-no-image.png" onerror="this.src='images/avatar-no-image.png'" />
+                            </div>
+                            <div class="box-field has-avatar">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label for="FullName">Họ tên</label>
+                                            <input type="text" id="FullName" name="FullName" class="form-control"
+                                                placeholder="Nhập họ và tên" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Birthday">Ngày sinh</label>
+                                            <div class="input-component">
+                                                <input type="text" id="Birthday" name="Birthday" class="form-control"
+                                                    placeholder="Chọn ngày sinh" />
+                                                <svg>
+                                                    <use xlink:href="#icon-calendar" /></svg>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Gender">Giới tính</label>
+                                            <div class="select-component">
+                                                <select id="Gender" class="form-control">
+                                                    <option value="Nam">Nam</option>
+                                                    <option value="Nữ">Nữ</option>
+                                                    <option value="LGBT">LGBT</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PhoneNumber">Số điện thoại</label>
+                                            <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control"
+                                                placeholder="Nhập số điện thoại" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Email">Email</label>
+                                            <input type="email" id="Email" name="Email" class="form-control"
+                                                placeholder="Nhập email" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label for="Passport">Số CMND/Hộ chiếu</label>
+                                            <input type="text" id="Passport" name="Passport" class="form-control"
+                                                placeholder="Nhập số CMND/Hộ chiếu" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="PlacePassport">NƠi cấp CMND/Hộ chiếu</label>
+                                            <input type="text" id="PlacePassport" name="PlacePassport"
+                                                class="form-control" placeholder="Nhập nơi cấp CMND/Hộ chiếu" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="DatePassport">Ngày cấp</label>
+                                            <div class="input-component">
+                                                <input type="text" id="DatePassport" name="DatePassport"
+                                                    class="form-control" placeholder="Chọn ngày cấp CMND" />
+                                                <svg>
+                                                    <use xlink:href="#icon-calendar" /></svg>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Apartment">Căn hộ</label>
+                                            <input type="text" id="Apartment" name="Apartment" class="form-control"
+                                                placeholder="Nhập căn hộ" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Position">Vai trò</label>
+                                            <div class="select-component">
+                                                <select id="Position" class="form-control">
+                                                    <option value="Chủ hộ">Chủ hộ</option>
+                                                    <option value="Người thuê nhà">Người thuê nhà</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="advanced-info box-info">
+                        <h3>2. Thông tin nâng cao</h3>
+                        <div class="box-content d-flex">
+                            <div class="box-field">
+                                <div class="row">
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label for="Work">Công việc</label>
+                                            <input type="text" id="Work" name="Work" class="form-control"
+                                                placeholder="Nhập công việc" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="TaxCode">TAX CODE</label>
+                                            <input type="text" id="TaxCode" name="TaxCode" class="form-control"
+                                                placeholder="Nhập tax code" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Nationality">Quốc tịch</label>
+                                            <div class="select-component">
+                                                <select id="Nationality" class="form-control">
+                                                    <option value="Việt Nam">Việt Nam</option>
+                                                    <option value="Lào">Lào</option>
+                                                    <option value="Trung Quốc">Trung Quốc</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="VisaDate">Ngày hết hạn visa</label>
+                                            <div class="input-component">
+                                                <input type="text" id="VisaDate" name="VisaDate" class="form-control"
+                                                    placeholder="Chọn ngày hết hạn visa" />
+                                                <svg>
+                                                    <use xlink:href="#icon-calendar" /></svg>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="HouseholdDate">Ngày nhập hộ khẩu</label>
+                                            <div class="input-component">
+                                                <input type="text" id="HouseholdDate" name="HouseholdDate"
+                                                    class="form-control" placeholder="Chọn ngày nhập hộ khẩu" />
+                                                <svg>
+                                                    <use xlink:href="#icon-calendar" /></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-12">
+                                        <div class="form-group">
+                                            <label for="Company">Công Ty</label>
+                                            <input type="text" id="Company" name="Company" class="form-control"
+                                                placeholder="Nhập tên công ty" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="HouseholdRelation">Quan hệ với chủ hộ</label>
+                                            <div class="select-component">
+                                                <select id="HouseholdRelation" class="form-control">
+                                                    <option value="Chủ hộ">Chủ hộ</option>
+                                                    <option value="Vợ">Vợ</option>
+                                                    <option value="Con">Con</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Visa">VISA</label>
+                                            <input type="text" id="Visa" name="Visa" class="form-control"
+                                                placeholder="Nhập visa" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="KT3Number">Số sổ tạm trú</label>
+                                            <input type="text" id="KT3Number" name="KT3Number" class="form-control"
+                                                placeholder="Nhập số sổ tạm trú" />
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="DateRegisterKT3">Ngày đăng ký tạm trú</label>
+                                            <div class="input-component">
+                                                <input type="text" id="DateRegisterKT3" name="DateRegisterKT3"
+                                                    class="form-control" placeholder="Chọn ngày đăng ký tạm trú" />
+                                                <svg>
+                                                    <use xlink:href="#icon-calendar" /></svg>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="DateExpiredKT3">Ngày hết hạn tạm trú</label>
+                                            <div class="input-component">
+                                                <input type="text" id="DateExpiredKT3" name="DateExpiredKT3"
+                                                    class="form-control" placeholder="Chọn ngày hết hạn tạm trú" />
+                                                <svg>
+                                                    <use xlink:href="#icon-calendar" /></svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="action">
+                                    <button type="reset" class="btn btn-reset">Huỷ</button>
+                                    <button type="submit" class="btn btn-submit">Lưu thay đổi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-7">Bản quyền thuộc về <a href="#" target="_blank">iLang.vn</a></div>
+                        <div class="col-5 text-right">Phiên bản 1.1.1</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <svg display="none">
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-home">
+            <path
+                d="M15.1111 0H8.00003C7.51114 0 7.11115 0.4 7.11115 0.888889V2.32C7.11115 2.32 7.11115 2.32 7.12003 2.32889L11.5645 6.32889C12.1245 6.82667 12.4445 7.55556 12.4445 8.31111V8.88889H14.2223V10.6667H12.4445V12.4444H14.2223V14.2222H12.4445V16H15.1111C15.6 16 16 15.6 16 15.1111V0.888889C16 0.4 15.6 0 15.1111 0ZM10.6667 3.55556H8.88892V1.77778H10.6667V3.55556ZM14.2223 7.11111H12.4445V5.33333H14.2223V7.11111ZM14.2223 3.55556H12.4445V1.77778H14.2223V3.55556Z" />
+            <path
+                d="M10.6667 15.1111V8.3111C10.6667 8.06221 10.56 7.82221 10.3733 7.65332L5.92889 3.65332C5.76 3.49332 5.54667 3.42221 5.33333 3.42221C5.12 3.42221 4.90667 3.50221 4.73778 3.65332L0.293333 7.65332C0.106667 7.81332 0 8.05332 0 8.3111V15.1111C0 15.6 0.4 16 0.888889 16H2.66667C3.15556 16 3.55556 15.6 3.55556 15.1111V11.5555H7.11111V15.1111C7.11111 15.6 7.51111 16 8 16H9.77778C10.2667 16 10.6667 15.6 10.6667 15.1111Z" />
+        </symbol>
+        <symbol width="15" height="15" viewBox="0 0 15 15" id="icon-plus">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M7.07594 0.810683C6.68808 0.810683 6.37481 1.12395 6.37481 1.51181L6.36984 6.36995L1.50673 6.36995C1.11887 6.36995 0.805601 6.68322 0.805601 7.07108C0.805601 7.45893 1.11887 7.7722 1.50673 7.7722L6.36984 7.7722L6.36984 12.6353C6.36984 13.0232 6.68311 13.3364 7.07097 13.3364C7.45882 13.3364 7.77209 13.0232 7.77209 12.6353V7.7722H12.6352C13.0231 7.7722 13.3363 7.45893 13.3363 7.07108C13.3363 6.68322 13.0231 6.36995 12.6352 6.36995H7.77209V1.50684C7.77209 1.12892 7.45385 0.810683 7.07594 0.810683Z" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect y="7.07108" width="10" height="10" transform="rotate(-45 0 7.07108)" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol width="7" height="12" viewBox="0 0 7 12" id="icon-arrow">
+            <path
+                d="M1.31964 11.8498L6.59821 6.57128C6.92139 6.2481 6.92139 5.8172 6.59821 5.60175L1.31964 0.323177C1.21192 0.107726 0.996464 0 0.781012 0C0.565561 0 0.457835 0.107726 0.242383 0.215452C-0.0807944 0.538629 -0.0807944 0.969533 0.242383 1.18498L4.98232 5.92492L0.242383 10.6649C-0.0807944 10.988 -0.0807944 11.4189 0.242383 11.7421C0.565561 12.0653 0.996464 12.0653 1.31964 11.8498Z" />
+        </symbol>
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-document">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M14.2204 4.52149L11.3285 0.472874C11.117 0.17675 10.7736 0 10.4097 0C10.3622 0 10.3236 0.0385624 10.3236 0.0861248V4.47312C10.3236 4.69818 10.506 4.88062 10.7311 4.88062H14.0356C14.2203 4.88062 14.3278 4.67183 14.2204 4.52149Z" />
+                <path
+                    d="M13.8942 6.15383H9.85119C9.40891 6.15383 9.05045 5.7953 9.05045 5.35308V4.88062V0.800748C9.05038 0.358531 8.69185 0 8.24963 0H2.43624C1.81149 0 1.30505 0.506437 1.30505 1.13122V14.8688C1.30505 15.4935 1.81149 16 2.43624 16H13.5638C14.1885 16 14.6949 15.4936 14.6949 14.8689V6.95458C14.6949 6.51236 14.3364 6.15383 13.8942 6.15383ZM4.38199 2.50396H6.39917C6.74307 2.50396 7.03992 2.76818 7.05507 3.11174C7.07117 3.47643 6.78023 3.77715 6.41911 3.77715H4.40192C4.05802 3.77715 3.76117 3.51293 3.74602 3.16937C3.72992 2.80471 4.02083 2.50396 4.38199 2.50396ZM11.5968 13.0716H4.40195C4.05805 13.0716 3.76114 12.8074 3.74599 12.4638C3.72989 12.0991 4.02083 11.7984 4.38195 11.7984H11.5768C11.9208 11.7984 12.2176 12.0627 12.2328 12.4062C12.2489 12.7709 11.9579 13.0716 11.5968 13.0716ZM11.5968 10.9071H4.40195C4.05805 10.9071 3.76114 10.6429 3.74599 10.2994C3.72989 9.93467 4.02083 9.63392 4.38195 9.63392H11.5768C11.9208 9.63392 12.2176 9.89817 12.2328 10.2417C12.2489 10.6064 11.9579 10.9071 11.5968 10.9071ZM11.5968 8.82758H4.40195C4.05805 8.82758 3.76114 8.56336 3.74599 8.2198C3.72989 7.85511 4.02083 7.55436 4.38195 7.55436H11.5768C11.9208 7.55436 12.2176 7.81858 12.2328 8.16214C12.2489 8.52683 11.9579 8.82758 11.5968 8.82758Z" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="16" height="16" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-card">
+            <path
+                d="M8.00008 8.86484C8.84185 8.86484 9.52406 8.18247 9.52406 7.34082C9.52406 6.49914 8.84189 5.8166 8.00008 5.8166C7.15827 5.8166 6.47601 6.49914 6.47601 7.34082C6.47601 8.18247 7.15827 8.86484 8.00008 8.86484Z" />
+            <path
+                d="M11.6019 1.91324H9.23299V0.410984C9.23299 0.183984 9.04897 0 8.82197 0H7.17807C6.95111 0 6.76709 0.183984 6.76709 0.410984V1.91329H4.39814C3.50977 1.91329 2.78979 2.63338 2.78979 3.52171V14.3916C2.78979 15.2799 3.50977 16 4.39814 16H11.6019C12.4903 16 13.2103 15.2799 13.2103 14.3916V3.52171C13.2103 2.63334 12.4903 1.91324 11.6019 1.91324ZM7.46743 0.596344H8.53269C8.67733 0.596344 8.79454 0.713595 8.79454 0.858315C8.79454 1.00303 8.67733 1.12033 8.53269 1.12033H7.46743C7.32279 1.12033 7.2055 1.00303 7.2055 0.858315C7.2055 0.713595 7.32279 0.596344 7.46743 0.596344ZM6.64788 2.45911H6.76709V2.56628C6.76709 2.79328 6.95111 2.97726 7.17807 2.97726H8.82193C9.04893 2.97726 9.23295 2.79328 9.23295 2.56628V2.45911H9.35212C9.59884 2.45911 9.7987 2.65906 9.7987 2.90569C9.7987 3.15232 9.59884 3.35227 9.35212 3.35227H6.64788C6.4012 3.35227 6.2013 3.15228 6.2013 2.90569C6.2013 2.65906 6.4012 2.45911 6.64788 2.45911ZM5.23686 5.42112H10.7632V10.6535H10.127L10.2094 9.58335C10.2206 9.43888 10.1709 9.29633 10.0724 9.18996C9.97397 9.08363 9.83555 9.02323 9.69079 9.02323H6.30938C6.16449 9.02323 6.02619 9.08363 5.9277 9.18996C5.82924 9.29637 5.7796 9.43892 5.79073 9.58335L5.87305 10.6535H5.2369L5.23686 5.42112ZM10.6983 13.6984H5.3018C5.02441 13.6984 4.79945 13.4735 4.79945 13.1959C4.79945 12.9185 5.02437 12.6935 5.3018 12.6935H10.6983C10.9756 12.6935 11.2007 12.9185 11.2007 13.1959C11.2006 13.4734 10.9757 13.6984 10.6983 13.6984Z" />
+        </symbol>
+        <symbol width="7" height="8" viewBox="0 0 7 8" id="icon-last-page">
+            <path
+                d="M0.771654 7.8999L3.85827 4.38085C4.04724 4.1654 4.04724 3.87813 3.85827 3.7345L0.771654 0.215452C0.708661 0.071817 0.582677 0 0.456693 0C0.330709 0 0.267717 0.0718171 0.141732 0.143634C-0.0472441 0.359086 -0.0472441 0.646355 0.141732 0.78999L2.91339 3.94995L0.141732 7.10991C-0.0472441 7.32536 -0.0472441 7.61263 0.141732 7.82808C0.330709 8.04353 0.582677 8.04353 0.771654 7.8999Z" />
+            <path
+                d="M3.77165 7.8999L6.85827 4.38085C7.04724 4.1654 7.04724 3.87813 6.85827 3.7345L3.77165 0.215452C3.70866 0.071817 3.58268 0 3.45669 0C3.33071 0 3.26772 0.0718171 3.14173 0.143634C2.95276 0.359086 2.95276 0.646355 3.14173 0.78999L5.91339 3.94995L3.14173 7.10991C2.95276 7.32536 2.95276 7.61263 3.14173 7.82808C3.33071 8.04353 3.58268 8.04353 3.77165 7.8999Z" />
+        </symbol>
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-megaphone">
+            <path
+                d="M8.35625 0.403145C7.9875 0.0375196 7.39375 0.0406446 7.02812 0.403145C6.6625 0.76877 6.6625 1.36252 7.02812 1.73127L13.2688 7.96877C13.6344 8.33439 14.2281 8.33439 14.5938 7.96877C14.9594 7.60314 14.9594 7.00939 14.5938 6.64377L8.35625 0.403145Z" />
+            <path
+                d="M6.51875 2.82501C6.1875 4.48126 5.38437 6.05314 4.29688 7.32501L7.69063 10.7188C8.96563 9.63126 10.5156 8.80626 12.1719 8.47501L12.4062 8.42814L6.56563 2.59064L6.51875 2.82501Z" />
+            <path
+                d="M3.67504 8.03125L1.35316 10.35C0.806287 10.8969 0.803162 11.7875 1.35316 12.3375L2.67816 13.6625C3.22504 14.2094 4.11566 14.2125 4.66566 13.6625L6.98441 11.3437L3.67504 8.03125ZM4.00629 11.6781C3.82191 11.8625 3.52504 11.8625 3.34379 11.6781C3.15941 11.4937 3.15941 11.1969 3.34379 11.0156L4.00629 10.3531C4.19066 10.1687 4.48754 10.1687 4.66879 10.3531C4.85316 10.5375 4.85316 10.8344 4.66879 11.0156L4.00629 11.6781Z" />
+            <path
+                d="M9.5844 11.2875L9.1094 10.8125C8.8469 10.9875 8.5969 11.1781 8.35315 11.3844L8.91877 11.95C9.10002 12.1313 9.10315 12.4281 8.91877 12.6125L8.2719 13.2594L7.31877 12.3375L5.99377 13.6625L8.1219 15.7219C8.4844 16.0844 9.08127 16.0875 9.4469 15.7219C9.81252 15.3563 9.81252 14.7625 9.4469 14.3969L8.9469 13.9125L9.5844 13.275C10.1344 12.7281 10.1313 11.8375 9.5844 11.2875Z" />
+            <path
+                d="M10.8406 1.875C11.1 1.875 11.3094 1.66562 11.3094 1.40625V0.46875C11.3094 0.209375 11.1 0 10.8406 0C10.5813 0 10.3719 0.209375 10.3719 0.46875V1.40625C10.3719 1.66562 10.5813 1.875 10.8406 1.875Z" />
+            <path
+                d="M14.5906 3.75H13.6531C13.3938 3.75 13.1844 3.95937 13.1844 4.21875C13.1844 4.47812 13.3938 4.6875 13.6531 4.6875H14.5906C14.85 4.6875 15.0594 4.47812 15.0594 4.21875C15.0594 3.95937 14.85 3.75 14.5906 3.75Z" />
+            <path
+                d="M13.0469 2.67499L13.9844 1.73749C14.1687 1.55312 14.1687 1.25624 13.9844 1.07499C13.8 0.893743 13.5031 0.890618 13.3219 1.07499L12.3844 2.01249C12.2 2.19687 12.2 2.49374 12.3844 2.67499C12.5687 2.85624 12.8625 2.85937 13.0469 2.67499Z" />
+        </symbol>
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-report">
+            <path
+                d="M9.00165 6.66636C8.72434 6.66636 8.48716 6.56784 8.29378 6.37446C8.10039 6.18107 8.00187 5.9439 8.00187 5.66659V0H2.33528C2.05797 0 1.8208 0.0985177 1.62741 0.291904C1.43403 0.485291 1.33551 0.722463 1.33551 0.999772V15.0002C1.33551 15.2775 1.43403 15.5147 1.62741 15.7081C1.8208 15.9015 2.05797 16 2.33528 16H13.6685C13.9458 16 14.1829 15.9015 14.3763 15.7081C14.5697 15.5147 14.6682 15.2775 14.6682 15.0002V6.66636H9.00165ZM5.99868 13.0007C5.99868 13.0992 5.96949 13.1795 5.90381 13.2415C5.84178 13.3035 5.76151 13.3364 5.66299 13.3364H4.99891C4.90039 13.3364 4.82012 13.3035 4.75809 13.2415C4.69606 13.1795 4.66322 13.0992 4.66322 13.0007V5.66659C4.66322 5.56807 4.69606 5.4878 4.75809 5.42577C4.82012 5.36374 4.90039 5.3309 4.99891 5.3309H5.66664C5.76516 5.3309 5.84178 5.36009 5.90746 5.42577C5.96949 5.4878 6.00233 5.56807 6.00233 5.66659V13.0007H5.99868ZM8.66596 13.1685C8.66596 13.216 8.63312 13.2561 8.57109 13.2889C8.50906 13.3218 8.42878 13.3364 8.33027 13.3364H7.66253C7.56402 13.3364 7.48374 13.3218 7.42171 13.2889C7.35968 13.2597 7.32685 13.216 7.32685 13.1685V9.50148C7.32685 9.45405 7.35603 9.41391 7.42171 9.38107C7.48374 9.34823 7.56402 9.33364 7.66253 9.33364H8.33027C8.42878 9.33364 8.50541 9.34823 8.57109 9.38107C8.63312 9.41026 8.66596 9.45405 8.66596 9.50148V13.1685ZM11.3332 13.2525C11.3332 13.278 11.3004 13.2962 11.2384 13.3108C11.1763 13.3254 11.0961 13.3327 10.9975 13.3327H10.3298C10.2313 13.3327 10.151 13.3254 10.089 13.3108C10.027 13.2962 9.99412 13.2743 9.99412 13.2525V11.4171C9.99412 11.3916 10.0233 11.3733 10.089 11.3551C10.151 11.3405 10.2313 11.3332 10.3298 11.3332H10.9975C11.0961 11.3332 11.1763 11.3405 11.2384 11.3551C11.3004 11.3697 11.3332 11.3916 11.3332 11.4171V13.2525Z" />
+            <path
+                d="M13.9604 3.95896L10.7093 0.707873C10.3626 0.361237 9.9029 0.135011 9.33368 0.0328445V5.33455H14.6354C14.5333 4.76534 14.307 4.30559 13.9604 3.95896Z" />
+        </symbol>
+        <symbol width="15" height="14" viewBox="0 0 15 14" id="icon-resident">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M3.67289 4.20004C4.182 4.20004 4.61652 4.01782 4.9766 3.65322C5.3368 3.28864 5.51691 2.84864 5.51691 2.33338C5.51691 1.81817 5.3368 1.37818 4.9766 1.01355C4.61652 0.648971 4.18197 0.466644 3.67289 0.466644C3.16384 0.466644 2.72929 0.648971 2.36914 1.01355C2.00902 1.37818 1.8289 1.81807 1.8289 2.33338C1.8289 2.84875 2.00902 3.28864 2.36914 3.65322C2.72929 4.01772 3.16384 4.20004 3.67289 4.20004Z" />
+                <path
+                    d="M5.86623 7.11327C6.40647 7.65997 7.05827 7.93345 7.82191 7.93345C8.58558 7.93345 9.23735 7.65997 9.77757 7.11327C10.3177 6.56622 10.5879 5.90632 10.5879 5.13345C10.5879 4.36052 10.3177 3.70065 9.77757 3.15375C9.23735 2.60684 8.58558 2.33339 7.82191 2.33339C7.05827 2.33339 6.40642 2.60689 5.86623 3.15375C5.32604 3.70057 5.05586 4.36044 5.05586 5.13345C5.05586 5.90645 5.32604 6.56629 5.86623 7.11327Z" />
+                <path
+                    d="M11.971 4.20004C12.4799 4.20004 12.9145 4.01782 13.2746 3.65322C13.6348 3.28864 13.8148 2.84864 13.8148 2.33338C13.8148 1.81817 13.6348 1.37818 13.2746 1.01355C12.9146 0.648971 12.4799 0.466644 11.971 0.466644C11.4618 0.466644 11.0273 0.648971 10.6671 1.01355C10.3071 1.37818 10.127 1.81807 10.127 2.33338C10.127 2.84875 10.3071 3.28864 10.6671 3.65322C11.0273 4.01772 11.4618 4.20004 11.971 4.20004Z" />
+                <path
+                    d="M13.8436 4.20013C13.8149 4.20013 13.7105 4.25119 13.5304 4.35327C13.3504 4.4554 13.1162 4.55871 12.8281 4.66325C12.5401 4.76768 12.2543 4.81996 11.9711 4.81996C11.6492 4.81996 11.3301 4.7641 11.013 4.65224C11.0369 4.83201 11.0489 4.99248 11.0489 5.13346C11.0489 5.80916 10.8544 6.43136 10.4653 7.00012C11.2434 7.02451 11.8795 7.33556 12.3743 7.93365H13.3395C13.7332 7.93365 14.0646 7.83499 14.3335 7.63816C14.6023 7.44142 14.7368 7.15326 14.7368 6.77415C14.7369 5.05804 14.4393 4.20003 13.8436 4.20013Z" />
+                <path
+                    d="M12.7672 10.0954C12.7167 9.81099 12.653 9.54721 12.5762 9.30423C12.4993 9.06107 12.3961 8.82424 12.2666 8.59331C12.1369 8.36259 11.988 8.16557 11.8199 8.00266C11.6517 7.83974 11.4464 7.70987 11.2039 7.61252C10.9615 7.51531 10.6937 7.46674 10.4008 7.46674C10.3527 7.46674 10.2495 7.51901 10.091 7.62355C9.93251 7.72798 9.7574 7.84485 9.56523 7.97349C9.3731 8.10213 9.11642 8.2189 8.79447 8.32344C8.47249 8.42797 8.14839 8.48025 7.82202 8.48025C7.49553 8.48025 7.17133 8.42797 6.84958 8.32344C6.52775 8.2189 6.27092 8.10213 6.07882 7.97349C5.88667 7.84485 5.71145 7.72798 5.55301 7.62355C5.3945 7.51901 5.29131 7.46674 5.24322 7.46674C4.95033 7.46674 4.68262 7.51531 4.44009 7.61252C4.19756 7.70987 3.99229 7.83974 3.82424 8.00266C3.65604 8.1654 3.50731 8.36259 3.37755 8.59331C3.24795 8.82424 3.14471 9.06107 3.06786 9.30423C2.99104 9.54721 2.92749 9.81099 2.87698 10.0954C2.82652 10.3798 2.79294 10.6446 2.77614 10.8902C2.75931 11.1357 2.75093 11.3874 2.75093 11.645C2.75093 12.2282 2.92615 12.6889 3.27669 13.0266C3.62735 13.3644 4.09319 13.5334 4.67412 13.5334H10.9697C11.5507 13.5334 12.0165 13.3644 12.3673 13.0266C12.7178 12.6889 12.8931 12.2282 12.8931 11.645C12.8931 11.3874 12.8846 11.1358 12.868 10.8902C12.851 10.6446 12.8174 10.3798 12.7672 10.0954Z" />
+                <path
+                    d="M5.1783 7.00007C4.78931 6.43131 4.59487 5.80912 4.59495 5.13342C4.59495 4.99244 4.60698 4.83208 4.63095 4.6522C4.31397 4.76399 3.99464 4.81992 3.67289 4.81992C3.38956 4.81992 3.10392 4.76767 2.81575 4.66321C2.5277 4.55868 2.29352 4.45537 2.11351 4.35324C1.93342 4.25116 1.8289 4.2001 1.80011 4.2001C1.20462 4.20013 0.906891 5.05813 0.906891 6.7741C0.906891 7.15321 1.04136 7.44137 1.31023 7.6381C1.57918 7.83493 1.91054 7.93341 2.30419 7.93341H3.26947C3.76414 7.33551 4.40033 7.02444 5.1783 7.00007Z" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect x="0.906891" width="13.83" height="14" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol width="18" height="18" viewBox="0 0 18 18" id="icon-search">
+            <path
+                d="M13.1986 11.608H12.3645L12.0688 11.3231C13.3359 9.84582 13.9905 7.83036 13.6315 5.68827C13.1352 2.75477 10.6857 0.412194 7.72937 0.0534209C3.26319 -0.495291 -0.495582 3.26128 0.0534523 7.72484C0.412436 10.6794 2.75639 13.1275 5.69161 13.6235C7.83495 13.9823 9.8516 13.328 11.3298 12.0618L11.6148 12.3572V13.1909L16.1021 17.6755C16.535 18.1082 17.2424 18.1082 17.6753 17.6755C18.1082 17.2429 18.1082 16.5359 17.6753 16.1033L13.1986 11.608ZM6.86358 11.608C4.23456 11.608 2.11233 9.48705 2.11233 6.85956C2.11233 4.23207 4.23456 2.11109 6.86358 2.11109C9.49261 2.11109 11.6148 4.23207 11.6148 6.85956C11.6148 9.48705 9.49261 11.608 6.86358 11.608Z" />
+        </symbol>
+        <symbol width="10" height="10" viewBox="0 0 10 10" id="icon-select">
+            <path
+                d="M8.79166 5.70834H1.25C0.95833 5.70834 0.83333 6.04168 0.999997 6.25001L4.54166 9.79168C4.79166 10.0417 5.20833 10.0417 5.45833 9.79168L9 6.25001C9.20833 6.04168 9.08333 5.70834 8.79166 5.70834Z" />
+            <path
+                d="M1.20833 4.29168H8.75C9.04167 4.29168 9.16667 3.95834 9 3.75001L5.45833 0.208344C5.20833 -0.0416565 4.79167 -0.0416565 4.54167 0.208344L0.999998 3.75001C0.791665 3.95834 0.916665 4.29168 1.20833 4.29168Z" />
+        </symbol>
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-setting">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M15.1532 6.2627L13.8999 6.10339C13.7967 5.78528 13.6692 5.47864 13.5207 5.18738L14.2946 4.19067C14.6079 3.78735 14.5713 3.21802 14.2133 2.87134L13.1632 1.82129C12.8133 1.45996 12.2439 1.42395 11.84 1.73669L10.8446 2.51062C10.5532 2.36206 10.2466 2.23462 9.92788 2.13135L9.76857 0.880005C9.70864 0.378052 9.28261 0 8.77797 0H7.28456C6.77992 0 6.35389 0.378052 6.29396 0.878052L6.13465 2.13135C5.81593 2.23462 5.50929 2.36133 5.21791 2.51062L4.22193 1.73669C3.81922 1.42395 3.24988 1.45996 2.90259 1.81799L1.85254 2.86731C1.49121 3.21802 1.45459 3.78735 1.76795 4.19128L2.54187 5.18738C2.39258 5.47864 2.26587 5.78528 2.1626 6.10339L0.911257 6.2627C0.409302 6.32263 0.03125 6.74866 0.03125 7.2533V8.7467C0.03125 9.25134 0.409302 9.67737 0.909303 9.7373L2.1626 9.89661C2.26587 10.2147 2.39332 10.5214 2.54187 10.8126L1.76795 11.8093C1.45459 12.2126 1.49121 12.782 1.84925 13.1287L2.8993 14.1787C3.24988 14.5393 3.81861 14.5753 4.22254 14.2627L5.21864 13.4886C5.5099 13.6379 5.81654 13.7654 6.13465 13.868L6.29396 15.1187C6.35389 15.6219 6.77992 16 7.28456 16H8.77797C9.28261 16 9.70864 15.6219 9.76857 15.1219L9.92788 13.8687C10.246 13.7654 10.5526 13.6379 10.8439 13.4894L11.8406 14.2633C12.2439 14.5767 12.8133 14.54 13.1599 14.182L14.21 13.132C14.5713 12.7814 14.6079 12.2126 14.2946 11.8087L13.5207 10.8126C13.6699 10.5214 13.7973 10.2147 13.8999 9.89661L15.1507 9.7373C15.6526 9.67737 16.0307 9.25134 16.0307 8.7467V7.2533C16.0313 6.74866 15.6532 6.32263 15.1532 6.2627ZM8.03127 11.3334C6.19325 11.3334 4.69789 9.83801 4.69789 8C4.69789 6.16199 6.19325 4.66663 8.03127 4.66663C9.86928 4.66663 11.3646 6.16199 11.3646 8C11.3646 9.83801 9.86928 11.3334 8.03127 11.3334Z" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="16" height="16" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-cogwheels">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M9.81787 7.65488L8.85042 8.09066C8.54547 7.67523 8.16611 7.31841 7.73311 7.03962L8.1091 6.04734C8.18102 5.85758 8.08544 5.64557 7.89576 5.57372L6.93316 5.20904C6.84207 5.17452 6.74098 5.1776 6.65216 5.21764C6.56334 5.25768 6.49407 5.33129 6.45954 5.42246L6.08355 6.41473C5.57445 6.33657 5.05403 6.35244 4.55029 6.46153L4.1145 5.49408C4.07446 5.40527 4.00085 5.33599 3.90968 5.30146C3.81858 5.26693 3.7175 5.27002 3.62868 5.31006L2.69018 5.73284C2.5052 5.81615 2.42292 6.03375 2.50615 6.21858L2.94194 7.18603C2.5265 7.49098 2.16969 7.87035 1.89089 8.30334L0.898615 7.92736C0.708931 7.85551 0.49684 7.95101 0.424993 8.14069L0.0602442 9.10322C0.0257897 9.19424 0.0288017 9.29533 0.0688395 9.38422C0.108877 9.47304 0.182488 9.54231 0.273657 9.57684L1.26586 9.95276C1.18725 10.4624 1.20349 10.9837 1.31258 11.4861L0.345211 11.9218C0.256393 11.9618 0.187117 12.0355 0.152589 12.1266C0.118134 12.2176 0.121146 12.3188 0.161184 12.4076L0.583969 13.3462C0.667277 13.5312 0.88473 13.6135 1.06971 13.5302L2.03716 13.0944C2.34211 13.5099 2.72148 13.8667 3.15447 14.1455L2.77848 15.1378C2.74403 15.2288 2.74711 15.3299 2.78708 15.4188C2.82712 15.5076 2.90073 15.5769 2.9919 15.6114L3.95442 15.9761C4.1441 16.0479 4.35619 15.9524 4.42804 15.7627L4.80403 14.7704C5.31306 14.8486 5.83363 14.8327 6.3373 14.7236L6.77308 15.6912C6.81312 15.78 6.88673 15.8493 6.9779 15.8838C7.069 15.9183 7.17008 15.9152 7.2589 15.8752L8.1974 15.4524C8.28622 15.4124 8.3555 15.3388 8.39003 15.2477C8.42455 15.1565 8.42154 15.0555 8.38143 14.9667L7.94564 13.9992C8.36115 13.6943 8.71789 13.315 8.99669 12.8819L9.98897 13.2579C10.1786 13.3297 10.3907 13.2342 10.4626 13.0446L10.8273 12.082C10.8431 12.04 10.8511 11.9959 10.8511 11.9519C10.8511 11.9004 10.8403 11.8489 10.8187 11.801C10.7786 11.7121 10.705 11.6429 10.6139 11.6083L9.62165 11.2324C9.70018 10.7228 9.68402 10.2014 9.57492 9.69908L10.5423 9.26337C10.6311 9.22333 10.7004 9.14972 10.7349 9.05855C10.7694 8.96746 10.7664 8.8663 10.7263 8.77755L10.3036 7.83905C10.2203 7.654 10.0029 7.57157 9.81787 7.65488ZM6.3262 8.2636C7.28858 8.6282 7.93514 9.56435 7.93514 10.5931C7.93514 10.894 7.88048 11.1907 7.77278 11.475C7.53711 12.0971 7.07326 12.5902 6.46667 12.8634C5.86015 13.1366 5.18347 13.1573 4.56138 12.9216C3.599 12.557 2.95245 11.6208 2.95245 10.5921C2.95245 10.2912 3.0071 9.99448 3.1148 9.71018C3.35047 9.08809 3.81432 8.595 4.42084 8.32178C5.02743 8.0485 5.70411 8.02785 6.3262 8.2636ZM11.342 0.0966887C11.2703 0.162512 11.2276 0.254268 11.2234 0.351534L11.1937 1.04342C10.8672 1.10711 10.5519 1.22216 10.2609 1.38378L9.79267 0.873569C9.65551 0.72407 9.42315 0.714153 9.27372 0.85131L8.72171 1.35792C8.64994 1.42374 8.60726 1.5155 8.60307 1.61284C8.59947 1.70996 8.63363 1.80517 8.69945 1.87694L9.16771 2.38707C8.98178 2.66322 8.84021 2.96744 8.74882 3.2873L8.05694 3.25762C7.85425 3.24895 7.68293 3.40624 7.67426 3.60893L7.64216 4.35745C7.63452 4.55911 7.79078 4.73145 7.99339 4.74012L8.68528 4.7698C8.74897 5.09628 8.86401 5.41151 9.02556 5.70257L8.51535 6.17083C8.44358 6.23666 8.4009 6.32841 8.39671 6.42568C8.39274 6.52295 8.42727 6.61801 8.49309 6.68978L8.9997 7.24179C9.13686 7.39129 9.36923 7.40121 9.51865 7.26405L10.0289 6.79579C10.305 6.98173 10.6091 7.12329 10.9291 7.21468L10.8994 7.90649C10.8913 8.1083 11.0479 8.28057 11.2506 8.28924L11.9992 8.32134C12.0965 8.32553 12.1915 8.29085 12.2633 8.22496C12.335 8.15913 12.3777 8.06738 12.3819 7.97004L12.4115 7.27823C12.7381 7.21453 13.0533 7.09949 13.3444 6.93794L13.8126 7.44808C13.8784 7.51985 13.9702 7.56253 14.0675 7.56672C14.1648 7.57091 14.2598 7.53623 14.3316 7.47034L14.8836 6.96373C14.9553 6.8979 14.998 6.80615 15.0022 6.70881C15.0061 6.61191 14.9717 6.51648 14.9058 6.44471L14.4376 5.93457C14.6235 5.65842 14.7651 5.35421 14.8565 5.03434L15.5483 5.06403C15.751 5.07269 15.9224 4.91548 15.931 4.71279L15.9631 3.96427C15.9633 3.95898 15.9634 3.95376 15.9634 3.94855C15.9634 3.85672 15.929 3.76805 15.8667 3.70017C15.8009 3.62839 15.7092 3.58571 15.6119 3.58152L14.92 3.55184C14.8563 3.22537 14.7413 2.91014 14.5797 2.61907L15.0899 2.15081C15.1617 2.08499 15.2044 1.99323 15.2086 1.89597C15.2128 1.79826 15.178 1.70356 15.1122 1.63186L14.6056 1.07986C14.4684 0.930357 14.2361 0.92044 14.0866 1.0576L13.5764 1.52586C13.3003 1.33992 12.9961 1.19835 12.6762 1.10696L12.7059 0.415154C12.7137 0.212687 12.5573 0.0411505 12.3547 0.0324082L11.6061 0.00030467C11.5088 -0.00388196 11.4138 0.0307917 11.342 0.0966887ZM13.5139 4.23425C13.4735 5.17782 12.6729 5.91261 11.7293 5.87213C10.81 5.83275 10.0898 5.08173 10.0898 4.1624C10.0898 4.13757 10.0903 4.11259 10.0914 4.08754C10.1319 3.14397 10.9325 2.40918 11.876 2.44966C12.8203 2.49014 13.5539 3.28297 13.5139 4.23425Z" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect y="16" width="16" height="16" transform="rotate(-90 0 16)" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-wallet">
+            <path
+                d="M11.6923 5.30768H16V3.30768C16 2.03522 14.9647 1 13.6923 1H2.30768C1.03522 1 0 2.03522 0 3.30768V11.923C0 13.1955 1.03522 14.2307 2.30768 14.2307H13.6923C14.9647 14.2307 16 13.1955 16 11.923V9.92304H11.6923C10.4198 9.92304 9.3846 8.88782 9.3846 7.61536C9.3846 6.34289 10.4198 5.30768 11.6923 5.30768Z" />
+            <path
+                d="M11.6923 6.23074C10.9288 6.23074 10.3077 6.85186 10.3077 7.61536C10.3077 8.37885 10.9288 8.99997 11.6923 8.99997H16V6.23077H11.6923V6.23074ZM12.3077 8.07688H11.6923C11.4374 8.07688 11.2308 7.87023 11.2308 7.61536C11.2308 7.36048 11.4374 7.15383 11.6923 7.15383H12.3077C12.5626 7.15383 12.7692 7.36048 12.7692 7.61536C12.7692 7.87023 12.5626 8.07688 12.3077 8.07688Z" />
+        </symbol>
+        <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-check">
+            <g clip-path="url(#clip0)">
+                <path
+                    d="M13.6594 2.34072C10.5386 -0.780118 5.46146 -0.780118 2.34063 2.34072C-0.780209 5.46087 -0.780209 10.5393 2.34063 13.6595C3.90072 15.2202 5.95036 15.9999 7.99999 15.9999C10.0496 15.9999 12.0986 15.2202 13.6594 13.6595C16.7802 10.5393 16.7802 5.46087 13.6594 2.34072ZM12.4735 5.80369L7.80459 10.4726C7.67452 10.6027 7.50379 10.668 7.33302 10.668C7.16228 10.668 6.99151 10.6027 6.86145 10.4726L4.19351 7.80468C3.93273 7.5439 3.93273 7.12235 4.19351 6.86157C4.4543 6.60079 4.87584 6.60079 5.13662 6.86157L7.33302 9.05797L11.5304 4.86061C11.7912 4.59983 12.2127 4.59983 12.4735 4.86061C12.7343 5.12136 12.7343 5.54291 12.4735 5.80369Z" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="16" height="16" fill="white" />
+                </clipPath>
+            </defs>
+        </symbol>
+        <symbol width="7" height="8" viewBox="0 0 7 8" id="icon-last-page">
+            <path
+                d="M0.771654 7.8999L3.85827 4.38085C4.04724 4.1654 4.04724 3.87813 3.85827 3.7345L0.771654 0.215452C0.708661 0.071817 0.582677 0 0.456693 0C0.330709 0 0.267717 0.0718171 0.141732 0.143634C-0.0472441 0.359086 -0.0472441 0.646355 0.141732 0.78999L2.91339 3.94995L0.141732 7.10991C-0.0472441 7.32536 -0.0472441 7.61263 0.141732 7.82808C0.330709 8.04353 0.582677 8.04353 0.771654 7.8999Z" />
+            <path
+                d="M3.77165 7.8999L6.85827 4.38085C7.04724 4.1654 7.04724 3.87813 6.85827 3.7345L3.77165 0.215452C3.70866 0.071817 3.58268 0 3.45669 0C3.33071 0 3.26772 0.0718171 3.14173 0.143634C2.95276 0.359086 2.95276 0.646355 3.14173 0.78999L5.91339 3.94995L3.14173 7.10991C2.95276 7.32536 2.95276 7.61263 3.14173 7.82808C3.33071 8.04353 3.58268 8.04353 3.77165 7.8999Z" />
+        </symbol>
+        <symbol width="42" height="42" viewBox="0 0 42 42" id="icon-user" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path
+                d="M21 0C9.40625 0 0 9.3975 0 21C0 32.6025 9.40625 42 21 42C32.5938 42 42 32.5938 42 21C42 9.40625 32.5938 0 21 0ZM16.45 8.4175C18.9613 5.90625 23.03 5.90625 25.5412 8.4175C28.0525 10.9288 28.0525 14.9975 25.5412 17.5088C23.03 20.02 18.9613 20.02 16.45 17.5088C13.9387 15.0063 13.9387 10.9288 16.45 8.4175ZM29.0325 32.2437H12.9675C12.0837 32.2437 11.3575 31.5263 11.3575 30.6338C11.3575 26.2063 14.9625 22.6012 19.39 22.6012H22.6012C27.0287 22.6012 30.6338 26.2063 30.6338 30.6338C30.6425 31.5263 29.925 32.2437 29.0325 32.2437Z" />
+        </symbol>
+        <symbol width="14" height="12" viewBox="0 0 14 12" id="icon-calendar">
+            <path
+                d="M12.6 1.33333H11.9V0.666667C11.9 0.3 11.585 0 11.2 0C10.815 0 10.5 0.3 10.5 0.666667V1.33333H3.50001V0.666667C3.50001 0.3 3.185 0 2.8 0C2.415 0 2.10001 0.3 2.10001 0.666667V1.33333H1.4C0.629999 1.33333 0 1.93333 0 2.66667V10.6667C0 11.4 0.630001 12 1.4 12H12.6C13.37 12 14 11.4 14 10.6667V2.66667C14 1.93333 13.37 1.33333 12.6 1.33333ZM11.9 10.6667H2.10001C1.715 10.6667 1.4 10.3667 1.4 10V4H12.6V10C12.6 10.3667 12.285 10.6667 11.9 10.6667Z" />
+        </symbol>
+        <symbol width="26" height="17" viewBox="0 0 26 17" id="icon-back" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M24.0112 6.96575L3.76301 6.96581L9.1033 1.85194C9.53009 1.44325 9.53364 0.768912 9.11118 0.35575C8.68872 -0.0574128 8.0028 -0.0610249 7.57601 0.347666L0.364424 7.25348C-0.0623615 7.66217 -0.0658572 8.32597 0.3566 8.73913L7.48411 15.731C7.90657 16.1442 8.5925 16.1478 9.01928 15.7391C9.44607 15.3304 9.44956 14.6666 9.0271 14.2534L3.75191 9.07312L24.0001 9.07306C24.599 9.07621 25.0914 8.60465 25.0944 8.02514C25.0975 7.44563 24.61 6.9689 24.0112 6.96575Z"
+                fill="#383838" />
+        </symbol>
+    </svg>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+@import '../common/common.scss';
+@import '../common/header.scss';
+@import '../common/sidebar.scss';
+@import '../common/pagination.scss';
+
+#wrapper {
+    position: relative;
+}
+
+.main-content {
+    .member-detail {
+        color: #383838;
+
+        h1 {
+            font-size: 20px;
+            padding-bottom: 10px;
+            margin: 0 0 16px;
+            border-bottom: 1px solid #A4A4A4;
+
+            .btn-back {
+                border: none;
+                padding: 0;
+                margin-right: 8px;
+                flex-shrink: 0;
+                line-height: 1;
+                outline: none;
+                background: none;
+
+                svg {
+                    width: 26px;
+                    height: 17px;
+                    vertical-align: top;
+                }
+            }
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 0 0 18px;
+        }
+
+        .box-info {
+            padding: 0 0 40px;
+
+            .avatar {
+                background: #fff;
+                border-radius: 50%;
+                margin-right: 20px;
+                flex-shrink: 0;
+                width: 68px;
+                height: 68px;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    max-width: 68px;
+                    max-height: 68px;
+                }
+            }
+
+            .box-field {
+                width: 100%;
+                padding: 0 85px;
+
+                &.has-avatar {
+                    padding-left: 0;
+                }
+
+                .row {
+                    margin: 0 -10px;
+                }
+
+                .col-12 {
+                    padding: 0 10px;
+                }
+
+                .form-group {
+                    margin: 0 0 12px;
+
+                    label {
+                        text-transform: uppercase;
+                        display: block;
+                        font-size: 16px;
+                        line-height: 20px;
+                        margin: 0 0 5px;
+                    }
+
+                    input[type="text"],
+                    input[type="email"],
+                    select {
+                        border: 1px solid #A4A4A4;
+                        border-radius: 3px;
+                        font-size: 16px;
+                    }
+
+                    select {
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        background: url(../../../images/caret-down.svg) no-repeat center right 10px #fff;
+                    }
+
+                    .input-component {
+                        position: relative;
+
+                        svg {
+                            position: absolute;
+                            fill: #a4a4a4;
+                            width: 14px;
+                            height: 12px;
+                            top: 12px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+
+            &.advanced-info {
+                padding-bottom: 8px;
+            }
+        }
+
+        .action {
+            text-align: right;
+            padding-top: 20px;
+            border-top: 1px solid #A4A4A4;
+
+            .btn {
+                text-transform: uppercase;
+                width: 130px;
+                font-size: 14px;
+                font-weight: 500;
+            }
+
+            .btn-reset {
+                background: #e5e5e5;
+                margin-right: 10px;
+            }
+
+            .btn-submit {
+                color: #fff;
+                background: #00B14F;
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .main-content {
+        .member-detail {
+            .box-info {
+                .box-content {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+
+                .avatar {
+                    margin-bottom: 20px;
+                    margin-right: 0;
+                }
+
+                .box-field {
+                    padding: 0;
+                }
+            }
+
+            .action {
+                text-align: center;
+            }
+        }
+    }
+}
