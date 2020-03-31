@@ -251,7 +251,7 @@ header .nav-header {
 }
 
 header .nav-header .user-info {
-  padding: 10px 15px;
+  padding: 10px 0;
   text-align: right;
   margin-bottom: 21px;
   position: relative;
@@ -276,32 +276,28 @@ header .nav-header .user-info a svg {
 }
 
 header .nav-header .user-info a.profile:hover ~ .profile-nav {
-  opacity: 1;
-  -webkit-transition-delay: 0.5s;
-          transition-delay: 0.5s;
+  display: block;
 }
 
 header .nav-header .user-info .profile-nav {
   position: absolute;
-  right: 15px;
+  right: 0;
   top: 25px;
   text-align: left;
-  padding: 10px;
+  padding: 10px 0;
   z-index: 10;
-  -webkit-transition: 0s;
-  transition: 0s;
-  opacity: 0;
+  display: none;
+  min-width: 190px;
 }
 
 header .nav-header .user-info .profile-nav:hover {
-  opacity: 1;
+  display: block;
 }
 
 header .nav-header .user-info .profile-nav ul {
   margin: 0 0;
-  border: 1px solid #00B14F;
-  padding: 10px 20px;
-  background: #fff;
+  padding: 15px 20px;
+  background: #00A54A;
 }
 
 header .nav-header .user-info .profile-nav li {
@@ -309,10 +305,23 @@ header .nav-header .user-info .profile-nav li {
 }
 
 header .nav-header .user-info .profile-nav li a {
-  color: #00B14F;
+  color: #fff;
   display: block;
   font-size: 14px;
   line-height: 25px;
+  border-bottom: 1px solid transparent;
+}
+
+header .nav-header .user-info .profile-nav li a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+}
+
+header .nav-header .user-info .profile-nav li a svg {
+  margin-right: 0;
+  width: 7px;
+  height: 12px;
+  margin-right: 5px;
 }
 
 header .nav-header .nav {

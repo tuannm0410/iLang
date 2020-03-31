@@ -229,7 +229,7 @@ header {
     font-weight: normal;
 
     .user-info {
-      padding: 10px 15px;
+      padding: 10px 0;
       text-align: right;
       margin-bottom: 21px;
       position: relative;
@@ -253,40 +253,51 @@ header {
 
         &.profile {
           &:hover ~ .profile-nav {
-            opacity: 1;
-            transition-delay: 0.5s;
+            display: block;
           }
         }
       }
 
       .profile-nav {
         position: absolute;
-        right: 15px;
+        right: 0;
         top: 25px;
         text-align: left;
-        padding: 10px;
+        padding: 10px 0;
         z-index: 10;
-        transition: 0s;
-        opacity: 0;
+        display: none;
+        min-width: 190px;
 
         &:hover {
-          opacity: 1;
+          display: block;
         }
 
         ul {
           margin: 0 0;
-          border: 1px solid #00B14F;
-          padding: 10px 20px;
-          background: #fff;
+          padding: 15px 20px;
+          background: #00A54A;
         }
 
         li {
           list-style: none;
           a {
-            color: #00B14F;
+            color: #fff;
             display: block;
             font-size: 14px;
             line-height: 25px;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+              text-decoration: none;
+              border-bottom: 1px solid #fff;
+            }
+
+            svg {
+              margin-right: 0;
+              width: 7px;
+              height: 12px;
+              margin-right: 5px;
+            }
           }
         }
       }

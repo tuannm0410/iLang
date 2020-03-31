@@ -32,6 +32,16 @@ header {
       font-size: 15px;
       padding: 0 20px;
   
+      svg {
+        fill: #fff;
+        vertical-align: middle;
+        margin-left: 3px;
+
+        &.option {
+          height: 13px;
+        }
+      }
+
       &:hover {
         text-decoration: none;
         color: #fff;
@@ -49,7 +59,8 @@ header {
       right: 0;
       top: 100%;
       background: #00A54A;
-      padding: 10px 15px;
+      padding: 10px 20px;
+      min-width: 210px;
 
       &:hover {
         display: block;
@@ -70,11 +81,21 @@ header {
         
         li {
           a {
-            padding: 0 10px 0 15px;
+            padding: 0 0;
             line-height: 21px;
+            display: block;
+            border-bottom: 1px solid transparent;
 
             &:hover {
-              text-decoration: underline;
+              border-bottom: 1px solid #fff;
+            }
+
+            svg {
+              width: 7px;
+              height: 12px;
+              float: none;
+              vertical-align: middle;
+              margin-right: 5px;
             }
           }
         }
