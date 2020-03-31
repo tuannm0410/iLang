@@ -1,0 +1,221 @@
+@import '../common/common.scss';
+@import '../common/header.scss';
+@import '../common/sidebar.scss';
+@import '../common/pagination.scss';
+
+#wrapper {
+  position: relative;
+}
+
+.main-content {
+  .apartment-detail {
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #00B14F;
+      margin-bottom: 10px;
+    }
+
+    .apartment-type {
+      font-size: 18px;
+      line-height: 18px;
+      color: #a4a4a4;
+      margin-bottom: 5px;
+    }
+
+    .members-count {
+      font-size: 18px;
+      line-height: 18px;
+      display: flex;
+      align-items: flex-end;
+
+      svg {
+        width: 18px;
+        height: 18px;
+        fill: #383838;
+        margin-right: 5px;
+        vertical-align: top;
+      }
+    }
+
+    .action {
+      margin-left: auto;
+
+      .btn {
+        color: #fff;
+        background: #00B14F;
+        display: inline-block;
+        line-height: 38px;
+        font-size: 16px;
+        padding: 0 10px;
+
+        &.btn-delete {
+          margin-right: 20px;
+        }
+
+        svg {
+          margin-left: 5px;
+          fill: #fff;
+        }
+      }
+    }
+
+    .members {
+      margin-top: 15px;
+      border-top: 2px solid #a4a4a4;
+      padding-top: 30px;
+
+      .member-item {
+        text-align: center;
+        margin-bottom: 35px;
+
+        .avatar {
+          margin-bottom: 15px;
+          max-height: 68px;
+        }
+
+        .name {
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 8px;
+        }
+
+        .role {
+          font-size: 16px;
+          line-height: 16px;
+          color: #00B14F;
+          margin-bottom: 8px;
+        }
+
+        .phone {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .send-message {
+      background: #fff;
+      border: 1px solid #d1d1d1;
+      border-radius: 5px;
+
+      .title {
+        padding: 15px;
+        font-size: 18px;
+        line-height: 18px;
+        font-weight: 500;
+        border-bottom: 1px solid #d1d1d1;
+      }
+
+      .form-message {
+        padding: 15px;
+
+        .form-group {
+          margin-bottom: 10px;
+        }
+
+        label {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 20px;
+          margin-bottom: 5px;
+        }
+
+        input, textarea {
+          border-color: #d1d1d1;
+          resize: none;
+          font-size: 16px;
+        }
+
+        .content {
+          height: 170px;
+        }
+
+        .attachment {
+          input {
+            display: none;
+          }
+
+          label {
+            font-weight: normal;
+            font-size: 16px;
+            cursor: pointer;
+
+            svg {
+              fill: #00B14F;
+            }
+          }
+        }
+
+        .bootstrap-tagsinput {
+          height: 196px;
+          overflow-y: auto;
+          border-color: #d1d1d1;
+
+          .badge {
+            line-height: 32px;
+            background: #00B14F;
+            color: #fff;
+            font-size: 14px;
+            padding: 0 5px;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin-right: 10px;
+
+            span {
+              background: url('../../../images/icon-close.svg');
+              width: 12px;
+              height: 12px;
+              display: inline-block;
+              vertical-align: middle;
+
+              &:after {
+                display: none;
+              }
+            }
+          }
+        }
+
+        select {
+          font-size: 16px;
+        }
+
+        .all-apartment {
+          display: block;
+          border: 1px solid #d1d1d1;
+          border-radius: .25rem;
+          line-height: 36px;
+          padding: 0 .75rem;
+          font-size: 16px;
+          color: #383838;
+
+          &:hover {
+            background: #00B14F;
+            color: #fff;
+            border-color: #00B14F;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .action {
+        border-top: 1px solid #d1d1d1;
+        padding: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    .apartment-detail {
+      .members-count {
+        display: none;
+      }
+
+      .action {
+        margin-left: initial;
+      }
+    }
+  }
+}
