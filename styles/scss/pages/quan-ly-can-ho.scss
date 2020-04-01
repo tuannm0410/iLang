@@ -169,11 +169,37 @@
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) and (min-width: 768px) {
   .main-content {
     .filter {
       .filter-type {
         margin-bottom: 10px;
+      }
+
+      .filter-detail {
+        .filter-name {
+          input {
+            width: auto;
+          }
+
+          .input-group {
+            margin-bottom: 10px;
+          }
+        }
+
+        .filter-status {
+          text-align: left !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    .filter {
+      .filter-type {
+        margin-bottom: 0;
 
         .btn {
           font-size: 14px;
@@ -190,6 +216,10 @@
           .input-group {
             margin-bottom: 10px;
           }
+        }
+
+        .filter-status {
+          text-align: left !important;
         }
       }
     }

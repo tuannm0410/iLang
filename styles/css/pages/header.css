@@ -42,6 +42,16 @@ header .profile a {
   padding: 0 20px;
 }
 
+header .profile a svg {
+  fill: #fff;
+  vertical-align: middle;
+  margin-left: 3px;
+}
+
+header .profile a svg.option {
+  height: 13px;
+}
+
 header .profile a:hover {
   text-decoration: none;
   color: #fff;
@@ -58,7 +68,8 @@ header .profile .profile-nav {
   right: 0;
   top: 100%;
   background: #00A54A;
-  padding: 10px 15px;
+  padding: 10px 20px;
+  min-width: 210px;
 }
 
 header .profile .profile-nav:hover {
@@ -80,10 +91,20 @@ header .profile .profile-nav ul {
 }
 
 header .profile .profile-nav ul li a {
-  padding: 0 10px 0 15px;
+  padding: 0 0;
   line-height: 21px;
+  display: block;
+  border-bottom: 1px solid transparent;
 }
 
 header .profile .profile-nav ul li a:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid #fff;
+}
+
+header .profile .profile-nav ul li a svg {
+  width: 7px;
+  height: 12px;
+  float: none;
+  vertical-align: middle;
+  margin-right: 5px;
 }
