@@ -1,7 +1,7 @@
-@import '../common/common.scss';
-@import '../common/header.scss';
-@import '../common/sidebar.scss';
-@import '../common/pagination.scss';
+@import "../common/common.scss";
+@import "../common/header.scss";
+@import "../common/sidebar.scss";
+@import "../common/pagination.scss";
 
 #wrapper {
     position: relative;
@@ -11,7 +11,7 @@
     .service-detail {
         .apartment-item {
             width: 244px;
-            background: #00B14F;
+            background: #00b14f;
             display: -webkit-box;
             display: -ms-flexbox;
             display: flex;
@@ -23,15 +23,15 @@
             box-shadow: 1px 1px 5px 1px #c2c2c2;
 
             &.has-paid {
-                background: #00B14F;
+                background: #00b14f;
             }
 
             &.not-paid {
-                background: #444E99;
+                background: #444e99;
             }
 
             &.expired {
-                background: #FF6C58;
+                background: #ff6c58;
             }
 
             .position {
@@ -92,7 +92,432 @@
                 }
             }
         }
+
+        .service-content {
+            display: flex;
+            border-top: 1px solid #a4a4a4;
+            min-height: 600px;
+
+            .list-service {
+                width: 117px;
+                padding: 20px 20px 0 0;
+                border-right: 1px solid #a4a4a4;
+                flex-shrink: 0;
+                margin: 0;
+                list-style: none;
+
+                li {
+                    margin: 0 0 20px;
+
+                    a {
+                        background: #fff;
+                        border: 2px solid #ffa800;
+                        box-sizing: border-box;
+                        border-radius: 3px;
+                        color: #000000;
+                        font-weight: 500;
+                        font-size: 14px;
+                        height: 76px;
+                        text-decoration: none;
+
+                        span {
+                            display: block;
+                            text-align: center;
+                        }
+
+                        svg {
+                            width: 24px;
+                            height: 24px;
+                            vertical-align: top;
+                            fill: #ffa800;
+                            margin: 0 0 4px;
+                        }
+
+                        &.active,
+                        &:hover {
+                            background: #ffa800;
+                            color: #fff;
+
+                            svg {
+                                fill: #fff;
+                            }
+                        }
+
+                        &.water {
+                            border-color: #008dc9;
+
+                            svg {
+                                fill: #008dc9;
+                            }
+
+                            &.active,
+                            &:hover {
+                                background: #008dc9;
+
+                                svg {
+                                    fill: #fff;
+                                }
+                            }
+                        }
+
+                        &.internet {
+                            border-color: #8a6ace;
+
+                            svg {
+                                fill: #8a6ace;
+                            }
+
+                            &.active,
+                            &:hover {
+                                background: #8a6ace;
+
+                                svg {
+                                    fill: #fff;
+                                }
+                            }
+                        }
+
+                        &.other {
+                            border-color: #444e99;
+
+                            svg {
+                                fill: #444e99;
+                            }
+
+                            &.active,
+                            &:hover {
+                                background: #444e99;
+
+                                svg {
+                                    fill: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .info-service {
+                width: 100%;
+                padding: 20px 0 0 20px;
+
+                .block-info-customer {
+                    background: #ffffff;
+                    border-radius: 3px;
+                    padding: 15px;
+                    margin: 0 0 22px;
+
+                    p {
+                        margin: 0 0 5px;
+                        font-size: 18px;
+                        line-height: 21px;
+                        color: #383838;
+
+                        strong {
+                            font-weight: 500;
+                        }
+                    }
+
+                    .list-item {
+                        .item {
+                            margin-top: 16px;
+
+                            &:first-child {
+                                margin-top: 24px;
+                            }
+
+                            h3 {
+                                font-weight: bold;
+                                font-size: 18px;
+                                line-height: 1.2;
+                                margin: 0 0 4px;
+                            }
+
+                            ul {
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    ul {
+                        margin: 10px 0 0;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                            padding: 9px 0;
+                            border-top: 1px solid #e5e5e5;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #383838;
+
+                            &:first-child {
+                                border-top: none;
+                            }
+
+                            .total {
+                                font-weight: 500;
+                                color: #008dc9;
+                            }
+                        }
+                    }
+                }
+
+                .block-history-payment {
+                    background: #ffffff;
+                    border-radius: 3px;
+                    padding: 19px 15px 0;
+                    margin: 0 0 20px;
+                    position: relative;
+
+                    h3 {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 32px;
+                        color: #383838;
+                        padding-bottom: 19px;
+                        margin: 0;
+                    }
+
+                    .date-filter {
+                        position: absolute;
+                        top: 19px;
+                        right: 15px;
+                        display: flex;
+
+                        .input-component {
+                            position: relative;
+                            width: 165px;
+                            margin-left: 15px;
+
+                            input {
+                                background: #ffffff;
+                                border: 1px solid #c5c5c5;
+                                box-sizing: border-box;
+                                border-radius: 18px;
+                                height: 32px;
+                                padding-left: 18px;
+                            }
+
+                            svg {
+                                fill: #a4a4a4;
+                                position: absolute;
+                                right: 20px;
+                                top: 9px;
+                            }
+                        }
+                    }
+
+                    .list-history {
+                        .item {
+                            border-top: 1px solid #e5e5e5;
+                            padding: 12px 5px;
+                            position: relative;
+
+                            p {
+                                margin: 0;
+                                padding: 0 0 6px;
+                                font-size: 18px;
+                                line-height: 1.2;
+                                color: #383838;
+                            }
+
+                            span {
+                                display: block;
+                                font-weight: 300;
+                                font-size: 16px;
+                                line-height: 1.2;
+                                color: #383838;
+                                padding: 0 0 6px;
+
+                                &.money {
+                                    color: #008dc9;
+                                    font-weight: 500;
+                                    font-size: 16px;
+                                    position: absolute;
+                                    right: 5px;
+                                    top: 22px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .action {
+            padding-top: 18px;
+            border-top: 1px solid #a4a4a4;
+            display: flex;
+            justify-content: space-between;
+
+            .btn-submit {
+                color: #fff;
+                background: #00b14f;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+                border-radius: 3px;
+                vertical-align: top;
+            }
+
+            .btn-comfirm-pay {
+                margin-left: 15px;
+            }
+        }
     }
 }
 
-@media(max-width: 767px) {}
+@media(max-width: 1199px) {
+    .main-content {
+        .service-detail {
+            .service-content {
+                min-height: initial;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .main-content {
+        .service-detail {
+            .apartment-item {
+                width: 280px;
+            }
+
+            .service-content {
+                display: block;
+                overflow: hidden;
+                border-top: 0;
+                min-height: initial;
+
+                .list-service {
+                    width: auto;
+                    padding: 0;
+                    border: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin: 0 -7.5px;
+
+                    li {
+                        width: 147px;
+                        padding: 0 7.5px;
+                        margin: 0 0 15px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+
+                        a {
+                            padding: 5px 0;
+                            height: auto;
+                        }
+                    }
+                }
+
+                .info-service {
+                    padding: 0;
+
+                    .block-info-customer {
+                        padding-bottom: 5px;
+
+                        .list-item {
+                            .item {
+                                h3 {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+
+                        p {
+                            font-size: 16px;
+                        }
+
+                        ul {
+                            li {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    .block-history-payment {
+                        padding: 15px 15px 0;
+
+                        h3 {
+                            font-size: 16px;
+                            line-height: 1.2;
+                            padding-bottom: 10px;
+                        }
+
+                        .date-filter {
+                            position: static;
+                            margin: 0 -5px 10px;
+
+                            .input-component {
+                                padding: 0 5px;
+                                margin: 0;
+
+                                input {
+                                    font-size: 15px;
+                                    padding-left: 10px;
+                                }
+
+                                svg {
+                                    right: 14px;
+                                }
+                            }
+                        }
+
+                        .list-history {
+                            .item {
+                                padding: 10px 0;
+
+                                p {
+                                    font-size: 16px;
+                                    padding: 0 0 2px;
+                                }
+
+                                span {
+                                    font-size: 15px;
+
+                                    &.money {
+                                        position: static;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .action {
+                flex-wrap: wrap;
+                border-top: none;
+                padding-top: 0;
+
+                .send-message {
+                    width: 100%;
+                    display: flex;
+                    margin-bottom: 10px;
+
+                    .btn-submit {
+                        width: calc(50% - 5px);
+                        margin-right: 5px;
+                    }
+
+                    .btn-send-noti {
+                        margin-right: 0;
+                        margin-left: 5px;
+                    }
+                }
+
+                .more {
+                    width: 100%;
+
+                    .btn-comfirm-pay {
+                        margin-left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
