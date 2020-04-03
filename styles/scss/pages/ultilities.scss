@@ -297,6 +297,113 @@
                     }
                 }
             }
+
+            .block-list-customer {
+                background: #FFFFFF;
+                border-radius: 3px;
+                padding-bottom: 37px;
+                margin-top: -8px;
+
+                .box-content {
+                    padding: 0 23px;
+                    border-bottom: 1px solid #A4A4A4;
+                }
+
+                table,
+                .table {
+                    margin: 0;
+
+                    thead {
+                        th {
+                            vertical-align: middle;
+                            border-bottom: 2px solid #E5E5E5;
+                            border-top: 0;
+                            font-weight: 500;
+                            font-size: 18px;
+                            padding: 16px 3px;
+                            white-space: nowrap;
+
+                            &:nth-child(n+2) {
+                                text-align: center;
+                                padding: 16px 10px;
+                            }
+
+                            &:nth-child(4) {
+                                width: 165px;
+                            }
+
+                            &:nth-child(5) {
+                                width: 55px;
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            td {
+                                font-size: 18px;
+                                padding: 14px 3px;
+                                vertical-align: middle;
+                                border-top: 1px solid #E5E5E5;
+
+                                &:nth-child(n+2) {
+                                    text-align: center;
+                                    padding: 14px 10px;
+                                    white-space: nowrap;
+                                }
+
+                                .btn-primary {
+                                    background: #008DC9;
+                                    border-radius: 3px;
+                                    height: 32px;
+                                    line-height: 32px;
+                                    padding: 0 10px;
+                                    min-width: 112px;
+                                    font-size: 14px;
+                                    color: #fff;
+                                }
+
+                                .btn-disabled {
+                                    pointer-events: none;
+                                    cursor: not-allowed;
+                                    background: #A4A4A4;
+                                    border-radius: 3px;
+                                    height: 32px;
+                                    line-height: 32px;
+                                    padding: 0 10px;
+                                    min-width: 112px;
+                                    font-size: 14px;
+                                    color: #fff;
+                                }
+
+                                .btn-grid {
+                                    border: none;
+                                    padding: 0 10px;
+                                    margin: 0;
+                                    background: none;
+                                    outline: none;
+
+                                    svg {
+                                        height: 18px;
+                                        width: 18px;
+                                        fill: #A4A4A4;
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .pager {
+                    margin-top: 13px;
+                    padding: 0 10px;
+
+                    ul {
+                        margin: 0;
+                    }
+                }
+            }
         }
     }
 }
@@ -310,6 +417,43 @@
                         .item {
                             .time {
                                 margin-right: 0;
+                            }
+                        }
+                    }
+                }
+
+                .block-list-customer {
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) and (min-width: 768px) {
+    .main-content {
+        .utilities {
+            .utilities-content {
+                .block-list-customer {
+                    padding-bottom: 15px;
+
+                    .box-content {
+                        padding: 0 15px;
+                    }
+
+                    table,
+                    .table {
+                        thead {
+                            th {
+                                font-size: 17px;
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    font-size: 16px;
+                                }
                             }
                         }
                     }
@@ -334,6 +478,45 @@
 
                     .btn-grid {
                         padding: 0 4px;
+                    }
+                }
+            }
+
+            .utilities-content {
+                .block-list-customer {
+                    margin: 0;
+
+                    .box-content {
+                        padding: 0 10px;
+                        white-space: nowrap;
+                        overflow: auto;
+                    }
+
+                    table,
+                    .table {
+                        thead {
+                            th {
+                                font-size: 17px;
+                                padding: 14px 3px;
+
+                                &:nth-child(n+2) {
+                                    padding: 14px 10px;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                td {
+                                    font-size: 16px;
+                                    padding: 12px 3px;
+
+                                    &:nth-child(n+2) {
+                                        padding: 12px 10px;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

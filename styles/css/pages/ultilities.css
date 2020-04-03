@@ -266,9 +266,9 @@ header {
 }
 
 header .menu-bar {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
 }
 
 header .menu-bar a {
@@ -337,7 +337,6 @@ header .profile .profile-nav svg {
   height: 42px;
   fill: #fff;
   float: left;
-  margin-right: 8px;
 }
 
 header .profile .profile-nav ul {
@@ -364,14 +363,6 @@ header .profile .profile-nav ul li a svg {
   float: none;
   vertical-align: middle;
   margin-right: 5px;
-}
-
-@media (max-width: 767px) {
-  header .profile {
-    -webkit-box-flex: 1;
-        -ms-flex: auto;
-            flex: auto;
-  }
 }
 
 aside {
@@ -907,9 +898,140 @@ aside nav ul li.active a svg {
   border-radius: 3px;
 }
 
+.main-content .utilities .utilities-content .block-list-customer {
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding-bottom: 37px;
+  margin-top: -8px;
+}
+
+.main-content .utilities .utilities-content .block-list-customer .box-content {
+  padding: 0 23px;
+  border-bottom: 1px solid #A4A4A4;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table,
+.main-content .utilities .utilities-content .block-list-customer .table {
+  margin: 0;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table thead th,
+.main-content .utilities .utilities-content .block-list-customer .table thead th {
+  vertical-align: middle;
+  border-bottom: 2px solid #E5E5E5;
+  border-top: 0;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 16px 3px;
+  white-space: nowrap;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table thead th:nth-child(n+2),
+.main-content .utilities .utilities-content .block-list-customer .table thead th:nth-child(n+2) {
+  text-align: center;
+  padding: 16px 10px;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table thead th:nth-child(4),
+.main-content .utilities .utilities-content .block-list-customer .table thead th:nth-child(4) {
+  width: 165px;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table thead th:nth-child(5),
+.main-content .utilities .utilities-content .block-list-customer .table thead th:nth-child(5) {
+  width: 55px;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table tbody tr td,
+.main-content .utilities .utilities-content .block-list-customer .table tbody tr td {
+  font-size: 18px;
+  padding: 14px 3px;
+  vertical-align: middle;
+  border-top: 1px solid #E5E5E5;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table tbody tr td:nth-child(n+2),
+.main-content .utilities .utilities-content .block-list-customer .table tbody tr td:nth-child(n+2) {
+  text-align: center;
+  padding: 14px 10px;
+  white-space: nowrap;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table tbody tr td .btn-primary,
+.main-content .utilities .utilities-content .block-list-customer .table tbody tr td .btn-primary {
+  background: #008DC9;
+  border-radius: 3px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  min-width: 112px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table tbody tr td .btn-disabled,
+.main-content .utilities .utilities-content .block-list-customer .table tbody tr td .btn-disabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  background: #A4A4A4;
+  border-radius: 3px;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+  min-width: 112px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table tbody tr td .btn-grid,
+.main-content .utilities .utilities-content .block-list-customer .table tbody tr td .btn-grid {
+  border: none;
+  padding: 0 10px;
+  margin: 0;
+  background: none;
+  outline: none;
+}
+
+.main-content .utilities .utilities-content .block-list-customer table tbody tr td .btn-grid svg,
+.main-content .utilities .utilities-content .block-list-customer .table tbody tr td .btn-grid svg {
+  height: 18px;
+  width: 18px;
+  fill: #A4A4A4;
+  display: block;
+}
+
+.main-content .utilities .utilities-content .block-list-customer .pager {
+  margin-top: 13px;
+  padding: 0 10px;
+}
+
+.main-content .utilities .utilities-content .block-list-customer .pager ul {
+  margin: 0;
+}
+
 @media (max-width: 1199px) and (min-width: 992px) {
   .main-content .utilities .utilities-content .block-register-list .list-register .item .time {
     margin-right: 0;
+  }
+  .main-content .utilities .utilities-content .block-list-customer {
+    padding-bottom: 25px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .main-content .utilities .utilities-content .block-list-customer {
+    padding-bottom: 15px;
+  }
+  .main-content .utilities .utilities-content .block-list-customer .box-content {
+    padding: 0 15px;
+  }
+  .main-content .utilities .utilities-content .block-list-customer table thead th,
+  .main-content .utilities .utilities-content .block-list-customer .table thead th {
+    font-size: 17px;
+  }
+  .main-content .utilities .utilities-content .block-list-customer table tbody tr td,
+  .main-content .utilities .utilities-content .block-list-customer .table tbody tr td {
+    font-size: 16px;
   }
 }
 
@@ -927,6 +1049,32 @@ aside nav ul li.active a svg {
   }
   .main-content .utilities .filter .block-date .btn-grid {
     padding: 0 4px;
+  }
+  .main-content .utilities .utilities-content .block-list-customer {
+    margin: 0;
+  }
+  .main-content .utilities .utilities-content .block-list-customer .box-content {
+    padding: 0 10px;
+    white-space: nowrap;
+    overflow: auto;
+  }
+  .main-content .utilities .utilities-content .block-list-customer table thead th,
+  .main-content .utilities .utilities-content .block-list-customer .table thead th {
+    font-size: 17px;
+    padding: 14px 3px;
+  }
+  .main-content .utilities .utilities-content .block-list-customer table thead th:nth-child(n+2),
+  .main-content .utilities .utilities-content .block-list-customer .table thead th:nth-child(n+2) {
+    padding: 14px 10px;
+  }
+  .main-content .utilities .utilities-content .block-list-customer table tbody tr td,
+  .main-content .utilities .utilities-content .block-list-customer .table tbody tr td {
+    font-size: 16px;
+    padding: 12px 3px;
+  }
+  .main-content .utilities .utilities-content .block-list-customer table tbody tr td:nth-child(n+2),
+  .main-content .utilities .utilities-content .block-list-customer .table tbody tr td:nth-child(n+2) {
+    padding: 12px 10px;
   }
 }
 
