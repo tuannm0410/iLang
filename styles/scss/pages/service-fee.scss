@@ -1,0 +1,236 @@
+@import '../common/common.scss';
+@import '../common/header.scss';
+@import '../common/sidebar.scss';
+@import '../common/pagination.scss';
+
+#wrapper {
+  position: relative;
+}
+
+.main-content {
+  background: #f5f5f5;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px 20px 70px 20px;
+  min-height: calc(100vh - 48px);
+  position: relative;
+
+  .filter {
+    padding-bottom: 10px;
+
+    .filter-detail {
+      .filter-name {
+        font-size: 15px;
+        color: #a4a4a4;
+
+        input {
+          width: 240px;
+          border-color: #a4a4a4;
+          border-left: none;
+          padding-left: 0;
+          box-shadow: none;
+        }
+
+        .input-group-text {
+          background: #fff;
+          border-color: #a4a4a4;
+
+          svg {
+            fill: #a4a4a4;
+          }
+        }
+
+        .custom-select {
+          width: 135px;
+          border-color: #a4a4a4;
+          background-image: url(../../../images/select-option.svg);
+          background-size: 10px;
+        }
+      }
+    }
+
+    .filter-status {
+      .btn {
+        box-shadow: 1px 1px 6px -2px #c2c2c2;
+        color: #fff;
+        min-width: 90px;
+
+        &.paid {
+          background: #56D18D;
+        }
+
+        &.unpaid {
+          background: #444E99;
+        }
+
+        &.expired {
+          background: #FF6C58;
+        }
+      }
+    }
+  }
+
+  .apartments {
+    padding: 25px 0 50px;
+    margin-bottom: 25px;
+    border-top: 1px solid #a4a4a4;
+    border-bottom: 1px solid #a4a4a4;
+
+    .apartment-item {
+      display: flex;
+      border-radius: 5px;
+      padding: 2px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      box-shadow: 1px 1px 5px 1px #c2c2c2;
+
+      &.paid {
+        background: #56D18D;
+
+        .position {
+          background-color: #56D18D;
+        }
+      }
+
+      &.unpaid{
+        background: #444E99;
+
+        .position {
+          background-color: #444E99;
+        }
+      }
+
+      &.expired {
+        background: #FF6C58;
+
+        .position {
+          background-color: #FF6C58;
+        }
+      }
+
+      .position {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 0 15px;
+
+        .code {
+          flex-direction: row;
+          flex-wrap: wrap;
+          color: #fff;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 20px;
+        }
+      }
+
+      .info {
+        width: 100%;
+        background: #fff;
+        padding: 10px;
+        border-radius: 3px;
+        font-size: 12px;
+        line-height: 16px;
+
+        .owner {
+          font-weight: 700;
+          margin-bottom: 8px;
+          font-size: 12px;
+        }
+
+        .desc {
+          color: #a4a4a4;
+          margin-bottom: 10px;
+        }
+
+        .total {
+          font-weight: 700;
+
+          svg {
+            margin-right: 3px;
+            vertical-align: text-bottom;
+            fill: #383838;
+          }
+        }
+      }
+    }
+  }
+
+  .action {
+    .btn {
+      line-height: 38px;
+      background: #00B14F;
+      color: #fff;
+      font-size: 15px;
+      margin-bottom: 10px;
+
+      &.send-message {
+        padding: 0 20px;
+      }
+
+      &.send-noti,
+      &.confirm {
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .main-content {
+    .filter {
+      .filter-type {
+        margin-bottom: 10px;
+      }
+
+      .filter-detail {
+        .filter-name {
+          input {
+            width: auto;
+          }
+
+          .input-group {
+            margin-bottom: 10px;
+          }
+        }
+
+        .filter-status {
+          text-align: left !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    .filter {
+      .filter-type {
+        margin-bottom: 0;
+
+        .btn {
+          font-size: 14px;
+          margin-bottom: 10px;
+        }
+      }
+
+      .filter-detail {
+        .filter-name {
+          input {
+            width: auto;
+          }
+
+          .input-group {
+            margin-bottom: 10px;
+          }
+        }
+
+        .filter-status {
+          text-align: left !important;
+        }
+      }
+    }
+  }
+}

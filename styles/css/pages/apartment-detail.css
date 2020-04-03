@@ -266,9 +266,9 @@ header {
 }
 
 header .menu-bar {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
 }
 
 header .menu-bar a {
@@ -654,6 +654,7 @@ aside nav ul li.active a svg {
 .main-content .apartment-detail .members .member-item {
   text-align: center;
   margin-bottom: 35px;
+  position: relative;
 }
 
 .main-content .apartment-detail .members .member-item .avatar {
@@ -676,6 +677,42 @@ aside nav ul li.active a svg {
 
 .main-content .apartment-detail .members .member-item .phone {
   font-size: 16px;
+}
+
+.main-content .apartment-detail .members .member-item .remove-item {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.main-content .apartment-detail .members .member-item .remove-item svg {
+  fill: #a4a4a4;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.main-content .apartment-detail .members .action {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-content .apartment-detail .members .action .btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  width: 150px;
+  text-align: center;
+  line-height: 38px;
+}
+
+.main-content .apartment-detail .members .action .btn.btn-cancel {
+  color: #383838;
+  background: #e5e5e5;
+  margin-right: 10px;
+}
+
+.main-content .apartment-detail .members .action .btn.btn-save {
+  background: #00B14F;
+  color: #fff;
 }
 
 .main-content .apartment-detail .send-message {
@@ -792,5 +829,8 @@ aside nav ul li.active a svg {
   }
   .main-content .apartment-detail .action {
     margin-left: initial;
+  }
+  .main-content .apartment-detail .action .btn {
+    margin-bottom: 10px;
   }
 }

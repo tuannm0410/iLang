@@ -607,21 +607,6 @@ aside nav ul li.active a svg {
   padding-bottom: 10px;
 }
 
-.main-content .filter .filter-type {
-  margin-bottom: 35px;
-}
-
-.main-content .filter .filter-type .btn {
-  background: #fff;
-  -webkit-box-shadow: 1px 1px 6px -2px #c2c2c2;
-          box-shadow: 1px 1px 6px -2px #c2c2c2;
-}
-
-.main-content .filter .filter-type .btn.active {
-  background: #00B14F;
-  color: #fff;
-}
-
 .main-content .filter .filter-detail .filter-name {
   font-size: 15px;
   color: #a4a4a4;
@@ -630,6 +615,10 @@ aside nav ul li.active a svg {
 .main-content .filter .filter-detail .filter-name input {
   width: 240px;
   border-color: #a4a4a4;
+  border-left: none;
+  padding-left: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .main-content .filter .filter-detail .filter-name .input-group-text {
@@ -652,22 +641,24 @@ aside nav ul li.active a svg {
   -webkit-box-shadow: 1px 1px 6px -2px #c2c2c2;
           box-shadow: 1px 1px 6px -2px #c2c2c2;
   color: #fff;
+  min-width: 90px;
 }
 
-.main-content .filter .filter-status .btn.active {
-  background: #00B14F;
+.main-content .filter .filter-status .btn.paid {
+  background: #56D18D;
 }
 
-.main-content .filter .filter-status .btn.empty {
-  background: #008DC9;
+.main-content .filter .filter-status .btn.unpaid {
+  background: #444E99;
 }
 
 .main-content .filter .filter-status .btn.expired {
-  background: #E33922;
+  background: #FF6C58;
 }
 
 .main-content .apartments {
-  padding: 25px 0 5px;
+  padding: 25px 0 50px;
+  margin-bottom: 25px;
   border-top: 1px solid #a4a4a4;
   border-bottom: 1px solid #a4a4a4;
 }
@@ -684,28 +675,28 @@ aside nav ul li.active a svg {
           box-shadow: 1px 1px 5px 1px #c2c2c2;
 }
 
-.main-content .apartments .apartment-item.active {
-  background: #00B14F;
+.main-content .apartments .apartment-item.paid {
+  background: #56D18D;
 }
 
-.main-content .apartments .apartment-item.active .position {
-  background-color: #00B14F;
+.main-content .apartments .apartment-item.paid .position {
+  background-color: #56D18D;
 }
 
-.main-content .apartments .apartment-item.empty {
-  background: #008DC9;
+.main-content .apartments .apartment-item.unpaid {
+  background: #444E99;
 }
 
-.main-content .apartments .apartment-item.empty .position {
-  background-color: #008DC9;
+.main-content .apartments .apartment-item.unpaid .position {
+  background-color: #444E99;
 }
 
 .main-content .apartments .apartment-item.expired {
-  background: #E33922;
+  background: #FF6C58;
 }
 
 .main-content .apartments .apartment-item.expired .position {
-  background-color: #E33922;
+  background-color: #FF6C58;
 }
 
 .main-content .apartments .apartment-item .position {
@@ -763,6 +754,22 @@ aside nav ul li.active a svg {
   margin-right: 3px;
   vertical-align: text-bottom;
   fill: #383838;
+}
+
+.main-content .action .btn {
+  line-height: 38px;
+  background: #00B14F;
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.main-content .action .btn.send-message {
+  padding: 0 20px;
+}
+
+.main-content .action .btn.send-noti, .main-content .action .btn.confirm {
+  padding: 0 15px;
 }
 
 @media (max-width: 991px) and (min-width: 768px) {
