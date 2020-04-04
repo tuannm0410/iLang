@@ -121,16 +121,38 @@ aside nav ul li a:hover svg {
   fill: #00B14F;
 }
 
-aside nav ul li.active {
-  border-bottom-color: #00B14F;
-}
-
 aside nav ul li.active a {
   color: #00B14F;
   font-weight: 500;
+  border-bottom: 1px solid #00B14F;
 }
 
 aside nav ul li.active a svg {
+  fill: #00B14F;
+}
+
+aside nav ul li.active ul li a {
+  border-bottom: none;
+  color: #383838;
+}
+
+aside nav ul li.active ul li a svg {
+  fill: #383838;
+}
+
+aside nav ul li.active ul li a:hover {
+  color: #00B14F;
+}
+
+aside nav ul li.active ul li a:hover svg {
+  fill: #00B14F;
+}
+
+aside nav ul li.active ul li.active a {
+  color: #00B14F;
+}
+
+aside nav ul li.active ul li.active a svg {
   fill: #00B14F;
 }
 

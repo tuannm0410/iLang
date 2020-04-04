@@ -116,15 +116,45 @@ aside {
           }
         }
 
-        &.active {
-          border-bottom-color: #00B14F;
-          
+        &.active {         
           a {
             color: #00B14F;
             font-weight: 500;
+            border-bottom: 1px solid #00B14F;
 
             svg {
               fill: #00B14F;
+            }
+          }
+
+          ul {
+            li {
+              a {
+                border-bottom: none;
+                color: #383838;
+
+                svg {
+                  fill: #383838;
+                }
+
+                &:hover {
+                  color: #00B14F;
+
+                  svg {
+                    fill: #00B14F;
+                  }
+                }
+              }
+
+              &.active {
+                a {
+                  color: #00B14F;
+
+                  svg {
+                    fill: #00B14F;
+                  }
+                }
+              }
             }
           }
         }
