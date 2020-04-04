@@ -266,9 +266,9 @@ header {
 }
 
 header .menu-bar {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100px;
+          flex: 0 0 100px;
 }
 
 header .menu-bar a {

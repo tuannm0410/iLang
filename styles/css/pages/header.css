@@ -81,7 +81,6 @@ header .profile .profile-nav svg {
   height: 42px;
   fill: #fff;
   float: left;
-  margin-right: 8px;
 }
 
 header .profile .profile-nav ul {
@@ -108,12 +107,4 @@ header .profile .profile-nav ul li a svg {
   float: none;
   vertical-align: middle;
   margin-right: 5px;
-}
-
-@media (max-width: 767px) {
-  header .profile {
-    -webkit-box-flex: 1;
-        -ms-flex: auto;
-            flex: auto;
-  }
 }
