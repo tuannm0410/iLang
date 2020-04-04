@@ -69,6 +69,7 @@
 
         td {
           border: none;
+          align-content: start;
         }
 
         .title {
@@ -82,12 +83,45 @@
           }
         }
 
+        .desc {
+          font-size: 16px;
+          margin: 15px 0 20px;
+        }
+
+        .action {
+          .btn {
+            height: 36px;
+            margin: 0 10px 10px 0;
+            color: #fff;
+            font-size: 16px;
+            padding: 0 10px;
+
+            &.cancel {
+              background: #008DC9;
+              padding: 0 20px;
+            }
+
+            &.transfer {
+              background: #FFA800;
+            }
+          }
+        }
+
         .view-detail {
           margin-left: auto;
           font-size: 16px;
 
           a {
             color: #008DC9;
+          }
+        }
+
+        .images {
+          width: 100%;
+          margin-top: 15px;
+
+          img {
+            max-width: 100%;
           }
         }
 
