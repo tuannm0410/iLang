@@ -4,17 +4,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="styles/css/common/bootstrap.min.css" />
-    <link rel="stylesheet" href="styles/css/pages/quan-ly-can-ho.min.css" />
+    <link rel="stylesheet" href="styles/css/common/tagsinput.css" />
+    <link rel="stylesheet" href="styles/css/common/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" href="styles/css/pages/resident-comment.css" />
 
 
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/tagsinput.js"></script>
     <script src="js/sidebar.js"></script>
-    
-    <title>Quản lý căn hộ</title>
+    <script src="js/apartment-detail.js"></script>
+    <title>Tiếp nhận ý kiến</title>
   </head>
   <body>
     <div id="container">
@@ -57,14 +58,31 @@
           </div>
           <nav>
             <ul>
-              <li class="active">
-                <a href="#">
+              <li class="has-sub">
+                <a href="#" data-toggle="collapse" data-target="#sub-item-1">
                    <svg class="nav-icon"><use xlink:href="#icon-home" /></svg>
                   <span>
                     Căn hộ
-                    <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg>
+                    <svg class="nav-plus"><use xlink:href="#icon-plus" /></svg>
                   </span>
                 </a>
+                <ul id="sub-item-1" class="collapse show">
+                  <li>
+                    <a href="#">
+                      <span>Danh sách căn hộ <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Khởi tạo căn hộ <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Thêm một căn hộ <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">
@@ -78,18 +96,18 @@
                   <span>Quản lý tiện ích <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
                 </a>
               </li>
-              <li class="has-sub">
-                <a href="#" data-toggle="collapse" class="collapsed" data-target="#sub-item-1">
+              <li class="has-sub active">
+                <a href="#" data-toggle="collapse" data-target="#sub-item-2">
                    <svg class="nav-icon"><use xlink:href="#icon-megaphone" /></svg>
                   <span>Giao tiếp cư dân <svg class="nav-plus"><use xlink:href="#icon-plus" /></svg></span>
                 </a>
-                <ul id="sub-item-1" class="collapse">
+                <ul id="sub-item-2" class="collapse show">
                   <li>
                     <a href="#">
-                      <span>Gửi thông báo <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
+                      <span>Gửi tin nhắn <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
                     </a>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="#">
                       <span>Tiếp nhận ý kiến <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
                     </a>
@@ -102,11 +120,28 @@
                   <span>Nhân viên <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
                 </a>
               </li>
-              <li>
-                <a href="#">
+              <li class="has-sub">
+                <a href="#" data-toggle="collapse" data-target="#sub-item-3">
                    <svg class="nav-icon"><use xlink:href="#icon-cogwheels" /></svg>
-                  <span>Vận hành bảo trì <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
+                  <span>Vận hành bảo trì <svg class="nav-plus"><use xlink:href="#icon-plus" /></svg></span>
                 </a>
+                <ul id="sub-item-3" class="collapse show">
+                  <li>
+                    <a href="#">
+                      <span>Quản lý thiết bị <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Kế hoạch bảo trì <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <span>Yêu cầu sửa chữa <svg class="nav-arrow"><use xlink:href="#icon-arrow" /></svg></span>
+                    </a>
+                  </li>
+                </ul>
               </li>
               <li>
                 <a href="#">
@@ -130,535 +165,137 @@
           </nav>
         </aside>
         <section class="main-content">
-          <div class="filter align-items-start">
-            <div class="filter-type">
-              <button type="button" class="btn mr-2 active">Tất cả</button>
-              <button type="button" class="btn mr-2">Chính chủ</button>
-              <button type="button" class="btn mr-2">Cho thuê</button>
-              <button type="button" class="btn">Văn phòng</button>
+          <div class="residents-comments">
+            <div class="filter d-flex">
+              <div class="action">
+                <button type="button" class="btn active">Góp ý chung</button>
+                <button type="button" class="btn">Báo cáo sự cố</button>
+                <button type="button" class="btn">Phản hồi thông báo từ cư dân</button>
+              </div>
+              <a href="#" class="more-action d-flex"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a>
             </div>
-            <div class="filter-detail">
-              <div class="row">
-                <div class="col-12 col-lg-6">
-                  <div class="filter-name">
-                    <form class="form-inline">
-                      <div class="input-group mr-sm-2">
-                        <input type="text" class="form-control" id="departName" placeholder="Tìm kiếm căn hộ">
-                        <div class="input-group-append">
-                          <span class="input-group-text">
-                            <svg><use xlink:href="#icon-search"/></svg>
-                          </span>
-                        </div>
-                      </div>
-                      <div class="input-group">
-                        <select class="custom-select">
-                          <option selected>Căn hộ</option>
-                          <option>Căn hộ 2</option>
-                          <option>Căn hộ 3</option>
-                          <option>Căn hộ 4</option>
-                        </select>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                  <div class="filter-status text-right">
-                    <button type="button" class="btn active mr-2">Sử dụng</button>
-                    <button type="button" class="btn empty mr-2">Trống</button>
-                    <button type="button" class="btn expired">Hết hạn</button>
-                  </div>
-                </div>
+            <div class="comments">
+              <div class="table-responsive">
+                <table class="table table-borderless">
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+                  <tr class="d-md-flex">
+                    <td class="col-5"><a class="title" href="#">Góp ý với BQL về vấn đề...</a></td>
+                    <td class="col-6 d-md-flex">
+                      <div class="created-date">22/03/2020</div>
+                      <div class="view-detail d-md-block d-none"><a href="#">Xem chi tiết</a></div>
+                    </td>
+                    <td class="col-1 text-right"><a href="#"><svg class="more-menu"><use xlink:href="#icon-more-menu" /></svg></a></td>
+                  </tr>
+               </table>
               </div>
             </div>
-          </div>
-          
-          <div class="apartments align-items-start">
-            <div class="row">
 
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item empty">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item expired">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item empty">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item expired">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item empty">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item expired">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item empty">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item expired">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item empty">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item expired">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item active">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item empty">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-6 col-lg-3">
-                <div class="apartment-item expired">
-                  <div class="position">
-                    <div class="code">
-                      <div class="room">P101</div>
-                      <div class="floor">CH104</div>
-                    </div>
-                  </div>
-                  <div class="info">
-                    <h4 class="owner">Nguyễn Linh Chi</h4>
-                    <div class="desc">Chính chủ</div>
-                    <div class="total">
-                      <svg><use xlink:href="#icon-resident" /></svg>
-                      4
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+            <div class="pager align-items-start">
+              <nav>
+                <ul class="pagination justify-content-end">
+                  <li class="page-item"><span class="d-none d-sm-block">Trang 1/12</span></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#"><svg class="first-page"><use xlink:href="#icon-first-page" /></svg></a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#"><svg class="prev-page"><use xlink:href="#icon-prev-page" /></svg></a>
+                  </li>
+                  <li class="page-item">
+                    <select class="custom-select">
+                      <option selected>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#"><svg class="next-page"><use xlink:href="#icon-next-page" /></svg></a>
+                  </li>
+                  <li class="page-item">
+                    <a class="page-link" href="#"><svg class="last-page"><use xlink:href="#icon-last-page" /></svg></a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-          </div>
-          <div class="pager align-items-start">
-            <nav>
-              <ul class="pagination justify-content-end">
-                <li class="page-item"><span class="d-none d-sm-block">Trang 1/12</span></li>
-                <li class="page-item">
-                  <a class="page-link" href="#"><svg class="first-page"><use xlink:href="#icon-first-page" /></svg></a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#"><svg class="prev-page"><use xlink:href="#icon-prev-page" /></svg></a>
-                </li>
-                <li class="page-item">
-                  <select class="custom-select">
-                    <option selected>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                  </select>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#"><svg class="next-page"><use xlink:href="#icon-next-page" /></svg></a>
-                </li>
-                <li class="page-item">
-                  <a class="page-link" href="#"><svg class="last-page"><use xlink:href="#icon-last-page" /></svg></a>
-                </li>
-              </ul>
-            </nav>
           </div>
 
           <div class="copyright">
@@ -672,6 +309,78 @@
     </div>
 
     <svg display="none">
+      <symbol width="18" height="18" viewBox="0 0 18 18" id="icon-more-menu">
+        <path d="M11.25 6.75H6.75V11.25H11.25V6.75Z"/>
+        <path d="M4.49999 0H0V4.49999H4.49999V0Z"/>
+        <path d="M11.25 13.5H6.75V18H11.25V13.5Z"/>
+        <path d="M4.49999 6.75H0V11.25H4.49999V6.75Z"/>
+        <path d="M4.49999 13.5H0V18H4.49999V13.5Z"/>
+        <path d="M18 0H13.5V4.49999H18V0Z"/>
+        <path d="M11.25 0H6.75V4.49999H11.25V0Z"/>
+        <path d="M18 6.75H13.5V11.25H18V6.75Z"/>
+        <path d="M18 13.5H13.5V18H18V13.5Z"/>
+      </symbol>
+        
+
+      <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-delete">
+        <g clip-path="url(#clip0)">
+        <path d="M14.4961 3.57629L14.1428 2.51733C14.0083 2.11401 13.6322 1.84302 13.2072 1.84302H10.2381V0.876343C10.2381 0.393188 9.84523 0 9.3622 0H6.64321C6.1603 0 5.76735 0.393188 5.76735 0.876343V1.84302H2.79836C2.37319 1.84302 1.99709 2.11401 1.86257 2.51733L1.50929 3.57629C1.42885 3.81738 1.46962 4.08435 1.61818 4.29053C1.76674 4.4967 2.0071 4.61987 2.26125 4.61987H2.63051L3.44325 14.67C3.50368 15.4158 4.13649 16 4.88417 16H11.2861C12.0337 16 12.6666 15.4158 12.7269 14.6699L13.5397 4.61987H13.7442C13.9983 4.61987 14.2387 4.4967 14.3872 4.29065C14.5358 4.08447 14.5766 3.81738 14.4961 3.57629ZM6.70485 0.9375H9.30055V1.84302H6.70485V0.9375ZM11.7925 14.5944C11.7713 14.8569 11.5488 15.0625 11.2861 15.0625H4.88417C4.62148 15.0625 4.39906 14.8569 4.37782 14.5944L3.57106 4.61987H12.5991L11.7925 14.5944ZM2.4623 3.68237L2.75197 2.81396C2.75856 2.79395 2.77724 2.78052 2.79836 2.78052H13.2072C13.2283 2.78052 13.2468 2.79395 13.2536 2.81396L13.5432 3.68237H2.4623Z" />
+        <path d="M10.2974 14.5611C10.3057 14.5616 10.3139 14.5617 10.3222 14.5617C10.5699 14.5617 10.7769 14.3676 10.7898 14.1174L11.23 5.66742C11.2434 5.40888 11.0447 5.1883 10.7863 5.17487C10.5271 5.16108 10.3073 5.36005 10.2937 5.6186L9.85367 14.0685C9.84024 14.3271 10.0389 14.5477 10.2974 14.5611Z" />
+        <path d="M5.23654 14.1185C5.25021 14.3684 5.457 14.5617 5.70419 14.5617C5.71274 14.5617 5.72153 14.5615 5.73019 14.561C5.98861 14.547 6.18673 14.326 6.1727 14.0675L5.71164 5.61754C5.6976 5.35899 5.47665 5.16087 5.21811 5.17503C4.95969 5.18907 4.76157 5.41002 4.7756 5.66856L5.23654 14.1185Z" />
+        <path d="M8.00781 14.5618C8.26672 14.5618 8.47656 14.3519 8.47656 14.093V5.64307C8.47656 5.38416 8.26672 5.17432 8.00781 5.17432C7.7489 5.17432 7.53906 5.38416 7.53906 5.64307V14.093C7.53906 14.3519 7.7489 14.5618 8.00781 14.5618Z" />
+        </g>
+        <defs>
+        <clipPath id="clip0">
+        <rect width="16" height="16" fill="white"/>
+        </clipPath>
+        </defs>
+      </symbol>
+        
+      <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-add-user">
+        <g clip-path="url(#clip0)">
+        <path d="M15.9688 9.90625C15.9688 8.09697 14.4968 6.625 12.6875 6.625C11.7225 6.625 10.8536 7.04378 10.2526 7.70909C9.90272 7.53019 9.53966 7.38134 9.1675 7.26366C10.2681 6.56469 11 5.33503 11 3.9375C11 1.76634 9.23366 0 7.0625 0C4.89134 0 3.125 1.76634 3.125 3.9375C3.125 5.332 3.85372 6.55941 4.95031 7.25916C3.88272 7.59387 2.90444 8.18312 2.09066 8.99687C0.762625 10.3249 0.03125 12.0906 0.03125 13.9687V15.5312C0.03125 15.7901 0.241125 16 0.5 16H13.625C13.8839 16 14.0938 15.7901 14.0938 15.5312V13.9687C14.0938 13.6164 14.0661 13.2611 14.0121 12.9079C15.1634 12.3979 15.9688 11.2444 15.9688 9.90625ZM4.0625 3.9375C4.0625 2.28328 5.40828 0.9375 7.0625 0.9375C8.71672 0.9375 10.0625 2.28328 10.0625 3.9375C10.0625 5.59172 8.71672 6.9375 7.0625 6.9375C5.40828 6.9375 4.0625 5.59172 4.0625 3.9375ZM13.1562 13.9687V15.0625H0.96875V13.9687C0.96875 10.6087 3.70241 7.875 7.0625 7.875C7.98344 7.875 8.89516 8.08844 9.72591 8.49434C9.52109 8.92225 9.40625 9.40106 9.40625 9.90625C9.40625 11.7155 10.8782 13.1875 12.6875 13.1875C12.8278 13.1875 12.966 13.1786 13.1016 13.1615C13.1378 13.4307 13.1562 13.7008 13.1562 13.9687ZM13.3656 12.1496C13.354 12.1525 13.3424 12.1556 13.3312 12.1594C13.1265 12.218 12.9107 12.25 12.6875 12.25C11.3952 12.25 10.3438 11.1986 10.3438 9.90625C10.3438 8.61391 11.3952 7.5625 12.6875 7.5625C13.9798 7.5625 15.0312 8.61391 15.0312 9.90625C15.0312 10.9628 14.3283 11.858 13.3656 12.1496Z"/>
+        <path d="M13.625 9.4375H13.1562V8.96875C13.1562 8.70987 12.9464 8.5 12.6875 8.5C12.4286 8.5 12.2188 8.70987 12.2188 8.96875V9.4375H11.75C11.4911 9.4375 11.2812 9.64737 11.2812 9.90625C11.2812 10.1651 11.4911 10.375 11.75 10.375H12.2188V10.8438C12.2188 11.1026 12.4286 11.3125 12.6875 11.3125C12.9464 11.3125 13.1562 11.1026 13.1562 10.8438V10.375H13.625C13.8839 10.375 14.0938 10.1651 14.0938 9.90625C14.0938 9.64737 13.8839 9.4375 13.625 9.4375Z"/>
+        </g>
+        <defs>
+        <clipPath id="clip0">
+        <rect width="16" height="16" fill="white"/>
+        </clipPath>
+        </defs>
+      </symbol>
+        
+      <symbol width="16" height="16" viewBox="0 0 16 16" id="icon-attachment">
+        <g clip-path="url(#clip0)">
+        <path d="M14.8413 5.82717C14.5802 5.56751 14.1581 5.56867 13.8985 5.8297L5.88429 13.8872C4.84455 14.927 3.15585 14.927 2.11417 13.8858C1.07328 12.8444 1.07328 11.1557 2.1143 10.1147L10.3657 1.81992C11.0149 1.17081 12.0702 1.17081 12.7212 1.82132C13.3721 2.47215 13.3721 3.5274 12.7211 4.17841L5.88554 11.0139C5.88511 11.0143 5.88473 11.0148 5.88429 11.0153C5.62388 11.2742 5.20303 11.2739 4.94315 11.014C4.68283 10.7537 4.68283 10.3318 4.94315 10.0715L8.2426 6.77132C8.50292 6.51094 8.50289 6.0888 8.24251 5.82848C7.98212 5.56816 7.55999 5.5682 7.29967 5.82858L4.00025 9.12866C3.21926 9.90964 3.21926 11.1758 4.00031 11.9568C4.78133 12.7378 6.04748 12.7378 6.82853 11.9568C6.82944 11.9559 6.83016 11.9549 6.83103 11.954L13.6639 5.12118C14.8356 3.94947 14.8356 2.04999 13.6639 0.878271C12.492 -0.292757 10.5927 -0.292757 9.42163 0.878271L1.17021 9.17309C-0.390259 10.7336 -0.390259 13.2663 1.17134 14.8287C2.73397 16.3905 5.26672 16.3905 6.82841 14.8288L14.8439 6.77001C15.1035 6.50894 15.1024 6.08683 14.8413 5.82717Z"/>
+        </g>
+        <defs>
+        <clipPath id="clip0">
+        <rect width="16" height="16" fill="white"/>
+        </clipPath>
+        </defs>
+      </symbol>
+        
+      <symbol width="12" height="12" viewBox="0 0 12 12" id="icon-close">
+        <path d="M11.3163 0.692036C10.9872 0.36293 10.4555 0.36293 10.1264 0.692036L5.99994 4.81009L1.87345 0.683598C1.54434 0.354491 1.0127 0.354491 0.683598 0.683598C0.354491 1.0127 0.354491 1.54434 0.683598 1.87345L4.81009 5.99994L0.683598 10.1264C0.354491 10.4555 0.354491 10.9872 0.683598 11.3163C1.0127 11.6454 1.54434 11.6454 1.87345 11.3163L5.99994 7.18978L10.1264 11.3163C10.4555 11.6454 10.9872 11.6454 11.3163 11.3163C11.6454 10.9872 11.6454 10.4555 11.3163 10.1264L7.18978 5.99994L11.3163 1.87345C11.6369 1.55278 11.6369 1.0127 11.3163 0.692036Z" />
+      </symbol>
+        
+
+      <symbol width="18" height="18" viewBox="0 0 18 18" id="icon-resident-2">
+        <g clip-path="url(#clip0)">
+        <path d="M3.55639 5.40006C4.21095 5.40006 4.76963 5.16577 5.23258 4.697C5.69569 4.22825 5.92727 3.66255 5.92727 3.00007C5.92727 2.33765 5.69569 1.77195 5.23258 1.30314C4.76963 0.834396 4.21092 0.599976 3.55639 0.599976C2.90189 0.599976 2.34319 0.834396 1.88014 1.30314C1.41712 1.77195 1.18555 2.33752 1.18555 3.00007C1.18555 3.66268 1.41712 4.22825 1.88014 4.697C2.34319 5.16564 2.90189 5.40006 3.55639 5.40006Z"/>
+        <path d="M6.37637 9.14569C7.07096 9.84859 7.90899 10.2002 8.89082 10.2002C9.87268 10.2002 10.7107 9.84859 11.4052 9.14569C12.0997 8.44233 12.447 7.59389 12.447 6.60019C12.447 5.60643 12.0997 4.75803 11.4052 4.05487C10.7107 3.3517 9.87268 3.00012 8.89082 3.00012C7.90899 3.00012 7.0709 3.35177 6.37637 4.05487C5.68185 4.75793 5.33447 5.60633 5.33447 6.60019C5.33447 7.59406 5.68185 8.44243 6.37637 9.14569Z"/>
+        <path d="M14.2254 5.40006C14.8797 5.40006 15.4385 5.16577 15.9015 4.697C16.3645 4.22825 16.596 3.66255 16.596 3.00007C16.596 2.33765 16.3645 1.77195 15.9015 1.30314C15.4385 0.834396 14.8797 0.599976 14.2254 0.599976C13.5707 0.599976 13.012 0.834396 12.549 1.30314C12.086 1.77195 11.8545 2.33752 11.8545 3.00007C11.8545 3.66268 12.0861 4.22825 12.549 4.697C13.012 5.16564 13.5707 5.40006 14.2254 5.40006Z"/>
+        <path d="M16.6328 5.40015C16.596 5.40015 16.4617 5.46579 16.2301 5.59704C15.9988 5.72835 15.6976 5.86117 15.3273 5.99557C14.957 6.12984 14.5894 6.19706 14.2253 6.19706C13.8114 6.19706 13.4012 6.12525 12.9935 5.98142C13.0242 6.21256 13.0397 6.41887 13.0397 6.60013C13.0397 7.46889 12.7896 8.26886 12.2893 9.00013C13.2897 9.03149 14.1076 9.43141 14.7438 10.2004H15.9847C16.4909 10.2004 16.917 10.0735 17.2627 9.82046C17.6084 9.56752 17.7813 9.19702 17.7813 8.70959C17.7814 6.50316 17.3988 5.40002 16.6328 5.40015Z"/>
+        <path d="M15.2489 12.9798C15.184 12.6141 15.1021 12.275 15.0033 11.9626C14.9045 11.65 14.7717 11.3455 14.6053 11.0486C14.4385 10.7519 14.247 10.4986 14.0309 10.2891C13.8147 10.0797 13.5507 9.9127 13.239 9.78753C12.9273 9.66255 12.5829 9.6001 12.2064 9.6001C12.1446 9.6001 12.0119 9.66731 11.8081 9.80171C11.6043 9.93598 11.3792 10.0862 11.1321 10.2516C10.8851 10.417 10.555 10.5672 10.1411 10.7016C9.72714 10.836 9.31044 10.9032 8.89082 10.9032C8.47105 10.9032 8.05422 10.836 7.64054 10.7016C7.22676 10.5672 6.89655 10.417 6.64956 10.2516C6.40252 10.0862 6.17724 9.93598 5.97353 9.80171C5.76972 9.66731 5.63705 9.6001 5.57522 9.6001C5.19865 9.6001 4.85445 9.66255 4.54263 9.78753C4.2308 9.9127 3.96689 10.0797 3.75082 10.2891C3.53456 10.4984 3.34334 10.7519 3.17651 11.0486C3.00988 11.3455 2.87714 11.65 2.77833 11.9626C2.67956 12.275 2.59785 12.6141 2.53291 12.9798C2.46803 13.3455 2.42486 13.686 2.40326 14.0017C2.38162 14.3174 2.37085 14.6409 2.37085 14.9722C2.37085 15.722 2.59613 16.3143 3.04682 16.7486C3.49768 17.1828 4.09661 17.4001 4.84352 17.4001H12.9379C13.6849 17.4001 14.2837 17.1828 14.7347 16.7486C15.1854 16.3143 15.4107 15.722 15.4107 14.9722C15.4107 14.6409 15.3999 14.3175 15.3786 14.0017C15.3566 13.686 15.3135 13.3454 15.2489 12.9798Z"/>
+        <path d="M5.49181 9.00011C4.99168 8.26884 4.74169 7.46888 4.74178 6.60012C4.74178 6.41886 4.75726 6.21268 4.78807 5.98142C4.38053 6.12514 3.96996 6.19705 3.55628 6.19705C3.19201 6.19705 2.82475 6.12987 2.45424 5.99557C2.0839 5.86117 1.78281 5.72835 1.55137 5.59703C1.31983 5.46579 1.18544 5.40015 1.14843 5.40015C0.382798 5.40018 0 6.50332 0 8.70957C0 9.19699 0.172893 9.56749 0.518583 9.82043C0.864369 10.0735 1.29041 10.2001 1.79653 10.2001H3.0376C3.67361 9.43138 4.49156 9.03143 5.49181 9.00011Z"/>
+        </g>
+        <defs>
+        <clipPath id="clip0">
+        <rect width="17.7814" height="18" fill="white"/>
+        </clipPath>
+        </defs>
+      </symbol>
+        
+
       <symbol width="10" height="10" viewBox="0 0 10 10" id="icon-select-option">
         <path d="M9.61997 2.53174H0.424645C0.0690243 2.53174 -0.0833844 2.93816 0.119827 3.19218L4.43807 7.51042C4.74289 7.81524 5.25092 7.81524 5.55574 7.51042L9.87398 3.19218C10.128 2.93816 9.97559 2.53174 9.61997 2.53174Z"/>
       </symbol>        
@@ -820,15 +529,15 @@
         
       <symbol width="5" height="10" viewBox="0 0 5 10" id="icon-prev-page">
         <path d="M4.03543 0.12513L0.177166 4.52394C-0.0590544 4.79325 -0.0590544 5.15234 0.177166 5.33188L4.03543 9.73069C4.11417 9.91023 4.27165 10 4.42913 10C4.58661 10 4.66535 9.91023 4.82283 9.82046C5.05906 9.55114 5.05906 9.19206 4.82283 9.01251L1.35827 5.06257L4.82284 1.11262C5.05906 0.843303 5.05906 0.484217 4.82284 0.214902C4.58662 -0.0544129 4.27165 -0.0544129 4.03543 0.12513Z" />
-      </symbol>        
-
-      <symbol width="42" height="42" viewBox="0 0 42 42" id="icon-user-2">
+      </symbol>
+        
+      <symbol width="42" height="42" viewBox="0 0 42 42" id="icon-user-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <path d="M21 0C9.40625 0 0 9.3975 0 21C0 32.6025 9.40625 42 21 42C32.5938 42 42 32.5938 42 21C42 9.40625 32.5938 0 21 0ZM16.45 8.4175C18.9613 5.90625 23.03 5.90625 25.5412 8.4175C28.0525 10.9288 28.0525 14.9975 25.5412 17.5088C23.03 20.02 18.9613 20.02 16.45 17.5088C13.9387 15.0063 13.9387 10.9288 16.45 8.4175ZM29.0325 32.2437H12.9675C12.0837 32.2437 11.3575 31.5263 11.3575 30.6338C11.3575 26.2063 14.9625 22.6012 19.39 22.6012H22.6012C27.0287 22.6012 30.6338 26.2063 30.6338 30.6338C30.6425 31.5263 29.925 32.2437 29.0325 32.2437Z" />
       </symbol>
-  
-      <symbol height="32" id="icon-menu-bar" viewBox="0 0 32 32" width="32" >
-        <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
-      </svg>
+
+      <symbol width="14" height="12" viewBox="0 0 14 12" id="icon-calendar">
+        <path d="M12.6 1.33333H11.9V0.666667C11.9 0.3 11.585 0 11.2 0C10.815 0 10.5 0.3 10.5 0.666667V1.33333H3.50001V0.666667C3.50001 0.3 3.185 0 2.8 0C2.415 0 2.10001 0.3 2.10001 0.666667V1.33333H1.4C0.629999 1.33333 0 1.93333 0 2.66667V10.6667C0 11.4 0.630001 12 1.4 12H12.6C13.37 12 14 11.4 14 10.6667V2.66667C14 1.93333 13.37 1.33333 12.6 1.33333ZM11.9 10.6667H2.10001C1.715 10.6667 1.4 10.3667 1.4 10V4H12.6V10C12.6 10.3667 12.285 10.6667 11.9 10.6667Z" />
+      </symbol>        
     </svg>
   </body>
 </html>

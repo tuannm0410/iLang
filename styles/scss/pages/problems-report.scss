@@ -8,7 +8,7 @@
 }
 
 .main-content {
-  .residents-comments {
+  .problems-report {
     .filter {
 
       .btn {
@@ -49,7 +49,7 @@
       }
     }
 
-    .comments {
+    .problems {
       border-top: 1px solid #aeaeae;
       border-bottom: 1px solid #aeaeae;
       padding: 20px 0;
@@ -74,12 +74,18 @@
 
         .title {
           font-size: 18px;
-          color: #383838;
-          font-weight: 500;
+          color: #008DC9;
 
           &:hover {
-            text-decoration: none;
-            color: #00B14F;
+            text-decoration: underline;
+          }
+
+          svg {
+            height: 24px;
+            width: 18px;
+            fill: #c5c5c5;
+            vertical-align: sub;
+            margin-right: 10px;
           }
         }
 
@@ -89,21 +95,16 @@
         }
 
         .action {
-          .btn {
-            height: 36px;
-            margin: 0 10px 10px 0;
-            color: #fff;
+          label {
             font-size: 16px;
-            padding: 0 10px;
+            font-weight: 500;
+            display: block;
+          }
 
-            &.cancel {
-              background: #008DC9;
-              padding: 0 20px;
-            }
-
-            &.transfer {
-              background: #FFA800;
-            }
+          select {
+            width: auto;
+            font-size: 16px;
+            min-width: 220px;
           }
         }
 
@@ -112,7 +113,17 @@
           font-size: 16px;
 
           a {
-            color: #008DC9;
+            color: #fff;
+            display: inline-block;
+            height: 32px;
+            background: #008DC9;
+            border-radius: 5px;
+            padding: 0 15px;
+            line-height: 32px;
+
+            &:hover {
+              text-decoration: none;
+            }
           }
         }
 
@@ -122,6 +133,15 @@
 
           img {
             max-width: 100%;
+          }
+
+          .submit {
+            background: #008DC9;
+            color: #fff;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 15px;
+            margin-top: 15px;
           }
         }
 

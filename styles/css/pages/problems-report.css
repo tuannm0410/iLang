@@ -611,7 +611,7 @@ aside nav ul li.active ul li.active a svg {
   position: relative;
 }
 
-.main-content .residents-comments .filter .btn {
+.main-content .problems-report .filter .btn {
   height: 36px;
   border-radius: 4px;
   background: #fff;
@@ -624,12 +624,12 @@ aside nav ul li.active ul li.active a svg {
   margin-bottom: 10px;
 }
 
-.main-content .residents-comments .filter .btn:hover, .main-content .residents-comments .filter .btn.active {
+.main-content .problems-report .filter .btn:hover, .main-content .problems-report .filter .btn.active {
   background: #00B14F;
   color: #fff;
 }
 
-.main-content .residents-comments .filter .more-action {
+.main-content .problems-report .filter .more-action {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 18px;
           flex: 0 0 18px;
@@ -643,97 +643,117 @@ aside nav ul li.active ul li.active a svg {
           align-items: center;
 }
 
-.main-content .residents-comments .filter .more-action svg {
+.main-content .problems-report .filter .more-action svg {
   width: 18px;
   height: 18px;
   fill: #a4a4a4;
 }
 
-.main-content .residents-comments .filter .more-action:hover svg {
+.main-content .problems-report .filter .more-action:hover svg {
   fill: #00B14F;
 }
 
-.main-content .residents-comments .comments {
+.main-content .problems-report .problems {
   border-top: 1px solid #aeaeae;
   border-bottom: 1px solid #aeaeae;
   padding: 20px 0;
 }
 
-.main-content .residents-comments .comments table {
+.main-content .problems-report .problems table {
   font-size: 18px;
 }
 
-.main-content .residents-comments .comments table tr:nth-child(odd) {
+.main-content .problems-report .problems table tr:nth-child(odd) {
   background: #fff;
 }
 
-.main-content .residents-comments .comments table tr:nth-child(even) {
+.main-content .problems-report .problems table tr:nth-child(even) {
   background: #f5f5f5;
 }
 
-.main-content .residents-comments .comments table td {
+.main-content .problems-report .problems table td {
   border: none;
   -ms-flex-line-pack: start;
       align-content: start;
 }
 
-.main-content .residents-comments .comments table .title {
+.main-content .problems-report .problems table .title {
   font-size: 18px;
-  color: #383838;
-  font-weight: 500;
+  color: #008DC9;
 }
 
-.main-content .residents-comments .comments table .title:hover {
-  text-decoration: none;
-  color: #00B14F;
+.main-content .problems-report .problems table .title:hover {
+  text-decoration: underline;
 }
 
-.main-content .residents-comments .comments table .desc {
+.main-content .problems-report .problems table .title svg {
+  height: 24px;
+  width: 18px;
+  fill: #c5c5c5;
+  vertical-align: sub;
+  margin-right: 10px;
+}
+
+.main-content .problems-report .problems table .desc {
   font-size: 16px;
   margin: 15px 0 20px;
 }
 
-.main-content .residents-comments .comments table .action .btn {
-  height: 36px;
-  margin: 0 10px 10px 0;
-  color: #fff;
+.main-content .problems-report .problems table .action label {
   font-size: 16px;
-  padding: 0 10px;
+  font-weight: 500;
+  display: block;
 }
 
-.main-content .residents-comments .comments table .action .btn.cancel {
-  background: #008DC9;
-  padding: 0 20px;
+.main-content .problems-report .problems table .action select {
+  width: auto;
+  font-size: 16px;
+  min-width: 220px;
 }
 
-.main-content .residents-comments .comments table .action .btn.transfer {
-  background: #FFA800;
-}
-
-.main-content .residents-comments .comments table .view-detail {
+.main-content .problems-report .problems table .view-detail {
   margin-left: auto;
   font-size: 16px;
 }
 
-.main-content .residents-comments .comments table .view-detail a {
-  color: #008DC9;
+.main-content .problems-report .problems table .view-detail a {
+  color: #fff;
+  display: inline-block;
+  height: 32px;
+  background: #008DC9;
+  border-radius: 5px;
+  padding: 0 15px;
+  line-height: 32px;
 }
 
-.main-content .residents-comments .comments table .images {
+.main-content .problems-report .problems table .view-detail a:hover {
+  text-decoration: none;
+}
+
+.main-content .problems-report .problems table .images {
   width: 100%;
   margin-top: 15px;
 }
 
-.main-content .residents-comments .comments table .images img {
+.main-content .problems-report .problems table .images img {
   max-width: 100%;
 }
 
-.main-content .residents-comments .comments table .more-menu {
+.main-content .problems-report .problems table .images .submit {
+  background: #008DC9;
+  color: #fff;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 15px;
+  margin-top: 15px;
+}
+
+.main-content .problems-report .problems table .more-menu {
   width: 18px;
   height: 18px;
   fill: #a4a4a4;
 }
 
-.main-content .residents-comments .comments table .more-menu:hover {
+.main-content .problems-report .problems table .more-menu:hover {
   fill: #00B14F;
 }
