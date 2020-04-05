@@ -249,7 +249,10 @@
                 .box-content {
                     padding: 0;
                     white-space: nowrap;
-                    overflow: auto;
+                    width: 100%;
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                    -ms-overflow-style: -ms-autohiding-scrollbar;
 
                     .table {
                         thead {

@@ -618,374 +618,321 @@ aside nav ul li.active ul li.active a svg {
   position: relative;
 }
 
-.main-content .employee {
+.main-content .device-manager {
+  padding-top: 11px;
   color: #383838;
 }
 
-.main-content .employee .block-list-employee {
+.main-content .device-manager .filter {
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 0 10px 10px;
+  margin: 0 0 20px;
   position: relative;
-  padding: 13px 0 21px;
 }
 
-.main-content .employee .block-list-employee h3 {
+.main-content .device-manager .filter h3 {
   font-weight: 500;
-  font-size: 20px;
-  padding-bottom: 8px;
-  margin: 0 0 31px;
+  font-size: 18px;
   line-height: 1.2;
-  border-bottom: 1px solid #A4A4A4;
+  padding: 22px 0 23px;
+  margin: 0 0 22px;
+  border-bottom: 2px solid #E5E5E5;
 }
 
-.main-content .employee .block-list-employee .btn-grid {
-  border: none;
-  padding: 0 10px;
-  margin: 0;
-  background: none;
-  outline: none;
+.main-content .device-manager .filter .btn-add-device {
+  background: #00B14F;
+  border-color: #00B14F;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  color: #fff;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 12px;
   position: absolute;
-  right: 0;
-  top: 17px;
-}
-
-.main-content .employee .block-list-employee .btn-grid svg {
-  height: 18px;
-  width: 18px;
-  fill: #A4A4A4;
-  display: block;
-}
-
-.main-content .employee .block-list-employee .employee-item {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.main-content .employee .block-list-employee .employee-item .avatar {
-  margin: 0 0 15px;
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-}
-
-.main-content .employee .block-list-employee .employee-item .avatar .btn-remove {
-  border: none;
-  outline: none;
-  background: none;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  right: -19px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  line-height: 1;
-}
-
-.main-content .employee .block-list-employee .employee-item .avatar .btn-remove svg {
-  fill: #A4A4A4;
-  vertical-align: top;
-}
-
-.main-content .employee .block-list-employee .employee-item .info {
+  right: 10px;
+  top: 13px;
   font-size: 16px;
-  line-height: 1.2;
 }
 
-.main-content .employee .block-list-employee .employee-item .info strong {
-  font-weight: 500;
+.main-content .device-manager .filter .btn-add-device svg {
+  height: 12px;
+  width: 12px;
+  fill: #fff;
+  margin-left: 5px;
 }
 
-.main-content .employee .block-list-employee .employee-item .info strong,
-.main-content .employee .block-list-employee .employee-item .info span {
-  display: block;
-  margin: 0 0 2px;
+.main-content .device-manager .filter .form-group {
+  margin: 0 0 20px;
 }
 
-.main-content .employee .block-list-employee .action-delete {
-  padding-top: 17px;
-  padding-bottom: 15px;
+.main-content .device-manager .filter .form-group .input-component {
+  position: relative;
+}
+
+.main-content .device-manager .filter .form-group .input-component input {
+  background: #FFFFFF;
+  border: 1px solid #A4A4A4;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 56px 0 12px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.main-content .device-manager .filter .form-group .input-component.date-time input {
+  padding: 0 36px 0 12px;
+}
+
+.main-content .device-manager .filter .form-group .input-component svg {
+  fill: #A4A4A4;
+  position: absolute;
+  top: 11px;
+  right: 10px;
+}
+
+.main-content .device-manager .filter .form-group .input-component .btn-search {
+  height: 34px;
+  outline: none;
+  border: none;
+  border-left: 1px solid #a4a4a4;
+  border-radius: 0;
+  padding: 0;
+  width: 44px;
+  background: #fff;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.main-content .employee .block-list-employee .action-delete .btn-primary,
-.main-content .employee .block-list-employee .action-delete .btn-cancel {
-  background: #00B14F;
-  border: 1px solid #00B14F;
-  border-radius: 3px;
-  padding: 0 12px;
-  height: 38px;
-  width: 172px;
-  line-height: 38px;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin: 0 10px;
-}
-
-.main-content .employee .block-list-employee .action-delete .btn-cancel {
-  background: #E5E5E5;
-  border-color: #E5E5E5;
-  color: #383838;
-}
-
-.main-content .employee .block-list-employee .action {
-  margin-top: 6px;
-  padding-top: 20px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border-top: 1px solid #A4A4A4;
-}
-
-.main-content .employee .block-list-employee .action .btn-primary {
-  background: #00B14F;
-  border: 1px solid #00B14F;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  padding: 0 12px;
-  height: 38px;
-  line-height: 38px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 20px;
+  border-radius: 0px 3px 3px 0px;
 }
 
-.main-content .employee .block-list-employee .action .btn-primary svg {
-  fill: #fff;
-  margin-left: 5px;
-  margin-top: -3px;
+.main-content .device-manager .filter .form-group .input-component .btn-search svg {
+  position: static;
 }
 
-.main-content .employee .block-calendar-onduty h3 {
-  font-size: 22px;
-  line-height: 1.2;
-  font-weight: bold;
+.main-content .device-manager .filter .form-group .select-component {
   position: relative;
-  margin: 0 0 10px;
 }
 
-.main-content .employee .block-calendar-onduty h3 span {
-  background: #f5f5f5;
-  display: inline-block;
-  padding-right: 8px;
-  position: relative;
-  z-index: 2;
-}
-
-.main-content .employee .block-calendar-onduty h3:after {
-  content: "";
-  position: absolute;
-  height: 1px;
+.main-content .device-manager .filter .form-group .select-component select {
+  background: url(../../../images/caret-down.svg) no-repeat right 10px center #FFFFFF;
+  border: 1px solid #A4A4A4;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 28px 0 12px;
+  font-size: 16px;
   width: 100%;
-  background: #00B14F;
-  bottom: 5px;
-  left: 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.main-content .employee .block-calendar-onduty .filter {
-  padding-bottom: 14px;
+.main-content .device-manager .filter .form-group .select-component select:valid ~ label {
+  display: none;
 }
 
-.main-content .employee .block-calendar-onduty .filter .input-component {
-  position: relative;
-  width: 165px;
-  margin-left: 15px;
-}
-
-.main-content .employee .block-calendar-onduty .filter .input-component input {
-  background: #ffffff;
-  border: 1px solid #c5c5c5;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 18px;
-  height: 32px;
-  padding-left: 18px;
-}
-
-.main-content .employee .block-calendar-onduty .filter .input-component svg {
-  fill: #a4a4a4;
+.main-content .device-manager .filter .form-group .select-component label {
+  color: #A4A4A4;
+  font-size: 16px;
   position: absolute;
-  right: 20px;
-  top: 9px;
+  top: 50%;
+  left: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin: 0;
 }
 
-.main-content .employee .block-calendar-onduty .filter .btn-grid {
+.main-content .device-manager .block-list-device {
+  background: #FFFFFF;
+  border-radius: 3px;
+  padding: 0 10px 20px;
+}
+
+.main-content .device-manager .block-list-device .box-content .table,
+.main-content .device-manager .block-list-device .box-content table {
+  margin: 0;
+}
+
+.main-content .device-manager .block-list-device .box-content .table label,
+.main-content .device-manager .block-list-device .box-content table label {
+  margin: 2px 2px 0 0;
+  cursor: pointer;
+  vertical-align: top;
+  position: relative;
+}
+
+.main-content .device-manager .block-list-device .box-content .table label input,
+.main-content .device-manager .block-list-device .box-content table label input {
+  position: absolute;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  left: -8px;
+  top: -8px;
+  cursor: pointer;
+}
+
+.main-content .device-manager .block-list-device .box-content .table label input:checked ~ .checkmark:before,
+.main-content .device-manager .block-list-device .box-content table label input:checked ~ .checkmark:before {
+  content: "";
+  background: url(../../../images/checked.svg) no-repeat;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+.main-content .device-manager .block-list-device .box-content .table label .checkmark,
+.main-content .device-manager .block-list-device .box-content table label .checkmark {
+  background: #FFFFFF;
+  border: 1.4px solid #A4A4A4;
+  border-radius: 3px;
+  width: 14px;
+  height: 14px;
+  display: block;
+  position: relative;
+}
+
+.main-content .device-manager .block-list-device .box-content .table thead th,
+.main-content .device-manager .block-list-device .box-content table thead th {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  border-bottom: 2px solid #E5E5E5;
+  border-top: none;
+  padding: 26px 15px 16px;
+  white-space: nowrap;
+}
+
+.main-content .device-manager .block-list-device .box-content .table thead th:first-child,
+.main-content .device-manager .block-list-device .box-content table thead th:first-child {
+  padding-left: 0;
+}
+
+.main-content .device-manager .block-list-device .box-content .table thead th:last-child,
+.main-content .device-manager .block-list-device .box-content table thead th:last-child {
+  padding-right: 0;
+  width: 34px;
+}
+
+.main-content .device-manager .block-list-device .box-content .table tbody tr td,
+.main-content .device-manager .block-list-device .box-content table tbody tr td {
+  font-size: 16px;
+  line-height: 1.2;
+  border-bottom: 1px solid #E5E5E5;
+  border-top: none;
+  padding: 16px 15px;
+}
+
+.main-content .device-manager .block-list-device .box-content .table tbody tr td:first-child,
+.main-content .device-manager .block-list-device .box-content table tbody tr td:first-child {
+  padding-left: 0;
+}
+
+.main-content .device-manager .block-list-device .box-content .table tbody tr td:last-child,
+.main-content .device-manager .block-list-device .box-content table tbody tr td:last-child {
+  padding-right: 0;
+  width: 34px;
+}
+
+.main-content .device-manager .block-list-device .box-content .table tbody tr td a,
+.main-content .device-manager .block-list-device .box-content table tbody tr td a {
+  color: #008DC9;
+}
+
+.main-content .device-manager .block-list-device .box-content .table tbody tr td label,
+.main-content .device-manager .block-list-device .box-content table tbody tr td label {
+  margin-right: 7px;
+}
+
+.main-content .device-manager .block-list-device .box-content .table tbody tr td .btn-grid,
+.main-content .device-manager .block-list-device .box-content table tbody tr td .btn-grid {
   border: none;
-  padding: 0 10px;
+  padding: 0;
   margin: 0;
   background: none;
   outline: none;
+  display: block;
 }
 
-.main-content .employee .block-calendar-onduty .filter .btn-grid svg {
+.main-content .device-manager .block-list-device .box-content .table tbody tr td .btn-grid svg,
+.main-content .device-manager .block-list-device .box-content table tbody tr td .btn-grid svg {
   height: 18px;
   width: 18px;
   fill: #A4A4A4;
   display: block;
 }
 
-.main-content .employee .block-calendar-onduty .box-content {
-  background: #fff;
-  padding: 0 13px 10px;
+.main-content .device-manager .block-list-device .pager {
+  margin-top: 14px;
 }
 
-.main-content .employee .block-calendar-onduty .box-content table,
-.main-content .employee .block-calendar-onduty .box-content .table {
-  margin: 0;
-}
-
-.main-content .employee .block-calendar-onduty .box-content table thead th,
-.main-content .employee .block-calendar-onduty .box-content .table thead th {
-  vertical-align: middle;
-  border-bottom: 1px solid #E5E5E5;
-  border-top: 0;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 20px 5px 9px;
-  white-space: nowrap;
-  line-height: 1.2;
-}
-
-.main-content .employee .block-calendar-onduty .box-content table thead th:nth-child(n+2),
-.main-content .employee .block-calendar-onduty .box-content .table thead th:nth-child(n+2) {
-  padding: 20px 15px 9px;
-}
-
-.main-content .employee .block-calendar-onduty .box-content table tbody tr td,
-.main-content .employee .block-calendar-onduty .box-content .table tbody tr td {
-  font-size: 16px;
-  padding: 10px 5px 9px;
-  vertical-align: middle;
-  border-top: 1px solid #E5E5E5;
-  width: 33%;
-}
-
-.main-content .employee .block-calendar-onduty .box-content table tbody tr td:nth-child(n+2),
-.main-content .employee .block-calendar-onduty .box-content .table tbody tr td:nth-child(n+2) {
-  padding: 10px 15px 9px;
-}
-
-.main-content .employee .block-calendar-onduty .box-content table tbody tr td strong,
-.main-content .employee .block-calendar-onduty .box-content .table tbody tr td strong {
-  display: block;
-  font-weight: bold;
-}
-
-.main-content .employee .block-calendar-onduty .action {
-  padding-top: 20px;
-  padding-bottom: 10px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.main-content .employee .block-calendar-onduty .action .btn-primary {
-  background: #00B14F;
-  border: 1px solid #00B14F;
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
-  border-radius: 3px;
-  padding: 0 12px;
-  height: 38px;
-  line-height: 38px;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 20px;
-}
-
-.main-content .employee .block-calendar-onduty .action .btn-primary svg {
-  fill: #fff;
-  margin-right: 5px;
-  margin-top: -3px;
-}
-
-@media (min-width: 992px) {
-  .col-item-5 {
-    max-width: 20%;
-  }
-}
-
-@media (max-width: 767px) {
-  .main-content .employee .block-list-employee {
-    padding-top: 0;
-  }
-  .main-content .employee .block-list-employee .btn-grid {
-    top: 5px;
-  }
-  .main-content .employee .block-list-employee .action-delete .btn-primary,
-  .main-content .employee .block-list-employee .action-delete .btn-cancel {
-    margin: 0 5px;
-  }
-  .main-content .employee .block-list-employee .action {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .main-content .employee .block-list-employee .action .btn-primary {
-    width: 200px;
-    margin: 0 5px;
-    margin-bottom: 10px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .main-content .employee .block-calendar-onduty .filter .input-component {
-    margin-left: 10px;
-  }
-  .main-content .employee .block-calendar-onduty .filter .input-component:first-child {
-    margin-left: 0;
-  }
-  .main-content .employee .block-calendar-onduty .filter .input-component input {
-    padding-left: 10px;
-    font-size: 10px;
-    font-size: 14px;
-  }
-  .main-content .employee .block-calendar-onduty .filter .input-component svg {
-    right: 9px;
-  }
-  .main-content .employee .block-calendar-onduty .box-content {
-    padding: 0 10px;
+@media (max-width: 1400px) {
+  .main-content .device-manager .block-list-device .box-content {
     white-space: nowrap;
     width: 100%;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar;
   }
-  .main-content .employee .block-calendar-onduty .action {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .main-content .device-manager .block-list-device .box-content .table thead th:first-child,
+  .main-content .device-manager .block-list-device .box-content table thead th:first-child {
+    min-width: 250px;
   }
-  .main-content .employee .block-calendar-onduty .action .btn-primary {
-    width: 200px;
-    margin-bottom: 10px;
-    margin-left: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .main-content .device-manager .block-list-device .box-content .table tbody tr td,
+  .main-content .device-manager .block-list-device .box-content table tbody tr td {
+    white-space: normal;
+  }
+  .main-content .device-manager .block-list-device .box-content .table tbody tr td:first-child,
+  .main-content .device-manager .block-list-device .box-content table tbody tr td:first-child {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content .device-manager {
+    padding-top: 0;
+  }
+  .main-content .device-manager .filter {
+    padding-bottom: 0;
+  }
+  .main-content .device-manager .filter h3 {
+    font-size: 17px;
+    margin: 0 0 15px;
+  }
+  .main-content .device-manager .filter .btn-add-device {
+    padding: 0 10px;
+    font-size: 15px;
+  }
+  .main-content .device-manager .filter .form-group {
+    margin-bottom: 15px;
+  }
+  .main-content .device-manager .block-list-device {
+    padding-bottom: 10px;
+  }
+  .main-content .device-manager .block-list-device .box-content .table thead th:first-child,
+  .main-content .device-manager .block-list-device .box-content table thead th:first-child {
+    min-width: 200px;
+  }
+  .main-content .device-manager .block-list-device .box-content .table tbody tr td:first-child,
+  .main-content .device-manager .block-list-device .box-content table tbody tr td:first-child {
+    min-width: 200px;
   }
 }
