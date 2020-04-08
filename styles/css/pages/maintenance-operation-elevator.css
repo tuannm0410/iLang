@@ -621,11 +621,12 @@ aside nav ul li.active ul li.active a svg {
 .main-content .maintenance-operation {
   padding-top: 10px;
   color: #383838;
+  height: 100%;
 }
 
 .main-content .maintenance-operation .info-device {
-  background: #FFFFFF;
-  border: 1px solid #E5E5E5;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
   border-radius: 3px;
   padding: 0 17px 12px;
   position: relative;
@@ -638,14 +639,14 @@ aside nav ul li.active ul li.active a svg {
   text-transform: uppercase;
   line-height: 1.2;
   padding: 28px 0 20px;
-  border-bottom: 1px solid #3E5C9A;
+  border-bottom: 1px solid #3e5c9a;
   margin: 0 0 18px;
 }
 
 .main-content .maintenance-operation .info-device .btn-info-device {
   position: absolute;
   font-size: 16px;
-  color: #008DC9;
+  color: #008dc9;
   right: 17px;
   top: 26px;
   display: -webkit-box;
@@ -662,7 +663,7 @@ aside nav ul li.active ul li.active a svg {
   margin-left: 6px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  fill: #008DC9;
+  fill: #008dc9;
 }
 
 .main-content .maintenance-operation .info-device p {
@@ -705,8 +706,8 @@ aside nav ul li.active ul li.active a svg {
 }
 
 .main-content .maintenance-operation .history-maintaince .filter .input-component input {
-  background: #FFFFFF;
-  border: 1px solid #A4A4A4;
+  background: #ffffff;
+  border: 1px solid #a4a4a4;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
@@ -725,14 +726,14 @@ aside nav ul li.active ul li.active a svg {
   line-height: 34px;
   padding: 0;
   width: 43px;
-  border-left: 1px solid #A4A4A4;
+  border-left: 1px solid #a4a4a4;
   position: absolute;
   right: 1px;
   top: 1px;
 }
 
 .main-content .maintenance-operation .history-maintaince .filter .input-component .btn-search svg {
-  fill: #A4A4A4;
+  fill: #a4a4a4;
 }
 
 .main-content .maintenance-operation .history-maintaince .filter .btn-grid {
@@ -747,13 +748,13 @@ aside nav ul li.active ul li.active a svg {
 .main-content .maintenance-operation .history-maintaince .filter .btn-grid svg {
   height: 18px;
   width: 18px;
-  fill: #A4A4A4;
+  fill: #a4a4a4;
   display: block;
 }
 
 .main-content .maintenance-operation .history-maintaince .box-list-history {
-  background: #FFFFFF;
-  border: 1px solid #E5E5E5;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
   border-radius: 3px;
   padding: 0 17px 12px;
   margin: 0 0 20px;
@@ -769,7 +770,7 @@ aside nav ul li.active ul li.active a svg {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
-  border-bottom: 1px solid #3E5C9A;
+  border-bottom: 1px solid #3e5c9a;
   border-top: none;
   padding: 20px 15px 7px;
   white-space: nowrap;
@@ -783,7 +784,7 @@ aside nav ul li.active ul li.active a svg {
 .main-content .maintenance-operation .history-maintaince .box-list-history .table tbody tr td,
 .main-content .maintenance-operation .history-maintaince .box-list-history table tbody tr td {
   font-size: 16px;
-  border-bottom: 1px solid #A4A4A4;
+  border-bottom: 1px solid #a4a4a4;
   border-top: none;
   font-size: 16px;
   line-height: 22px;
@@ -844,28 +845,29 @@ aside nav ul li.active ul li.active a svg {
 .main-content .maintenance-operation .history-maintaince .action-pagination .action .btn-primary {
   font-weight: 500;
   font-size: 14px;
-  color: #FFFFFF;
+  color: #ffffff;
   height: 38px;
   line-height: 38px;
   padding: 0 11px;
-  background: #00B14F;
-  border-color: #00B14F;
+  background: #00b14f;
+  border-color: #00b14f;
   border-radius: 3px;
   margin: 0 10px;
 }
 
 .main-content .maintenance-operation .device-detail {
-  background: #FFFFFF;
-  border: 1px solid #E5E5E5;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
   border-radius: 3px;
   padding: 0 17px 30px;
+  height: 100%;
 }
 
 .main-content .maintenance-operation .device-detail h3 {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
-  border-bottom: 1px solid #A4A4A4;
+  border-bottom: 1px solid #a4a4a4;
   padding: 16px 0 15px;
 }
 
@@ -894,8 +896,8 @@ aside nav ul li.active ul li.active a svg {
 }
 
 .main-content .maintenance-operation .update-calendar-maintain {
-  background: #FFFFFF;
-  border: 1px solid #E5E5E5;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 3px;
@@ -907,7 +909,7 @@ aside nav ul li.active ul li.active a svg {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.2;
-  border-bottom: 1px solid #3E5C9A;
+  border-bottom: 1px solid #3e5c9a;
   margin: 0 0 18px;
   text-transform: uppercase;
 }
@@ -926,8 +928,8 @@ aside nav ul li.active ul li.active a svg {
 }
 
 .main-content .maintenance-operation .update-calendar-maintain .form-group input {
-  background: #FFFFFF;
-  border: 1px solid #A4A4A4;
+  background: #ffffff;
+  border: 1px solid #a4a4a4;
   border-radius: 3px;
   height: 36px;
   line-height: 36px;
@@ -938,7 +940,7 @@ aside nav ul li.active ul li.active a svg {
 
 .main-content .maintenance-operation .update-calendar-maintain .form-group textarea {
   min-height: 140px;
-  border: 1px solid #A4A4A4;
+  border: 1px solid #a4a4a4;
   border-radius: 3px;
   resize: none;
   width: 100%;
@@ -960,15 +962,15 @@ aside nav ul li.active ul li.active a svg {
 }
 
 .main-content .maintenance-operation .update-calendar-maintain .form-group .input-component svg {
-  fill: #A4A4A4;
+  fill: #a4a4a4;
   position: absolute;
   top: 11px;
   right: 10px;
 }
 
 .main-content .maintenance-operation .update-calendar-maintain .form-group select {
-  background: url(../../../images/caret-down.svg) no-repeat right 10px center #FFFFFF;
-  border: 1px solid #A4A4A4;
+  background: url(../../../images/caret-down.svg) no-repeat right 10px center #ffffff;
+  border: 1px solid #a4a4a4;
   border-radius: 3px;
   height: 36px;
   line-height: 36px;
@@ -993,7 +995,7 @@ aside nav ul li.active ul li.active a svg {
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
-  background: #00B14F;
+  background: #00b14f;
   border: none;
   color: #fff;
   font-size: 16px;
@@ -1001,7 +1003,7 @@ aside nav ul li.active ul li.active a svg {
 }
 
 .main-content .maintenance-operation .update-calendar-maintain .action .btn-cancel {
-  background: #C5C5C5;
+  background: #c5c5c5;
   color: #383838;
 }
 

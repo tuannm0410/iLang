@@ -1,7 +1,7 @@
-@import '../common/common.scss';
-@import '../common/header.scss';
-@import '../common/sidebar.scss';
-@import '../common/pagination.scss';
+@import "../common/common.scss";
+@import "../common/header.scss";
+@import "../common/sidebar.scss";
+@import "../common/pagination.scss";
 
 #wrapper {
     position: relative;
@@ -11,10 +11,11 @@
     .maintenance-operation {
         padding-top: 10px;
         color: #383838;
+        height: 100%;
 
         .info-device {
-            background: #FFFFFF;
-            border: 1px solid #E5E5E5;
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
             border-radius: 3px;
             padding: 0 17px 12px;
             position: relative;
@@ -26,14 +27,14 @@
                 text-transform: uppercase;
                 line-height: 1.2;
                 padding: 28px 0 20px;
-                border-bottom: 1px solid #3E5C9A;
+                border-bottom: 1px solid #3e5c9a;
                 margin: 0 0 18px;
             }
 
             .btn-info-device {
                 position: absolute;
                 font-size: 16px;
-                color: #008DC9;
+                color: #008dc9;
                 right: 17px;
                 top: 26px;
                 display: flex;
@@ -44,7 +45,7 @@
                     height: 12px;
                     margin-left: 6px;
                     flex-shrink: 0;
-                    fill: #008DC9;
+                    fill: #008dc9;
                 }
             }
 
@@ -82,8 +83,8 @@
                     margin-right: 15px;
 
                     input {
-                        background: #FFFFFF;
-                        border: 1px solid #A4A4A4;
+                        background: #ffffff;
+                        border: 1px solid #a4a4a4;
                         box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
                         border-radius: 3px;
                         width: 288px;
@@ -101,13 +102,13 @@
                         line-height: 34px;
                         padding: 0;
                         width: 43px;
-                        border-left: 1px solid #A4A4A4;
+                        border-left: 1px solid #a4a4a4;
                         position: absolute;
                         right: 1px;
                         top: 1px;
 
                         svg {
-                            fill: #A4A4A4;
+                            fill: #a4a4a4;
                         }
                     }
                 }
@@ -123,15 +124,15 @@
                     svg {
                         height: 18px;
                         width: 18px;
-                        fill: #A4A4A4;
+                        fill: #a4a4a4;
                         display: block;
                     }
                 }
             }
 
             .box-list-history {
-                background: #FFFFFF;
-                border: 1px solid #E5E5E5;
+                background: #ffffff;
+                border: 1px solid #e5e5e5;
                 border-radius: 3px;
                 padding: 0 17px 12px;
                 margin: 0 0 20px;
@@ -145,7 +146,7 @@
                             font-weight: 500;
                             font-size: 16px;
                             line-height: 1.2;
-                            border-bottom: 1px solid #3E5C9A;
+                            border-bottom: 1px solid #3e5c9a;
                             border-top: none;
                             padding: 20px 15px 7px;
                             white-space: nowrap;
@@ -160,7 +161,7 @@
                         tr {
                             td {
                                 font-size: 16px;
-                                border-bottom: 1px solid #A4A4A4;
+                                border-bottom: 1px solid #a4a4a4;
                                 border-top: none;
                                 font-size: 16px;
                                 line-height: 22px;
@@ -211,12 +212,12 @@
                     .btn-primary {
                         font-weight: 500;
                         font-size: 14px;
-                        color: #FFFFFF;
+                        color: #ffffff;
                         height: 38px;
                         line-height: 38px;
                         padding: 0 11px;
-                        background: #00B14F;
-                        border-color: #00B14F;
+                        background: #00b14f;
+                        border-color: #00b14f;
                         border-radius: 3px;
                         margin: 0 10px;
                     }
@@ -225,16 +226,17 @@
         }
 
         .device-detail {
-            background: #FFFFFF;
-            border: 1px solid #E5E5E5;
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
             border-radius: 3px;
             padding: 0 17px 30px;
+            height: 100%;
 
             h3 {
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 1.2;
-                border-bottom: 1px solid #A4A4A4;
+                border-bottom: 1px solid #a4a4a4;
                 padding: 16px 0 15px;
 
                 svg {
@@ -264,8 +266,8 @@
         }
 
         .update-calendar-maintain {
-            background: #FFFFFF;
-            border: 1px solid #E5E5E5;
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
             box-sizing: border-box;
             border-radius: 3px;
             padding: 0 17px;
@@ -275,7 +277,7 @@
                 font-weight: 500;
                 font-size: 16px;
                 line-height: 1.2;
-                border-bottom: 1px solid #3E5C9A;
+                border-bottom: 1px solid #3e5c9a;
                 margin: 0 0 18px;
                 text-transform: uppercase;
             }
@@ -293,8 +295,8 @@
                 }
 
                 input {
-                    background: #FFFFFF;
-                    border: 1px solid #A4A4A4;
+                    background: #ffffff;
+                    border: 1px solid #a4a4a4;
                     border-radius: 3px;
                     height: 36px;
                     line-height: 36px;
@@ -305,7 +307,7 @@
 
                 textarea {
                     min-height: 140px;
-                    border: 1px solid #A4A4A4;
+                    border: 1px solid #a4a4a4;
                     border-radius: 3px;
                     resize: none;
                     width: 100%;
@@ -326,7 +328,7 @@
                     }
 
                     svg {
-                        fill: #A4A4A4;
+                        fill: #a4a4a4;
                         position: absolute;
                         top: 11px;
                         right: 10px;
@@ -334,8 +336,8 @@
                 }
 
                 select {
-                    background: url(../../../images/caret-down.svg) no-repeat right 10px center #FFFFFF;
-                    border: 1px solid #A4A4A4;
+                    background: url(../../../images/caret-down.svg) no-repeat right 10px center #ffffff;
+                    border: 1px solid #a4a4a4;
                     border-radius: 3px;
                     height: 36px;
                     line-height: 36px;
@@ -359,7 +361,7 @@
                     line-height: 38px;
                     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
                     border-radius: 3px;
-                    background: #00B14F;
+                    background: #00b14f;
                     border: none;
                     color: #fff;
                     font-size: 16px;
@@ -367,7 +369,7 @@
                 }
 
                 .btn-cancel {
-                    background: #C5C5C5;
+                    background: #c5c5c5;
                     color: #383838;
                 }
             }
@@ -375,7 +377,7 @@
     }
 }
 
-@media(max-width: 991px) and (min-width: 768px) {
+@media (max-width: 991px) and (min-width: 768px) {
     .main-content {
         .maintenance-operation {
             .history-maintaince {
@@ -403,7 +405,7 @@
     }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
     .main-content {
         .maintenance-operation {
             padding-top: 0;
