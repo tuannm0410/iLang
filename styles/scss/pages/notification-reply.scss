@@ -1,0 +1,288 @@
+@import '../common/common.scss';
+@import '../common/header.scss';
+@import '../common/sidebar.scss';
+@import '../common/pagination.scss';
+
+#wrapper {
+  position: relative;
+}
+
+.main-content {
+  .notification-reply {
+    .filter {
+
+      .btn {
+        height: 36px;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 1px 1px 6px -2px #c2c2c2;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 0 12px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        &:hover, &.active {
+          background: #00B14F;
+          color: #fff;
+        }
+      }
+
+      .more-action {
+        flex: 0 0 18px;
+        margin-left: auto;
+        margin-right: 0.75rem;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 18px;
+          height: 18px;
+          fill: #a4a4a4;
+        }
+
+        &:hover {
+          svg {
+            fill: #00B14F;
+          }
+        }
+      }
+    }
+
+    .replies {
+      border-top: 1px solid #aeaeae;
+      border-bottom: 1px solid #aeaeae;
+      padding: 20px 0;
+
+      table {
+        font-size: 18px;
+
+        tr {
+          &:nth-child(odd) {
+            background: #fff;
+          }
+
+          &:nth-child(even) {
+            background: #f5f5f5;
+          }
+        }
+
+        td {
+          border: none;
+          align-content: start;
+        }
+
+        .title {
+          font-size: 18px;
+          color: #383838;
+          font-weight: 500;
+
+          &:hover {
+            text-decoration: none;
+            color: #00B14F;
+          }
+        }
+
+        .desc {
+          font-size: 16px;
+          margin: 15px 0 20px;
+        }
+
+        .count {
+          font-size: 16px;
+          color: #008DC9;
+
+          span {
+            display: inline-block;
+            color: #fff;
+            width: 18px;
+            height: 18px;
+            background: #E33922;
+            font-size: 12px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 9px;
+            margin-left: 8px;
+            vertical-align: text-bottom;
+          }
+        }
+
+        .action {
+          .btn {
+            height: 36px;
+            margin: 0 10px 10px 0;
+            color: #fff;
+            font-size: 16px;
+            padding: 0 10px;
+
+            &.cancel {
+              background: #008DC9;
+              padding: 0 20px;
+            }
+
+            &.transfer {
+              background: #FFA800;
+            }
+          }
+        }
+
+        .images {
+          width: 100%;
+          margin-top: 15px;
+
+          img {
+            max-width: 100%;
+          }
+        }
+
+        .more-menu {
+          width: 18px;
+          height: 18px;
+          fill: #a4a4a4;
+
+          &:hover {
+            fill: #00B14F;
+          }
+        }
+      }
+
+      .detail-reply {
+        .title {
+          font-size: 16px;
+          font-weight: 500;
+          margin-bottom: 5px;
+        }
+
+        .time {
+          font-size: 16px;
+          line-height: 12px;
+          color: #a4a4a4;
+          margin-bottom: 12px;
+
+          svg {
+            fill: #a4a4a4;
+            width: 18px;
+            height: 16px;
+            margin-right: 5px;
+          }
+        }
+
+        .content {
+          font-size: 16px;
+          line-height: 19px;
+          border-bottom: 0.5px solid #A4A4A4;
+          margin-bottom: 20px;
+
+          p {
+            margin-bottom: 20px;
+          }
+        }
+
+        .comments {
+          .comment-item {
+            .detail {
+              background: #E5E5E5;
+              border-radius: 6px;
+              padding: 10px;
+
+              .author {
+                font-size: 16px;
+                line-height: 19px;
+                color: #008DC9;
+                margin-bottom: 6px;
+                font-weight: 500;
+                display: block;
+              }
+
+              p {
+                font-size: 16px;
+                line-height: 19px;  
+                margin-bottom: 0;
+              }
+            }
+
+            .date {
+              padding-left: 10px;
+
+              span {
+                font-size: 14px;
+                line-height: 16px;
+                color: #A4A4A4;
+                display: inline-block;
+                margin-right: 12px;
+              }
+              
+              a {
+                display: inline-block;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                color: #383838;
+
+                &:hover {
+                  text-decoration: none;
+                }
+              }
+            }
+
+            &.reply-item {
+              border-left: 0.5px solid #C5C5C5;
+              padding: 10px 0 0 12px;
+              margin-left: 20px;
+            }
+          }
+
+          .send-comment {
+            .custom-input {
+              position: relative;
+              margin-top: 15px;
+  
+              input {
+                border: 1px solid #E5E5E5;
+                box-sizing: border-box;
+                border-radius: 19px;
+                height: 38px;
+                font-size: 16px;
+                line-height: 38px;
+                width: 100%;
+                padding: 0 40px 0 15px;
+              }
+  
+              svg {
+                width: 22px;
+                height: 22px;
+                position: absolute;
+                top: 7px;
+                right: 15px;
+                fill: #c5c5c5;
+              }
+            }
+
+            .btn-close {
+              margin-top: 15px;
+              height: 38px;
+              background: #008DC9;
+              color: #fff;
+              font-size: 16px;
+              padding: 0 12px;
+              border-radius: 3px;
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    .residents-comments {
+      .filter {
+        .btn {
+          //margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
