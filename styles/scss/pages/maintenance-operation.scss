@@ -1,0 +1,187 @@
+@import '../common/common.scss';
+@import '../common/header.scss';
+@import '../common/sidebar.scss';
+@import '../common/pagination.scss';
+
+#wrapper {
+    position: relative;
+}
+
+.main-content {
+    .maintenance-operation {
+        padding-top: 10px;
+        color: #383838;
+
+        .row {
+            margin: 0 -10px;
+
+            .col-12 {
+                padding: 0 10px;
+                margin-bottom: 20px;
+            }
+        }
+
+        .item {
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            border-radius: 3px;
+            height: 100%;
+            padding: 38px 41px 0;
+            text-align: center;
+
+            .icon {
+                margin: 0 0 21px;
+
+                svg {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 1.2;
+                text-transform: uppercase;
+                padding-bottom: 14px;
+                border-bottom: 1px solid #3E5C9A;
+                margin: 0;
+            }
+
+            ul {
+                margin: 0;
+                padding: 0 0 27px;
+                list-style: none;
+
+                li {
+                    a {
+                        padding: 9px 55px 9px 26px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: #383838;
+                        border-bottom: 1px solid #C5C5C5;
+                        position: relative;
+
+                        svg {
+                            height: 24px;
+                            width: 24px;
+                            margin-right: 8px;
+                            flex-shrink: 0;
+
+                            &.viewmore {
+                                height: 14px;
+                                width: 21px;
+                                fill: #c5c5c5;
+                                position: absolute;
+                                right: 25px;
+                                left: auto;
+                                bottom: auto;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .viewmore {
+                position: absolute;
+                bottom: 21px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                svg {
+                    fill: #c5c5c5;
+                    width: 25px;
+                }
+            }
+
+            &.lighting {
+                h3 {
+                    border-bottom: 1px solid #FFA800
+                }
+            }
+
+            &.waterdrop {
+                h3 {
+                    border-bottom: 1px solid #008DC9;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1199px) and (min-width: 992px) {
+    .main-content {
+        .maintenance-operation {
+            .item {
+                padding: 38px 20px 0;
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) and (min-width: 768px) {
+    .main-content {
+        .maintenance-operation {
+            .item {
+                padding: 20px 15px 0;
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                ul {
+                    li {
+                        a {
+                            padding: 9px 30px 9px 10px;
+                            font-size: 16px;
+
+                            svg {
+                                &.viewmore {
+                                    right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .main-content {
+        .maintenance-operation {
+            padding-top: 0;
+
+            .item {
+                padding: 20px 15px 0;
+
+                ul {
+                    li {
+                        a {
+                            padding: 9px 30px 9px 10px;
+
+                            svg {
+                                &.viewmore {
+                                    right: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                a.viewmore {
+                    position: static;
+                    padding: 12px 0;
+                    display: inline-block;
+                    transform: none;
+                }
+            }
+        }
+    }
+}

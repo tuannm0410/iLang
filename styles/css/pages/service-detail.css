@@ -211,7 +211,7 @@ svg.nav-plus {
 
 .main-content {
   background: #f5f5f5;
-  width: 100%;
+  width: calc(100% - 360px);
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -238,7 +238,8 @@ svg.nav-plus {
   text-decoration: underline;
 }
 
-.datepicker td, .datepicker th {
+.datepicker td,
+.datepicker th {
   width: 2.5rem;
   height: 2.5rem;
   font-size: 0.85rem;
@@ -246,6 +247,12 @@ svg.nav-plus {
 
 .datepicker {
   margin-bottom: 3rem;
+}
+
+@media (max-width: 1199px) {
+  .main-content {
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {

@@ -618,206 +618,460 @@ aside nav ul li.active ul li.active a svg {
   position: relative;
 }
 
-.main-content .employee-create {
+.main-content .maintenance-operation {
+  padding-top: 10px;
   color: #383838;
-  position: relative;
-  padding: 13px 0 21px;
 }
 
-.main-content .employee-create h3 {
+.main-content .maintenance-operation .info-device {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  padding: 0 17px 12px;
+  position: relative;
+  margin: 0 0 24px;
+}
+
+.main-content .maintenance-operation .info-device h3 {
   font-weight: 500;
-  font-size: 20px;
-  padding-bottom: 8px;
-  margin: 0 0 31px;
+  font-size: 16px;
+  text-transform: uppercase;
   line-height: 1.2;
-  border-bottom: 1px solid #A4A4A4;
+  padding: 28px 0 20px;
+  border-bottom: 1px solid #3E5C9A;
+  margin: 0 0 18px;
 }
 
-.main-content .employee-create .form-group {
-  margin-bottom: 10px;
-}
-
-.main-content .employee-create .form-group .avatar {
-  position: relative;
-  width: 112px;
-  height: 112px;
+.main-content .maintenance-operation .info-device .btn-info-device {
+  position: absolute;
+  font-size: 16px;
+  color: #008DC9;
+  right: 17px;
+  top: 26px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 1px solid #e5e5e5;
-  background: #fff;
-  margin-bottom: 20px;
 }
 
-.main-content .employee-create .form-group .avatar img {
-  max-width: 100%;
-  max-height: 100%;
+.main-content .maintenance-operation .info-device .btn-info-device svg {
+  width: 19px;
+  height: 12px;
+  margin-left: 6px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  fill: #008DC9;
 }
 
-.main-content .employee-create .form-group .avatar .choose-avatar {
+.main-content .maintenance-operation .info-device p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 16px;
+}
+
+.main-content .maintenance-operation .info-device p strong {
+  font-weight: 500;
+}
+
+.main-content .maintenance-operation .history-maintaince {
+  position: relative;
+}
+
+.main-content .maintenance-operation .history-maintaince h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 8px 0 12px;
+  margin: 0;
+}
+
+.main-content .maintenance-operation .history-maintaince .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: absolute;
-  bottom: 0;
-  right: -122px;
-  z-index: 1;
-  cursor: pointer;
-  width: 110px;
-  height: 36px;
-  line-height: 36px;
-  text-align: center;
+  right: 0;
+  top: 0;
+}
+
+.main-content .maintenance-operation .history-maintaince .filter .input-component {
+  position: relative;
+  margin-right: 15px;
+}
+
+.main-content .maintenance-operation .history-maintaince .filter .input-component input {
   background: #FFFFFF;
+  border: 1px solid #A4A4A4;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
+  width: 288px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+  padding-right: 50px;
+  font-size: 16px;
+}
+
+.main-content .maintenance-operation .history-maintaince .filter .input-component .btn-search {
+  background: none;
+  border-radius: 0;
+  height: 34px;
+  line-height: 34px;
+  padding: 0;
+  width: 43px;
+  border-left: 1px solid #A4A4A4;
+  position: absolute;
+  right: 1px;
+  top: 1px;
+}
+
+.main-content .maintenance-operation .history-maintaince .filter .input-component .btn-search svg {
+  fill: #A4A4A4;
+}
+
+.main-content .maintenance-operation .history-maintaince .filter .btn-grid {
   border: none;
-  font-size: 16px;
-}
-
-.main-content .employee-create .form-group .avatar .remove-avatar {
-  position: absolute;
-  top: 4px;
-  right: -21px;
-  cursor: pointer;
-}
-
-.main-content .employee-create .form-group label {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 0;
-  line-height: 36px;
-  text-align: right;
-}
-
-.main-content .employee-create .form-group span {
-  font-size: 16px;
-  line-height: 36px;
+  padding: 0;
+  margin: 0;
+  background: none;
+  outline: none;
   display: block;
 }
 
-.main-content .employee-create .form-group .btn-change-pass {
-  padding: 0 14px;
-  line-height: 36px;
-  background: #fff;
+.main-content .maintenance-operation .history-maintaince .filter .btn-grid svg {
+  height: 18px;
+  width: 18px;
+  fill: #A4A4A4;
+  display: block;
+}
+
+.main-content .maintenance-operation .history-maintaince .box-list-history {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
   border-radius: 3px;
-  -webkit-box-shadow: 1px 1px 6px -2px #c2c2c2;
-          box-shadow: 1px 1px 6px -2px #c2c2c2;
+  padding: 0 17px 12px;
+  margin: 0 0 20px;
 }
 
-.main-content .employee-create .form-group .radio {
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
+.main-content .maintenance-operation .history-maintaince .box-list-history .table,
+.main-content .maintenance-operation .history-maintaince .box-list-history table {
+  margin: 0;
+}
+
+.main-content .maintenance-operation .history-maintaince .box-list-history .table thead th,
+.main-content .maintenance-operation .history-maintaince .box-list-history table thead th {
+  font-weight: 500;
   font-size: 16px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  padding-left: 25px;
-  font-weight: normal;
-  margin-right: 10px;
+  line-height: 1.2;
+  border-bottom: 1px solid #3E5C9A;
+  border-top: none;
+  padding: 20px 15px 7px;
+  white-space: nowrap;
 }
 
-.main-content .employee-create .form-group .radio input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+.main-content .maintenance-operation .history-maintaince .box-list-history .table thead th:first-child,
+.main-content .maintenance-operation .history-maintaince .box-list-history table thead th:first-child {
+  padding-left: 0;
 }
 
-.main-content .employee-create .form-group .radio input:checked ~ .checkmark:after {
-  display: block;
+.main-content .maintenance-operation .history-maintaince .box-list-history .table tbody tr td,
+.main-content .maintenance-operation .history-maintaince .box-list-history table tbody tr td {
+  font-size: 16px;
+  border-bottom: 1px solid #A4A4A4;
+  border-top: none;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 9px 15px;
 }
 
-.main-content .employee-create .form-group .radio .checkmark {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid #a4a4a4;
-  background: #fff;
-  border-radius: 50%;
+.main-content .maintenance-operation .history-maintaince .box-list-history .table tbody tr td:first-child,
+.main-content .maintenance-operation .history-maintaince .box-list-history table tbody tr td:first-child {
+  padding-left: 0;
+  width: 180px;
 }
 
-.main-content .employee-create .form-group .radio .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-  top: 50%;
-  left: 50%;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+.main-content .maintenance-operation .history-maintaince .box-list-history .table tbody tr td:nth-child(2),
+.main-content .maintenance-operation .history-maintaince .box-list-history table tbody tr td:nth-child(2) {
+  width: 400px;
+}
+
+.main-content .maintenance-operation .history-maintaince .box-list-history .table tbody tr td:nth-child(3),
+.main-content .maintenance-operation .history-maintaince .box-list-history table tbody tr td:nth-child(3) {
+  width: 250px;
+}
+
+.main-content .maintenance-operation .history-maintaince .box-list-history .table tbody tr:last-child td,
+.main-content .maintenance-operation .history-maintaince .box-list-history table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.main-content .maintenance-operation .history-maintaince .action-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-content .maintenance-operation .history-maintaince .action-pagination .pager {
+  margin: 0;
+}
+
+.main-content .maintenance-operation .history-maintaince .action-pagination .pager .pagination {
+  margin: 0;
+}
+
+.main-content .maintenance-operation .history-maintaince .action-pagination .action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main-content .maintenance-operation .history-maintaince .action-pagination .action .btn-primary {
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+  height: 38px;
+  line-height: 38px;
+  padding: 0 11px;
   background: #00B14F;
+  border-color: #00B14F;
+  border-radius: 3px;
+  margin: 0 10px;
 }
 
-.main-content .employee-create .form-group .radio:hover .checkmark:after {
+.main-content .maintenance-operation .device-detail {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  padding: 0 17px 30px;
+}
+
+.main-content .maintenance-operation .device-detail h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  border-bottom: 1px solid #A4A4A4;
+  padding: 16px 0 15px;
+}
+
+.main-content .maintenance-operation .device-detail h3 svg {
+  width: 22px;
+  height: 14px;
+  fill: #383838;
+  margin-right: 9px;
+}
+
+.main-content .maintenance-operation .device-detail .content {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.main-content .maintenance-operation .device-detail .content strong {
+  font-weight: 500;
+}
+
+.main-content .maintenance-operation .device-detail .content p {
+  margin: 0;
+}
+
+.main-content .maintenance-operation .device-detail .content .note {
+  margin-top: 20px;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain {
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px;
+  padding: 0 17px;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain h3 {
+  padding: 26px 0 18px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  border-bottom: 1px solid #3E5C9A;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain .form-group {
+  margin: 0 0 20px;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain .form-group label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
   display: block;
+  margin: 0 0 10px;
+  padding-left: 5px;
 }
 
-.main-content .employee-create .form-group .input-component {
+.main-content .maintenance-operation .update-calendar-maintain .form-group input {
+  background: #FFFFFF;
+  border: 1px solid #A4A4A4;
+  border-radius: 3px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px 0 12px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain .form-group textarea {
+  min-height: 140px;
+  border: 1px solid #A4A4A4;
+  border-radius: 3px;
+  resize: none;
+  width: 100%;
+  padding: 9px 12px 0 12px;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain .form-group textarea.note {
+  height: 310px;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain .form-group .input-component {
   position: relative;
 }
 
-.main-content .employee-create .form-group .input-component svg {
+.main-content .maintenance-operation .update-calendar-maintain .form-group .input-component input {
+  padding: 0 36px 0 12px;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain .form-group .input-component svg {
+  fill: #A4A4A4;
   position: absolute;
-  right: 0;
-  fill: #a4a4a4;
-  width: 14px;
-  height: 12px;
-  top: 12px;
+  top: 11px;
   right: 10px;
 }
 
-.main-content .employee-create .action {
-  padding-top: 34px;
+.main-content .maintenance-operation .update-calendar-maintain .form-group select {
+  background: url(../../../images/caret-down.svg) no-repeat right 10px center #FFFFFF;
+  border: 1px solid #A4A4A4;
+  border-radius: 3px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 28px 0 12px;
+  font-size: 16px;
+  width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
-.main-content .employee-create .action .btn {
-  text-transform: uppercase;
-  width: 130px;
-  font-size: 14px;
-  font-weight: 500;
+.main-content .maintenance-operation .update-calendar-maintain .action {
+  padding: 10px 0 28px;
+  text-align: center;
 }
 
-.main-content .employee-create .action .btn-reset {
-  background: #e5e5e5;
-  margin-right: 10px;
-}
-
-.main-content .employee-create .action .btn-submit {
-  color: #fff;
+.main-content .maintenance-operation .update-calendar-maintain .action .btn {
+  width: 152px;
+  padding: 0 10px;
+  height: 38px;
+  line-height: 38px;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
   background: #00B14F;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin: 0 10px 10px;
+}
+
+.main-content .maintenance-operation .update-calendar-maintain .action .btn-cancel {
+  background: #C5C5C5;
+  color: #383838;
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .main-content .maintenance-operation .history-maintaince .box-content {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .main-content .maintenance-operation .history-maintaince .box-content .table tbody tr td:nth-child(2),
+  .main-content .maintenance-operation .history-maintaince .box-content table tbody tr td:nth-child(2) {
+    min-width: 350px;
+  }
 }
 
 @media (max-width: 767px) {
-  .main-content .employee-create {
+  .main-content .maintenance-operation {
     padding-top: 0;
   }
-  .main-content .employee-create h3 {
-    margin-bottom: 20px;
-  }
-  .main-content .employee-create .form-group {
-    margin-bottom: 15px;
-  }
-  .main-content .employee-create .form-group label {
-    text-align: left;
-    line-height: 1.2;
-    margin-bottom: 5px;
-  }
-  .main-content .employee-create .form-group .radio {
-    line-height: 36px;
-  }
-  .main-content .employee-create .form-group .avatar {
+  .main-content .maintenance-operation .info-device h3 {
+    padding: 22px 0 35px;
     margin-bottom: 0;
   }
-  .main-content .employee-create .action {
-    padding-top: 5px;
+  .main-content .maintenance-operation .info-device .btn-info-device {
+    position: relative;
+    top: -34px;
+    right: auto;
+    left: 0;
+  }
+  .main-content .maintenance-operation .info-device p {
+    margin-bottom: 10px;
+  }
+  .main-content .maintenance-operation .info-device p:last-child {
+    margin-bottom: 20px;
+  }
+  .main-content .maintenance-operation .history-maintaince .filter {
+    position: static;
+    margin-bottom: 10px;
+  }
+  .main-content .maintenance-operation .history-maintaince .filter .input-component input {
+    width: 245px;
+  }
+  .main-content .maintenance-operation .history-maintaince .box-content {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .main-content .maintenance-operation .history-maintaince .box-content .table tbody tr td:nth-child(2),
+  .main-content .maintenance-operation .history-maintaince .box-content table tbody tr td:nth-child(2) {
+    min-width: 350px;
+  }
+  .main-content .maintenance-operation .history-maintaince .action-pagination {
+    display: block;
+  }
+  .main-content .maintenance-operation .history-maintaince .action-pagination .action {
+    margin-top: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-content .maintenance-operation .history-maintaince .action-pagination .action .btn-primary {
+    width: 188px;
+    margin-bottom: 10px;
+  }
+  .main-content .maintenance-operation .update-calendar-maintain .form-group textarea.note {
+    height: 140px;
+  }
+  .main-content .maintenance-operation .update-calendar-maintain .action {
+    padding-bottom: 15px;
   }
 }
